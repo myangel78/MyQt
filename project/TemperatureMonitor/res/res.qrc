@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/qss">
+        <file>qss/myStyle.qss</file>
+    </qresource>
+    <qresource prefix="/img">
+        <file>img/temperature.ico</file>
+        <file>img/temperature.png</file>
+    </qresource>
+    <qresource prefix="/info">
+        <file>info/ReleaseInfo.txt</file>
+    </qresource>
+</RCC>
