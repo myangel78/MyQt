@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E3213355-8186-3358-90AF-345A1A979869}</ProjectGuid>
+    <RootNamespace>Lab256Prosystem</RootNamespace>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.18362.0</WindowsTargetPlatformMinVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>MultiByte</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>Lab256Prosystem</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>MultiByte</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>Lab256Prosystem</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>debug\</OutDir>
+    <IntDir>debug\</IntDir>
+    <TargetName>Lab256Prosystem</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>release\</OutDir>
+    <IntDir>release\</IntDir>
+    <TargetName>Lab256Prosystem</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;gui;widgets;serialport;printsupport;network</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;gui;widgets;serialport;printsupport;network</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>include\logger;include\CyApi;include;release;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;NDEBUG;QT_DEPRECATED_WARNINGS;QCUSTOMPLOT_USE_OPENGL;QT_NO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;libhiredis.lib;libcurl.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\Lab256Prosystem.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;NDEBUG;QT_DEPRECATED_WARNINGS;QCUSTOMPLOT_USE_OPENGL;QT_NO_DEBUG;QT_PRINTSUPPORT_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SERIALPORT_LIB;QT_NETWORK_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>res</InitFuncName>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>$(Configuration)</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>include\logger;include\CyApi;include;debug;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QCUSTOMPLOT_USE_OPENGL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;libhiredisd.lib;libcurld.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\Lab256Prosystem.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QCUSTOMPLOT_USE_OPENGL;QT_PRINTSUPPORT_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SERIALPORT_LIB;QT_NETWORK_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>res</InitFuncName>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>$(Configuration)</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AboutDialog.cpp" />
+    <ClCompile Include="src\CalibrationDialog.cpp" />
+    <ClCompile Include="src\CapListItem.cpp" />
+    <ClCompile Include="src\CapacitanceView.cpp" />
+    <ClCompile Include="src\CapUnitItem.cpp" />
+    <ClCompile Include="src\ChannelStatusView.cpp" />
+    <ClCompile Include="src\ConfigServer.cpp" />
+    <ClCompile Include="src\ControlListItem.cpp" />
+    <ClCompile Include="src\ControlView.cpp" />
+    <ClCompile Include="src\CustomPlotView.cpp" />
+    <ClCompile Include="src\CyAPI.cpp" />
+    <ClCompile Include="src\DegatingDialog.cpp" />
+    <ClCompile Include="src\FeedbackDialog.cpp" />
+    <ClCompile Include="src\FlowModulePane.cpp" />
+    <ClCompile Include="src\HistoryDataView.cpp" />
+    <ClCompile Include="src\HttpClient.cpp" />
+    <ClCompile Include="src\LogPane.cpp" />
+    <ClCompile Include="src\MainWindow.cpp" />
+    <ClCompile Include="src\MyQMessageBox.cpp" />
+    <ClCompile Include="src\PlotReviewDialog.cpp" />
+    <ClCompile Include="src\PoreSelectDialog.cpp" />
+    <ClCompile Include="src\RecordSettingDialog.cpp" />
+    <ClCompile Include="src\RedisAccess.cpp" />
+    <ClCompile Include="src\SampleRateDialog.cpp" />
+    <ClCompile Include="src\SavePane.cpp" />
+    <ClCompile Include="src\SerialPort.cpp" />
+    <ClCompile Include="src\SerialSettingDialog.cpp" />
+    <ClCompile Include="src\TemperatureMonitor.cpp" />
+    <ClCompile Include="src\TranslateDialog.cpp" />
+    <ClCompile Include="src\UpdateDialog.cpp" />
+    <ClCompile Include="src\UsbCyDevice.cpp" />
+    <ClCompile Include="src\UsbPortBulk.cpp" />
+    <ClCompile Include="src\UsbProtoMsg.cpp" />
+    <ClCompile Include="src\VerUpdateDialog.cpp" />
+    <ClCompile Include="src\ZeroAdjustDialog.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\qcustomplot.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\AboutDialog.h">
+    </QtMoc>
+    <QtMoc Include="src\CalibrationDialog.h">
+    </QtMoc>
+    <QtMoc Include="src\CapListItem.h">
+    </QtMoc>
+    <QtMoc Include="src\CapacitanceView.h">
+    </QtMoc>
+    <QtMoc Include="src\ChannelStatusView.h">
+    </QtMoc>
+    <QtMoc Include="src\CapUnitItem.h" />
+    <ClInclude Include="src\ConfigServer.h" />
+    <QtMoc Include="src\ControlListItem.h">
+    </QtMoc>
+    <QtMoc Include="src\ControlView.h">
+    </QtMoc>
+    <QtMoc Include="src\CustomPlotView.h">
+    </QtMoc>
+    <QtMoc Include="src\DegatingDialog.h">
+    </QtMoc>
+    <QtMoc Include="src\FeedbackDialog.h">
+    </QtMoc>
+    <QtMoc Include="src\FlowModulePane.h">
+    </QtMoc>
+    <QtMoc Include="src\HistoryDataView.h" />
+    <ClInclude Include="src\HttpClient.h" />
+    <QtMoc Include="src\LogPane.h">
+    </QtMoc>
+    <QtMoc Include="src\MainWindow.h">
+    </QtMoc>
+    <QtMoc Include="src\MyQMessageBox.h">
+    </QtMoc>
+    <QtMoc Include="src\PlotReviewDialog.h">
+    </QtMoc>
+    <QtMoc Include="src\PoreSelectDialog.h">
+    </QtMoc>
+    <QtMoc Include="src\RecordSettingDialog.h">
+    </QtMoc>
+    <ClInclude Include="src\RedisAccess.h" />
+    <QtMoc Include="src\SampleRateDialog.h">
+    </QtMoc>
+    <QtMoc Include="src\SavePane.h">
+    </QtMoc>
+    <QtMoc Include="src\SerialPort.h">
+    </QtMoc>
+    <QtMoc Include="src\SerialSettingDialog.h">
+    </QtMoc>
+    <QtMoc Include="src\TemperatureMonitor.h">
+    </QtMoc>
+    <QtMoc Include="src\TranslateDialog.h">
+    </QtMoc>
+    <QtMoc Include="src\UpdateDialog.h">
+    </QtMoc>
+    <ClInclude Include="src\UsbCyDevice.h" />
+    <ClInclude Include="src\UsbPortBulk.h" />
+    <ClInclude Include="src\UsbProtoMsg.h" />
+    <QtMoc Include="src\VerUpdateDialog.h">
+    </QtMoc>
+    <QtMoc Include="src\ZeroAdjustDialog.h">
+    </QtMoc>
+    <ClInclude Include="src\mainversion.h" />
+    <QtMoc Include="src\qcustomplot.h">
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -finput-charset=gbk -Zi -MDd -std:c++17 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -finput-charset=gbk -O2 -MD -std:c++17 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\img\BGI.png" />
+    <None Include="res\img\BGI_LOGO.ico" />
+    <None Include="res\info\LAB256ProUserGuide.pdf" />
+    <None Include="res\info\ReleaseInfo.txt" />
+    <None Include="res\img\Settings.png" />
+    <None Include="res\img\about.png" />
+    <None Include="res\img\chinaweather.png" />
+    <None Include="res\img\close.ico" />
+    <None Include="res\img\config.png" />
+    <None Include="res\img\connect.ico" />
+    <None Include="res\conf\defaultAFE2256-v3_0.img" />
+    <None Include="res\conf\defaultBgiCyclone.img" />
+    <None Include="res\conf\defaultCalibrationConfig.ini" />
+    <None Include="res\conf\defaultLoadReg.csv" />
+    <None Include="res\conf\defaultSysConfig.ini" />
+    <None Include="res\conf\defaultautonanopore.sh" />
+    <None Include="res\conf\defaultself_check.sh" />
+    <None Include="res\img\device_press.png" />
+    <None Include="res\img\eject.png" />
+    <None Include="res\img\eject_press.png" />
+    <None Include="res\img\engineer.png" />
+    <None Include="res\img\exaile.png" />
+    <None Include="res\img\install.png" />
+    <None Include="res\img\mdc.png" />
+    <None Include="res\img\monitor.png" />
+    <None Include="res\img\pause.ico" />
+    <None Include="res\img\pause.png" />
+    <None Include="res\img\pause_press.png" />
+    <QtRcc Include="res\res.qrc">
+    </QtRcc>
+    <None Include="res\img\reset_press.png" />
+    <None Include="res\img\run.png" />
+    <None Include="res\img\run_press.png" />
+    <None Include="res\img\search.png" />
+    <None Include="res\img\search_press.png" />
+    <None Include="res\img\setting.png" />
+    <None Include="res\img\setting_press.png" />
+    <None Include="res\img\shutdown.png" />
+    <None Include="res\img\start.ico" />
+    <None Include="res\img\stop.png" />
+    <None Include="res\img\stop_press.png" />
+    <None Include="res\img\system.png" />
+    <None Include="res\img\system_press.png" />
+    <None Include="res\img\temperature.png" />
+    <None Include="res\img\update.png" />
+    <None Include="res\img\upgrade.png" />
+    <None Include="res\img\upgrade_press.png" />
+    <None Include="res\img\version.png" />
+    <None Include="res\img\version_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include=".\Lab256Prosystem_resource.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

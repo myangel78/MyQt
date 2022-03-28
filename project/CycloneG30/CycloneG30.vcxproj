@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{827C17B5-29AD-3FAF-B475-FD9FF5BBD3A5}</ProjectGuid>
+    <RootNamespace>CycloneG30</RootNamespace>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.18362.0</WindowsTargetPlatformMinVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>CycloneG30</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>CycloneG30</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>debug\</OutDir>
+    <IntDir>debug\</IntDir>
+    <TargetName>CycloneG30</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>release\</OutDir>
+    <IntDir>release\</IntDir>
+    <TargetName>CycloneG30</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;sql;network;gui;widgets;serialport;charts</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;sql;network;gui;widgets;serialport;charts</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)include\;include\curl;include\FTD3XX;include\logger\spdlog;include\logger;src\;src\wizard;src\table;src\customplot;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;NDEBUG;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;QCUSTOMPLOT_USE_OPENGL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;FTD3XX.lib;shell32.lib;libcurl.lib;libhiredis.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\CycloneG30.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;NDEBUG;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SQL_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>res</InitFuncName>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>$(Configuration)</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)include\;include\FTD3XX;include\curl;include\logger\spdlog;include\logger;src\;src\wizard;src\table;src\customplot;debug;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QCUSTOMPLOT_USE_OPENGL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;FTD3XX.lib;shell32.lib;libcurl.lib;libhiredisd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\CycloneG30.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SQL_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>res</InitFuncName>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>$(Configuration)</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="include\logger\EcoliLog.cpp" />
+    <ClCompile Include="src\AboutDialog.cpp" />
+    <ClCompile Include="src\AutoScanPanel.cpp" />
+    <ClCompile Include="src\CapCaculate.cpp" />
+    <ClCompile Include="src\ChartViewWidgt.cpp" />
+    <ClCompile Include="src\ComunicateTestWdgt.cpp" />
+    <ClCompile Include="src\ConfigServer.cpp" />
+    <ClCompile Include="src\ConfigurationWidgt.cpp" />
+    <ClCompile Include="src\CustomPlotWidgt.cpp" />
+    <ClCompile Include="src\customplot\qcustomplot.cpp" />
+    <ClCompile Include="src\CustomSplitter.cpp" />
+    <ClCompile Include="src\DataAnalysWidgt.cpp" />
+    <ClCompile Include="src\DataCalculate.cpp" />
+    <ClCompile Include="src\DataHandle.cpp" />
+    <ClCompile Include="src\FlowOpertPanel.cpp" />
+    <ClCompile Include="src\HttpClient.cpp" />
+    <ClCompile Include="src\MembranePanel.cpp" />
+    <ClCompile Include="src\ModelSharedData.cpp" />
+    <ClCompile Include="src\MuxScanPanel.cpp" />
+    <ClCompile Include="src\DegatingPane.cpp" />
+    <ClCompile Include="src\MyQMessageBox.cpp" />
+    <ClCompile Include="src\PercentBarChartView.cpp" />
+    <ClCompile Include="src\PlotReviewDialog.cpp" />
+    <ClCompile Include="src\PoreCtrlPanel.cpp" />
+    <ClCompile Include="src\PoreStateMapWdgt.cpp" />
+    <ClCompile Include="src\QNotify.cpp" />
+    <ClCompile Include="src\RecordCsvFile.cpp" />
+    <ClCompile Include="src\RecordSettingDialog.cpp" />
+    <ClCompile Include="src\RedisAccess.cpp" />
+    <ClCompile Include="src\SavePannel.cpp" />
+    <ClCompile Include="src\SensorPanel.cpp" />
+    <ClCompile Include="src\SerialPort.cpp" />
+    <ClCompile Include="src\SerialSettingDialog.cpp" />
+    <ClCompile Include="src\table\CustomDelegate.cpp" />
+    <ClCompile Include="src\table\InputNewRecordDlg.cpp" />
+    <ClCompile Include="src\LogPane.cpp" />
+    <ClCompile Include="src\MainWindow.cpp" />
+    <ClCompile Include="src\table\PlotCfgDelegate.cpp" />
+    <ClCompile Include="src\table\PLotCfgTabModel.cpp" />
+    <ClCompile Include="src\table\PoreStateMapTabModel.cpp" />
+    <ClCompile Include="src\table\RegFieldTableModel.cpp" />
+    <ClCompile Include="src\RegisterMapWdgt.cpp" />
+    <ClCompile Include="src\table\RegFieldTableView.cpp" />
+    <ClCompile Include="src\table\RegisterTableModel.cpp" />
+    <ClCompile Include="src\RegisterWidget.cpp" />
+    <ClCompile Include="src\SqlDataBase.cpp" />
+    <ClCompile Include="src\table\RegisterTableView.cpp" />
+    <ClCompile Include="src\TemperatureMonitor.cpp" />
+    <ClCompile Include="src\TranslateDialog.cpp" />
+    <ClCompile Include="src\UDPSocket.cpp" />
+    <ClCompile Include="src\UsbFtdDevice.cpp" />
+    <ClCompile Include="src\UsbProtoMsg.cpp" />
+    <ClCompile Include="src\ValidOptimized.cpp" />
+    <ClCompile Include="src\VoltCtrPanel.cpp" />
+    <ClCompile Include="src\wizard\AutoSequenceSettingDlg.cpp" />
+    <ClCompile Include="src\wizard\CustomComponent.cpp" />
+    <ClCompile Include="src\wizard\MembraneQCSettingDlg.cpp" />
+    <ClCompile Include="src\wizard\PoreAutoFiltSettingDlg.cpp" />
+    <ClCompile Include="src\XmlStreamReader.cpp" />
+    <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\AboutDialog.h">
+    </QtMoc>
+    <QtMoc Include="src\ComunicateTestWdgt.h">
+    </QtMoc>
+    <ClInclude Include="include\logger\EcoliLog.h" />
+    <QtMoc Include="src\CapCaculate.h" />
+    <QtMoc Include="src\AutoScanPanel.h" />
+    <QtMoc Include="src\ChartViewWidgt.h" />
+    <ClInclude Include="src\ConfigServer.h" />
+    <QtMoc Include="src\ConfigurationWidgt.h">
+    </QtMoc>
+    <QtMoc Include="src\table\CustomDelegate.h">
+    </QtMoc>
+    <ClInclude Include="include\FTD3XX\FTD3XX.h" />
+    <QtMoc Include="src\CustomSplitter.h" />
+    <QtMoc Include="src\DataAnalysWidgt.h" />
+    <QtMoc Include="src\CustomPlotWidgt.h" />
+    <QtMoc Include="src\customplot\qcustomplot.h" />
+    <QtMoc Include="src\DataCalculate.h" />
+    <ClInclude Include="src\DataHandle.h" />
+    <QtMoc Include="src\DegatingPane.h" />
+    <QtMoc Include="src\FlowOpertPanel.h" />
+    <ClInclude Include="src\Global.h" />
+    <QtMoc Include="src\QNotify.h" />
+    <QtMoc Include="src\PlotReviewDialog.h" />
+    <QtMoc Include="src\SavePannel.h" />
+    <QtMoc Include="src\SensorPanel.h" />
+    <QtMoc Include="src\PoreCtrlPanel.h" />
+    <QtMoc Include="src\PoreStateMapWdgt.h" />
+    <QtMoc Include="src\MuxScanPanel.h" />
+    <ClInclude Include="src\HttpClient.h" />
+    <QtMoc Include="src\MyQMessageBox.h" />
+    <QtMoc Include="src\RecordSettingDialog.h" />
+    <QtMoc Include="src\MembranePanel.h" />
+    <QtMoc Include="src\ModelSharedData.h" />
+    <QtMoc Include="src\PercentBarChartView.h" />
+    <ClInclude Include="src\RecordCsvFile.h" />
+    <ClInclude Include="src\RedisAccess.h" />
+    <QtMoc Include="src\SerialSettingDialog.h" />
+    <QtMoc Include="src\SerialPort.h" />
+    <ClInclude Include="src\table\InputNewRecordDlg.h" />
+    <ClInclude Include="include\logger\Log.h" />
+    <QtMoc Include="src\LogPane.h">
+    </QtMoc>
+    <QtMoc Include="src\MainWindow.h">
+    </QtMoc>
+    <QtMoc Include="src\table\RegFieldTableModel.h">
+    </QtMoc>
+    <QtMoc Include="src\RegisterMapWdgt.h">
+    </QtMoc>
+    <QtMoc Include="src\table\RegisterTableModel.h">
+    </QtMoc>
+    <QtMoc Include="src\RegisterWidget.h">
+    </QtMoc>
+    <QtMoc Include="src\SqlDataBase.h">
+    </QtMoc>
+    <QtMoc Include="src\UsbFtdDevice.h">
+    </QtMoc>
+    <QtMoc Include="src\UDPSocket.h" />
+    <QtMoc Include="src\table\RegFieldTableView.h" />
+    <QtMoc Include="src\table\RegisterTableView.h" />
+    <QtMoc Include="src\TranslateDialog.h" />
+    <QtMoc Include="src\table\PlotCfgDelegate.h" />
+    <QtMoc Include="src\table\PlotCfgTabModel.h" />
+    <QtMoc Include="src\table\PoreStateMapTabModel.h" />
+    <QtMoc Include="src\TemperatureMonitor.h" />
+    <ClInclude Include="src\UsbProtoMsg.h" />
+    <ClInclude Include="src\Util.h" />
+    <QtMoc Include="src\VoltCtrPanel.h" />
+    <ClInclude Include="src\ValidOptimized.h" />
+    <QtMoc Include="src\wizard\AutoSequenceSettingDlg.h" />
+    <QtMoc Include="src\wizard\CustomComponent.h" />
+    <QtMoc Include="src\wizard\MembraneQCSettingDlg.h" />
+    <QtMoc Include="src\wizard\PoreAutoFiltSettingDlg.h" />
+    <ClInclude Include="src\XmlStreamReader.h" />
+    <ClInclude Include="include\concurrentqueue.h" />
+    <ClInclude Include="src\mainversion.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -std:c++17 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -O2 -MD -std:c++17 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\etc\FTD3XX.dll" />
+    <None Include="res\img\Registers.png" />
+    <None Include="res\etc\Registers.xml" />
+    <None Include="res\info\ReleaseInfo.txt" />
+    <None Include="res\img\about.png" />
+    <None Include="res\img\channelovftmap.png" />
+    <None Include="res\img\channeltiamap.png" />
+    <None Include="res\img\close.ico" />
+    <None Include="res\img\configuration.png" />
+    <None Include="res\img\connect.ico" />
+    <None Include="res\img\cycloneG30.ico" />
+    <None Include="res\img\cycloneG30.png" />
+    <None Include="res\img\initialization.png" />
+    <None Include="res\img\loadconf.png" />
+    <None Include="res\img\log.png" />
+    <None Include="res\img\logPage.png" />
+    <None Include="res\img\reg.png" />
+    <QtRcc Include="res\res.qrc">
+    </QtRcc>
+    <None Include="res\img\run.png" />
+    <None Include="res\img\search.png" />
+    <None Include="res\img\stop.png" />
+    <None Include="res\img\test.png" />
+    <None Include="res\img\xml.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include=".\CycloneG30_resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\img\curve.png" />
+    <Image Include="res\img\splitterBottom.png" />
+    <Image Include="res\img\splitterLeft.png" />
+    <Image Include="res\img\splitterRight.png" />
+    <Image Include="res\img\splitterTop.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

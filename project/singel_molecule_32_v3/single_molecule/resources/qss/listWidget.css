@@ -1,0 +1,23 @@
+
+QListWidget#listWidget_param::Item:hover,
+QListWidget#listWidget_param::Item:selected {
+    background-color:rgba(22, 29, 36, 1);
+}
+
+QListWidget#listWidget_param::Item:selected:!active {
+    background-color:rgba(22, 29, 36, 1);
+}
+
+
+QListWidget::Item:hover,
+QListWidget::Item:selected {
+    background-color:rgba(22, 29, 36, 1);
+}
+
+QListWidget::Item:selected:!active {
+    background-color:rgba(22, 29, 36, 1);
+}
+
+QListWidget{
+    outline:0px;
+}

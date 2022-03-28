@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab256Prosystem", "Lab256Prosystem.vcxproj", "{E3213355-8186-3358-90AF-345A1A979869}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3213355-8186-3358-90AF-345A1A979869}.Debug|x64.ActiveCfg = Debug|x64
+		{E3213355-8186-3358-90AF-345A1A979869}.Debug|x64.Build.0 = Debug|x64
+		{E3213355-8186-3358-90AF-345A1A979869}.Release|x64.ActiveCfg = Release|x64
+		{E3213355-8186-3358-90AF-345A1A979869}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84EDF733-52C2-423E-A34A-4DD300FCFDA5}
+	EndGlobalSection
+EndGlobal

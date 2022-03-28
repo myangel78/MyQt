@@ -1,0 +1,55 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>img/about.png</file>
+        <file>img/BGI.png</file>
+        <file>img/BGI_LOGO.ico</file>
+        <file>img/chinaweather.png</file>
+        <file>img/close.ico</file>
+        <file>img/config.png</file>
+        <file>img/connect.ico</file>
+        <file>img/device_press.png</file>
+        <file>img/eject.png</file>
+        <file>img/eject_press.png</file>
+        <file>img/engineer.png</file>
+        <file>img/install.png</file>
+        <file>img/mdc.png</file>
+        <file>img/monitor.png</file>
+        <file>img/pause.ico</file>
+        <file>img/pause.png</file>
+        <file>img/pause_press.png</file>
+        <file>img/run.png</file>
+        <file>img/run_press.png</file>
+        <file>img/search.png</file>
+        <file>img/search_press.png</file>
+        <file>img/setting.png</file>
+        <file>img/setting_press.png</file>
+        <file>img/Settings.png</file>
+        <file>img/shutdown.png</file>
+        <file>img/start.ico</file>
+        <file>img/stop.png</file>
+        <file>img/stop_press.png</file>
+        <file>img/system.png</file>
+        <file>img/system_press.png</file>
+        <file>img/upgrade.png</file>
+        <file>img/upgrade_press.png</file>
+        <file>img/version.png</file>
+        <file>img/version_press.png</file>
+        <file>img/temperature.png</file>
+        <file>img/update.png</file>
+        <file>img/exaile.png</file>
+        <file>img/reset_press.png</file>
+    </qresource>
+    <qresource prefix="/conf">
+        <file>conf/defaultCalibrationConfig.ini</file>
+        <file>conf/defaultLoadReg.csv</file>
+        <file>conf/defaultSysConfig.ini</file>
+        <file>conf/defaultAFE2256-v3_0.img</file>
+        <file>conf/defaultBgiCyclone.img</file>
+        <file>conf/defaultautonanopore.sh</file>
+        <file>conf/defaultself_check.sh</file>
+    </qresource>
+    <qresource prefix="/info">
+        <file>info/LAB256ProUserGuide.pdf</file>
+        <file>info/ReleaseInfo.txt</file>
+    </qresource>
+</RCC>

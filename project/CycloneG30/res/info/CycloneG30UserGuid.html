@@ -1,0 +1,605 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+
+</style><title>CycloneG30UserGuid</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><p><span>&lt;font size=&quot;5&quot; Cyclone G30 用戶使用手冊</span></font></p><div style="text-align:right;border:1px solid red">
+version v1.7.8<br>
+zhangxianda 2022-02-16<br>
+</div><figure><table><thead><tr><th><span>序号</span></th><th><span>版本号</span></th><th><span>更新内容</span></th><th><span>更改人</span></th><th><span>更改时间</span></th></tr></thead><tbody><tr><td><span>0</span></td><td><span>v1.0.6</span></td><td><span>CycloneG30 V1.0.6</span></td><td><span>张献达</span></td><td><span>2021-07-07</span></td></tr><tr><td><span>1</span></td><td><span>v1.0.7</span></td><td><span>CycloneG30 V1.0.7</span></td><td><span>张献达</span></td><td><span>2021-07-08</span></td></tr><tr><td><span>2</span></td><td><span>v1.0.9</span></td><td><span>CycloneG30 V1.0.9</span></td><td><span>张献达</span></td><td><span>2021-08-02</span></td></tr><tr><td><span>3</span></td><td><span>v1.1.0</span></td><td><span>CycloneG30 V1.1.0</span></td><td><span>张献达</span></td><td><span>2021-08-18</span></td></tr><tr><td><span>4</span></td><td><span>v1.1.2</span></td><td><span>CycloneG30 V1.1.2</span></td><td><span>张献达</span></td><td><span>2021-08-26</span></td></tr><tr><td><span>5</span></td><td><span>v1.1.5</span></td><td><span>CycloneG30 V1.1.5</span></td><td><span>张献达</span></td><td><span>2021-09-11</span></td></tr><tr><td><span>6</span></td><td><span>v1.7.8</span></td><td><span>CycloneG30 V1.7.8</span></td><td><span>张献达</span></td><td><span>2021-02-16</span></td></tr></tbody></table></figure><h1 id='目录'><span>目录</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n54"><a class="md-toc-inner" href="#目录">目录</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n59"><a class="md-toc-inner" href="#1设备连接">1.设备连接</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n60"><a class="md-toc-inner" href="#11硬件连接">1.1硬件连接:</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n63"><a class="md-toc-inner" href="#12-usb驱动安装">1.2 USB驱动安装</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n68"><a class="md-toc-inner" href="#13软件连接">1.3软件连接：</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n72"><a class="md-toc-inner" href="#2界面ui介绍">2.界面UI介绍</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n80"><a class="md-toc-inner" href="#3菜单栏介绍">3.菜单栏介绍</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n81"><a class="md-toc-inner" href="#31-文件菜单">3.1 文件菜单</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n82"><a class="md-toc-inner" href="#311-开启opengl">3.1.1 开启OpenGl</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n85"><a class="md-toc-inner" href="#312-退出">3.1.2 退出</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n88"><a class="md-toc-inner" href="#32-tool菜单">3.2 Tool菜单</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n91"><a class="md-toc-inner" href="#321-console调试窗口">3.2.1 Console调试窗口</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n94"><a class="md-toc-inner" href="#322-lvds数据crc-check">3.2.2 LVDS数据CRC Check</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n96"><a class="md-toc-inner" href="#3221通过crc校验数据">3.2.2.1通过CRC校验数据</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n99"><a class="md-toc-inner" href="#3222-打印校验失败的记录">3.2.2.2 打印校验失败的记录</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n102"><a class="md-toc-inner" href="#323-eanble-all-stream-print">3.2.3 Eanble all stream print</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n104"><a class="md-toc-inner" href="#324-temperature">3.2.4 Temperature</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n116"><a class="md-toc-inner" href="#325-udp-test-mode">3.2.5 Udp Test Mode</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n119"><a class="md-toc-inner" href="#326-simulate-data-mode">3.2.6 Simulate Data Mode</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n123"><a class="md-toc-inner" href="#33-help帮助菜单">3.3 Help帮助菜单</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n124"><a class="md-toc-inner" href="#331-用户操作手册">3.3.1 用户操作手册</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n126"><a class="md-toc-inner" href="#332-软件信息">3.3.2 软件信息</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n129"><a class="md-toc-inner" href="#4--配置界面configuration">4 . 配置界面Configuration</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n131"><a class="md-toc-inner" href="#41初始化配置">4.1初始化配置</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n133"><a class="md-toc-inner" href="#42-自定义配置">4.2 自定义配置</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n134"><a class="md-toc-inner" href="#421编辑自定义配置文件">4.2.1编辑自定义配置文件</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n138"><a class="md-toc-inner" href="#422-加载自定义配置文件">4.2.2 加载自定义配置文件</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n141"><a class="md-toc-inner" href="#43-afe模拟转换配置">4.3 AFE模拟转换配置</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n147"><a class="md-toc-inner" href="#44-其他配置">4.4 其他配置</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n148"><a class="md-toc-inner" href="#441-asic高低功耗配置">4.4.1 ASIC高低功耗配置</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n152"><a class="md-toc-inner" href="#5寄存器界面register">5.寄存器界面Register</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n156"><a class="md-toc-inner" href="#51寄存器表加载功能">5.1寄存器表加载功能</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n163"><a class="md-toc-inner" href="#52寄存器搜索功能">5.2寄存器搜索功能：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n166"><a class="md-toc-inner" href="#53-寄存器表读写操作">5.3 寄存器表读写操作</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n167"><a class="md-toc-inner" href="#531修改寄存器值">5.3.1修改寄存器值</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n181"><a class="md-toc-inner" href="#532-寄存器值读写功能">5.3.2 寄存器值读写功能</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n193"><a class="md-toc-inner" href="#53-段域表读写操作">5.3 段域表读写操作</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n194"><a class="md-toc-inner" href="#531修改域表位值">5.3.1修改域表位值</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n211"><a class="md-toc-inner" href="#532-段域读写功能">5.3.2 段域读写功能</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n217"><a class="md-toc-inner" href="#54-寄存器读写功能">5.4 寄存器读写功能</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n229"><a class="md-toc-inner" href="#55寄存器命令调试">5.5寄存器命令调试</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n232"><a class="md-toc-inner" href="#6data-analysis数据分析">6.Data analysis数据分析</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n259"><a class="md-toc-inner" href="#61-save-保存数据面板">6.1 Save 保存数据面板</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n262"><a class="md-toc-inner" href="#611-保存原始数据">6.1.1 保存原始数据</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n264"><a class="md-toc-inner" href="#612-保存选项json设置">6.1.2 保存选项Json设置</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n265"><a class="md-toc-inner" href="#6121-config选项">6.1.2.1 Config选项</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n276"><a class="md-toc-inner" href="#6122-加载现有的参数配置">6.1.2.2 加载现有的参数配置</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n278"><a class="md-toc-inner" href="#6123-保存配置参数">6.1.2.3 保存配置参数</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n280"><a class="md-toc-inner" href="#613-保存设置">6.1.3 保存设置</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n281"><a class="md-toc-inner" href="#6131-保存文件大小设置">6.1.3.1 保存文件大小设置</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n284"><a class="md-toc-inner" href="#6132-选择数据保存目录">6.1.3.2 选择数据保存目录</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n286"><a class="md-toc-inner" href="#6133-打开数据保存目录">6.1.3.3 打开数据保存目录</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n289"><a class="md-toc-inner" href="#614-设置倒计时时间">6.1.4 设置倒计时时间</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n292"><a class="md-toc-inner" href="#6141显示倒计时">6.1.4.1显示倒计时</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n294"><a class="md-toc-inner" href="#6142重置倒计时时间">6.1.4.2重置倒计时时间</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n296"><a class="md-toc-inner" href="#6143自动停止并保存数据">6.1.4.3自动停止并保存数据</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n298"><a class="md-toc-inner" href="#6144-自动停止数据保存">6.1.4.4 自动停止数据保存</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n300"><a class="md-toc-inner" href="#6145-其他说明">6.1.4.5 其他说明</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n302"><a class="md-toc-inner" href="#615-数据翻译转换">6.1.5 数据翻译转换</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n305"><a class="md-toc-inner" href="#6151-将二进制数据转换为文本数据">6.1.5.1 将二进制数据转换为文本数据</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n307"><a class="md-toc-inner" href="#6152-打开文本数据文件">6.1.5.2 打开文本数据文件</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n309"><a class="md-toc-inner" href="#616-数据波形图回放">6.1.6 数据波形图回放</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n317"><a class="md-toc-inner" href="#6161-加载数据文件">6.1.6.1 加载数据文件</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n326"><a class="md-toc-inner" href="#6162-重置数据">6.1.6.2 重置数据</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n328"><a class="md-toc-inner" href="#62-mux-sensor选择面板">6.2 Mux Sensor选择面板</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n331"><a class="md-toc-inner" href="#621-所有通道sensor切换">6.2.1 所有通道Sensor切换</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n349"><a class="md-toc-inner" href="#622-自选通道sensor切换">6.2.2 自选通道Sensor切换</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n362"><a class="md-toc-inner" href="#623-定时degating模块">6.2.3 定时degating模块</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n366"><a class="md-toc-inner" href="#63-volt电压控制面板">6.3 Volt电压控制面板</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n368"><a class="md-toc-inner" href="#631-dac电压的设置和读取">6.3.1 DAC电压的设置和读取</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n372"><a class="md-toc-inner" href="#632-normalunblock电压设置">6.3.2 Normal/Unblock电压设置</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n375"><a class="md-toc-inner" href="#64-pore孔保护面板">6.4 Pore孔保护面板</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n377"><a class="md-toc-inner" href="#641-孔保护模块">6.4.1 孔保护模块</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n378"><a class="md-toc-inner" href="#6411孔保护模块说明">6.4.1.1孔保护模块说明</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n392"><a class="md-toc-inner" href="#6412-孔保护模块开启">6.4.1.2 孔保护模块开启</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n394"><a class="md-toc-inner" href="#6413-通道锁定">6.4.1.3 通道锁定</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n397"><a class="md-toc-inner" href="#642-std过滤">6.4.2 Std过滤</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n401"><a class="md-toc-inner" href="#65-muxscan多路扫描模块">6.5 MuxScan多路扫描模块</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n404"><a class="md-toc-inner" href="#651-模块说明">6.5.1 模块说明</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n416"><a class="md-toc-inner" href="#652-pore-qc">6.5.2 Pore Qc</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n419"><a class="md-toc-inner" href="#653-seq">6.5.3 Seq</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n422"><a class="md-toc-inner" href="#66-simulate电化学活化模块">6.6 Simulate电化学活化模块</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n424"><a class="md-toc-inner" href="#661-simulation">6.6.1 Simulation</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n425"><a class="md-toc-inner" href="#6611-参数说明">6.6.1.1 参数说明</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n446"><a class="md-toc-inner" href="#6611-开启模块">6.6.1.1 开启模块</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n448"><a class="md-toc-inner" href="#6612-软件逻辑">6.6.1.2 软件逻辑</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n461"><a class="md-toc-inner" href="#662-polymer-simulate">6.6.2 Polymer simulate</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n463"><a class="md-toc-inner" href="#6621-参数说明">6.6.2.1 参数说明</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n481"><a class="md-toc-inner" href="#6622-开启模块">6.6.2.2 开启模块</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n483"><a class="md-toc-inner" href="#6623-软件逻辑">6.6.2.3 软件逻辑</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n491"><a class="md-toc-inner" href="#67-autoscan自动扫描模块">6.7 AutoScan自动扫描模块</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n494"><a class="md-toc-inner" href="#671-功能用途">6.7.1 功能用途</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n496"><a class="md-toc-inner" href="#672-功能使用">6.7.2 功能使用</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n498"><a class="md-toc-inner" href="#673-功能模块流程">6.7.3 功能模块流程</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n500"><a class="md-toc-inner" href="#674-scan-group">6.7.4 Scan Group</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n501"><a class="md-toc-inner" href="#6741参数解释">6.7.4.1参数解释</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n509"><a class="md-toc-inner" href="#6742目的">6.7.4.2目的</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n511"><a class="md-toc-inner" href="#6743内部操作逻辑">6.7.4.3内部操作逻辑      </a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n513"><a class="md-toc-inner" href="#675-valid-qc">6.7.5 Valid Qc</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n514"><a class="md-toc-inner" href="#6751参数解释">6.7.5.1参数解释</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n524"><a class="md-toc-inner" href="#6752目的">6.7.5.2目的</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n526"><a class="md-toc-inner" href="#6753内部操作逻辑">6.7.5.3内部操作逻辑   </a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n532"><a class="md-toc-inner" href="#676-porefilt">6.7.6 PoreFilt</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n533"><a class="md-toc-inner" href="#6761-参数解释">6.7.6.1 参数解释</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n543"><a class="md-toc-inner" href="#6762-目的">6.7.6.2 目的</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n545"><a class="md-toc-inner" href="#6763-内部操作逻辑">6.7.6.3 内部操作逻辑</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n547"><a class="md-toc-inner" href="#677-degating">6.7.7 Degating</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n548"><a class="md-toc-inner" href="#6771-参数解释">6.7.7.1 参数解释</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n550"><a class="md-toc-inner" href="#6772-目的">6.7.7.2 目的</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n552"><a class="md-toc-inner" href="#6773-内部操作逻辑">6.7.7.3 内部操作逻辑</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n554"><a class="md-toc-inner" href="#68-电流曲线模块">6.8 电流曲线模块</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n557"><a class="md-toc-inner" href="#681-设置xy轴坐标">6.8.1 设置XY轴坐标</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n568"><a class="md-toc-inner" href="#682-设置可视化通道">6.8.2 设置可视化通道</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n577"><a class="md-toc-inner" href="#69-curves-configuration">6.9 Curves configuration</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n580"><a class="md-toc-inner" href="#691-曲线颜色及可见性设置">6.9.1 曲线颜色及可见性设置</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n588"><a class="md-toc-inner" href="#692-平均值和标准差查看">6.9.2 平均值和标准差查看</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n591"><a class="md-toc-inner" href="#693-通道sensor组和valid查看">6.9.3 通道Sensor组和Valid查看</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n594"><a class="md-toc-inner" href="#694-筛选模块">6.9.4 筛选模块</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n607"><a class="md-toc-inner" href="#695-avgstd筛选模块">6.9.5 AvgStd筛选模块</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n633"><a class="md-toc-inner" href="#610-mapping映射图表">6.10 Mapping映射图表</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n637"><a class="md-toc-inner" href="#6101-通道号显示隐藏">6.10.1 通道号显示/隐藏</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n640"><a class="md-toc-inner" href="#6102-功能状态统计">6.10.2 功能状态统计</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n642"><a class="md-toc-inner" href="#6103-功能状态颜色更改">6.10.3 功能状态颜色更改</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n644"><a class="md-toc-inner" href="#6104-sensor状态表">6.10.4 Sensor状态表</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n646"><a class="md-toc-inner" href="#61041-sensor状态描述">6.10.4.1 Sensor状态描述</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n670"><a class="md-toc-inner" href="#61042-sensor状态更新">6.10.4.2 Sensor状态更新</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n672"><a class="md-toc-inner" href="#6105-ovf状态表">6.10.5 OVF状态表</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n675"><a class="md-toc-inner" href="#61051-ovf状态描述">6.10.5.1 OVF状态描述</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n682"><a class="md-toc-inner" href="#61052-ovf状态更新">6.10.5.2 OVF状态更新</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n684"><a class="md-toc-inner" href="#61053-关断ovf通道">6.10.5.3 关断OVF通道</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n686"><a class="md-toc-inner" href="#61054-lock-ovf通道">6.10.5.4 Lock OVF通道</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n688"><a class="md-toc-inner" href="#61055-清除ovf标识">6.10.5.5 清除OVF标识</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n690"><a class="md-toc-inner" href="#6106-cap状态表">6.10.6 Cap状态表</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n693"><a class="md-toc-inner" href="#61061-cap状态描述">6.10.6.1 Cap状态描述</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n705"><a class="md-toc-inner" href="#61062-cap电容检测">6.10.6.2 Cap电容检测</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n707"><a class="md-toc-inner" href="#61063-cap电容值显示">6.10.6.3 Cap电容值显示</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n709"><a class="md-toc-inner" href="#61064-cap电容保存">6.10.6.4 Cap电容保存</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n712"><a class="md-toc-inner" href="#61065-cap状态清除">6.10.6.5 Cap状态清除</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n714"><a class="md-toc-inner" href="#6107-pore状态表">6.10.7 Pore状态表</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n717"><a class="md-toc-inner" href="#61071-pore状态描述">6.10.7.1 Pore状态描述</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n731"><a class="md-toc-inner" href="#61072-pore标识组">6.10.7.2 Pore标识组</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n733"><a class="md-toc-inner" href="#61073-pore状态更新">6.10.7.3 Pore状态更新</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n735"><a class="md-toc-inner" href="#61074-pore状态统计">6.10.7.4 Pore状态统计</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n737"><a class="md-toc-inner" href="#61075-pore状态清除">6.10.7.5 Pore状态清除</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n739"><a class="md-toc-inner" href="#6108-lock状态表">6.10.8 Lock状态表</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n741"><a class="md-toc-inner" href="#61081-lock标识解释">6.10.8.1 Lock标识解释</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n752"><a class="md-toc-inner" href="#61082-lock标识组">6.10.8.2 Lock标识组</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n754"><a class="md-toc-inner" href="#61083-自动扫描scan">6.10.8.3 自动扫描Scan</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n755"><a class="md-toc-inner" href="#610831-扫描顺序">6.10.8.3.1 扫描顺序</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n762"><a class="md-toc-inner" href="#610832-软件逻辑">6.10.8.3.2 软件逻辑</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n764"><a class="md-toc-inner" href="#610833-一键操作">6.10.8.3.3 一键操作</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n766"><a class="md-toc-inner" href="#61084-手动修改标识">6.10.8.4 手动修改标识</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n767"><a class="md-toc-inner" href="#610841-手动标识为allow">6.10.8.4.1 手动标识为Allow</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n769"><a class="md-toc-inner" href="#610841-手动标识为prohibited">6.10.8.4.1 手动标识为Prohibited</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n771"><a class="md-toc-inner" href="#61085-其他功能">6.10.8.5 其他功能</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n772"><a class="md-toc-inner" href="#610851-手动置为normal">6.10.8.5.1 手动置为Normal</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n774"><a class="md-toc-inner" href="#610852-手动置为unblock">6.10.8.5.2 手动置为Unblock</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n776"><a class="md-toc-inner" href="#61086-重新统计标识">6.10.8.6 重新统计标识</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n778"><a class="md-toc-inner" href="#61086-清除标识">6.10.8.6 清除标识</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n781"><a class="md-toc-inner" href="#6109-valid状态表">6.10.9 Valid状态表</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n784"><a class="md-toc-inner" href="#61091-valid标识描述">6.10.9.1 Valid标识描述</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n792"><a class="md-toc-inner" href="#61092-valid标识组">6.10.9.2 Valid标识组</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n794"><a class="md-toc-inner" href="#61093-手动标识valid">6.10.9.3 手动标识Valid</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n808"><a class="md-toc-inner" href="#61094-自动标识valid">6.10.9.4 自动标识Valid</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n810"><a class="md-toc-inner" href="#61094-重新统计标识valid">6.10.9.4 重新统计标识Valid</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n812"><a class="md-toc-inner" href="#61095-清除统计标识valid">6.10.9.5 清除统计标识Valid</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n814"><a class="md-toc-inner" href="#61010-mux状态表">6.10.10 Mux状态表</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n817"><a class="md-toc-inner" href="#610101-mux状态标识描述">6.10.10.1 Mux状态标识描述</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n828"><a class="md-toc-inner" href="#610102-mux状态标识目的用途">6.10.10.2 Mux状态标识目的用途</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n830"><a class="md-toc-inner" href="#610103-mux状态标识软件逻辑">6.10.10.3 Mux状态标识软件逻辑</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n839"><a class="md-toc-inner" href="#610104-标识随机分配random">6.10.10.4 标识随机分配Random</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n841"><a class="md-toc-inner" href="#610105-标识顺移分配mux">6.10.10.5 标识顺移分配Mux</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n843"><a class="md-toc-inner" href="#610106-mux标识重新统计">6.10.10.6 Mux标识重新统计</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n845"><a class="md-toc-inner" href="#61010ss7-mux标识清除">6.10.10ss.7 Mux标识清除</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n847"><a class="md-toc-inner" href="#611-chart图表统计">6.11 Chart图表统计</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n850"><a class="md-toc-inner" href="#6111-sensor占比统计">6.11.1 Sensor占比统计</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n851"><a class="md-toc-inner" href="#61111-sensor统计更新">6.11.1.1 Sensor统计更新</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n854"><a class="md-toc-inner" href="#6112-cap-level统计">6.11.2 Cap Level统计</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n856"><a class="md-toc-inner" href="#61121--cap-level统计更新">6.11.2.1  Cap Level统计更新</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n858"><a class="md-toc-inner" href="#6113-pore-占比统计">6.11.3 Pore 占比统计</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n860"><a class="md-toc-inner" href="#61131--pore-占比统计更新">6.11.3.1  Pore 占比统计更新</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n862"><a class="md-toc-inner" href="#6114-valid统计">6.11.4 Valid统计</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n864"><a class="md-toc-inner" href="#61141--valid统计更新">6.11.4.1  Valid统计更新</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n866"><a class="md-toc-inner" href="#6115-reads-adapters统计">6.11.5 Reads Adapters统计</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n869"><a class="md-toc-inner" href="#61151--reads-adapters记录">6.11.5.1  Reads Adapters记录</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n871"><a class="md-toc-inner" href="#61152-reads-adapters统计更新">6.11.5.2 Reads Adapters统计更新</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n873"><a class="md-toc-inner" href="#7-log日志">7 Log日志</a></span></p></div><p>&nbsp;</p><p>&nbsp;</p><h2 id='1设备连接'><span>1.设备连接</span></h2><h3 id='11硬件连接'><span>1.1硬件连接:</span></h3><p><span>用USB设备线缆连接主控板USB口和PC USB3.0设备口，在计算机，设备管理窗口查看是否显示正常USB设备，如x下图正常显示FTDI FT601 USB 3.0Bridge Device，则表示设备正常，如其他请考虑是否设备驱动未正常安装</span></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210627223651288.png" alt="image-20210627223651288" style="zoom: 80%;" /></p><h3 id='12-usb驱动安装'><span>1.2 USB驱动安装</span></h3><p><span>如若未正常安装设备驱动，显示如图</span><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210707101912256.png" referrerpolicy="no-referrer" alt="image-20210707101912256"></p><p><span>请前网FTD官网下载D3XX驱动包进行安装</span><a href='http://www.ftdichip.cn/Drivers/D3XX.htm' target='_blank' class='url'>http://www.ftdichip.cn/Drivers/D3XX.htm</a></p><p><span>请右键选择-&gt;更新驱动程序-&gt;浏览我的计算机以查找我的驱动程序文件-&gt;选择驱动包位置-&gt;下一步-&gt;完成安装</span></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210707102404521.png" referrerpolicy="no-referrer" alt="image-20210707102404521"><span>!</span><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210707102455208.png" referrerpolicy="no-referrer" alt="image-20210707102455208"></p><h3 id='13软件连接'><span>1.3软件连接：</span></h3><p><span>命令控制：工具栏</span><strong><span>搜索连接USB设备</span></strong><span>-&gt;</span><strong><span>连接设备</span></strong><span>即可，目前</span><strong><span>命令控制</span></strong><span> 通过USB设备下发给FPGA。</span></p><p><span>数据流收发：工具栏</span><strong><span>搜索网口IP</span></strong><span>-&gt;</span><strong><span>开始接收数据</span></strong><span>即可，LVDS数据流通过网口上传至PC；</span></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220214161506983.png" referrerpolicy="no-referrer" alt="image-20220214161506983"></p><h2 id='2界面ui介绍'><span>2.界面UI介绍</span></h2><p><span>主界面如下图，包括菜单栏，工具栏，界面选择列表，界面功能以及状态栏</span></p><p><strong><span>界面包括</span></strong></p><p><span>①配置界面Configuration：主要的板级初始化设置，加载配置设置，AFE模拟设置，其他设置</span></p><p><span>②寄存器映射表Register：有关寄存器的设置和读取</span></p><p><span>③数据界面Data analysis:  LVDS的数据抓取和相应的测序功能</span></p><p><span>④日志界面 LogPanel ： 程序诊断日志</span></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220214162126227.png" referrerpolicy="no-referrer" alt="image-20220214162126227"></p><h2 id='3菜单栏介绍'><span>3.菜单栏介绍</span></h2><h3 id='31-文件菜单'><span>3.1 文件菜单</span></h3><h4 id='311-开启opengl'><span>3.1.1 开启OpenGl</span></h4><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220214163354646.png" referrerpolicy="no-referrer" alt="image-20220214163354646"><span>	</span></p><p><span>File-&gt;Enable OpenGL 开启硬件加速，再次点击关闭该功能；</span></p><h4 id='312-退出'><span>3.1.2 退出</span></h4><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220214163529578.png" referrerpolicy="no-referrer" alt="image-20220214163529578"><span>	</span></p><p><span>File-&gt;Exit 软件退出；</span></p><h3 id='32-tool菜单'><span>3.2 Tool菜单</span></h3><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220214163839156.png" alt="image-20220214163839156"  style="float: left;"/></span></p><p><span>Tool 工具栏包括:Console;CRC校验;使能数据流打印，温控，UDP测试模式，模拟数据模式，</span></p><h4 id='321-console调试窗口'><span>3.2.1 Console调试窗口</span></h4><p><span>调试窗口，便于显示打印采集数据，问题定位，可在</span><strong><span>菜单栏Tool-&gt;Console 选择是否显示调试窗口</span></strong><span>。</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210802164757855.png" alt="image-20210802164757855" style="zoom:80%; float:left;" /></span></p><h4 id='322-lvds数据crc-check'><span>3.2.2 LVDS数据CRC Check</span></h4><p><span>CRC Check 勾选是否使能： 如果使能，则原始数据则会通过CRC8校验法则进行校验，通过校验则进一步解析，不通过则可选择打印；具体校验规则详见ASIC芯片规格书；</span></p><h5 id='3221通过crc校验数据'><span>3.2.2.1通过CRC校验数据</span></h5><p><span>可通过菜单栏Tool-&gt;CRC Check-&gt;</span><strong><span>Pass CRC correct data</span></strong><span>，则只通过CRC校验通过的数据，再次点击则取消，允许全部数据通过，</span><strong><span>默认通过所有数据</span></strong><span>。</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220214170206573.png" alt="image-20220214170206573" style= "float:left;" /></span></p><h5 id='3222-打印校验失败的记录'><span>3.2.2.2 打印校验失败的记录</span></h5><p><span>可通过菜单栏Tool-&gt;CRC Check-&gt;</span><strong><span>Enable failed CRC print</span></strong><span>，点击打印记录，再次点击取消打印</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210818163728187.png" alt="image-20210818163728187" style="zoom:50%;float:left;"/></span></p><h4 id='323-eanble-all-stream-print'><span>3.2.3 Eanble all stream print</span></h4><p><span>Eanble all stream print勾选是否使能： 使能-&gt;打印所有原始数据流</span><span>	</span><span>不使能-&gt;不打印</span></p><h4 id='324-temperature'><span>3.2.4 Temperature</span></h4><p><span>温控模块为外部单独程序支持，在开启温控进程时，每秒更新温度值到当前主程序界面；</span><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220216112413737.png" alt="image-20220216112413737" style="zoom:80%;" /></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220216112450128.png" alt="image-20220216112450128" style= "zoom:100%; float:left;" /></span></p><p>&nbsp;</p><ul><li><p><span>状态解释</span></p><ul><li><span>Error 外部温控进程未开启</span></li><li><span>Off    进程开启，温控设备未连接；</span></li></ul></li></ul><h4 id='325-udp-test-mode'><span>3.2.5 Udp Test Mode</span></h4><p><span>Udp测试模块，勾选是否使能；会发送测试命令给FPGA，FPGA会返回一系列连续自增的数据流给PC，此功能用来验证数据流是否正常和连续；调试收发数据性能；打印TestMode 下的原始数据，为验证Udp所有数据，所以不画曲线，全打印Hex值。需配合FPGA测试固件使用；</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210826170842060.png" alt="image-20210826170842060" style="zoom: 80%;float:left;" /></span></p><h4 id='326-simulate-data-mode'><span>3.2.6 Simulate Data Mode</span></h4><p><span>模拟数据流功能，勾选是否使能；勾选后数据流将会停止从ASIC中读取，而是由SavePanel中加载数据文件作为输入源替代，以适应某些开发调试或者测试环境使用；</span></p><p><span>Tool-&gt;Simulate Data Mode-&gt;SavePanel 选择数据流文件夹-&gt; 开始收集数据</span></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220214171600632.png" referrerpolicy="no-referrer" alt="image-20220214171600632"></p><h3 id='33-help帮助菜单'><span>3.3 Help帮助菜单</span></h3><h4 id='331-用户操作手册'><span>3.3.1 用户操作手册</span></h4><p><span>Help-&gt;User Guide，点击即可出现用户手册PDF</span></p><h4 id='332-软件信息'><span>3.3.2 软件信息</span></h4><p><span>Help-&gt;About，点击即可出现关于此软件的版本信息，升级日志；</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220214173553804.png" alt="image-20220214173553804" style="float: left;" /></span></p><h2 id='4--配置界面configuration'><span>4 . 配置界面Configuration</span></h2><p><span>配置模块包括初始化配置，ASIC-AFE配置，自定义配置，其他配置；</span></p><h4 id='41初始化配置'><span>4.1初始化配置</span></h4><p><span>SysConfig-&gt;Initial 点击即可发送初始化指令至ASIC板，同时读取ASIC AFE中的配置，具体发送内容在软件中固定；</span></p><h4 id='42-自定义配置'><span>4.2 自定义配置</span></h4><h5 id='421编辑自定义配置文件'><span>4.2.1编辑自定义配置文件</span></h5><p><span>选择软件运行目录下 etc/Conf/LoadReg.csv，用EXCEL打开编辑， destination 目前支持ASIC，ID代号为1，自行增加修改ASIC addr和Value 列值，第四列是每条命令之间的</span><strong><span>间隔延时(单位ms)，不延时填写0，请勿空着，空着则格式无效</span></strong><span>，填写合格范围值保存即可。</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210707100132883.png" alt="image-20210707100132883" style= "float:left;" /></span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210627234156246.png" alt="image-20210627234156246" style= "float:left;"   /></span></p><h5 id='422-加载自定义配置文件'><span>4.2.2 加载自定义配置文件</span></h5><p><span>为方便快速调试，添加刚刚编辑的CSV表进行快速指令下发，点击LoadReg按钮-&gt;选择etc/Conf/LoadReg.csv文件-&gt;打开即发送指令。</span></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210627233833371.png" alt="image-20210627233833371" style="zoom:80%;" /><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210627234002507.png" alt="image-20210627234002507" style="zoom:80%;" /></p><h4 id='43-afe模拟转换配置'><span>4.3 AFE模拟转换配置</span></h4><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210911170825654.png" referrerpolicy="no-referrer" alt="image-20210911170825654"></p><p><strong><span>ADC sample rate</span></strong><span>: 请选择采样率：5K/10K/20K/3.75K,默认是5K</span><br/><strong><span>Raw or ADC Mode</span></strong><span> :选择RawData模式(范围0-65536) ,还是ADC out模式(-32768 - 32768) 对应ASIC addr A0 bit[23] SARADC_RAW;</span>
+<strong><span>Convert to current:</span></strong><span> 选择是否转换为pA电流</span>
+<strong><span>Input current range:</span></strong><span> 选择电流对应关系进行转换，具体参考下表格，详见LVDSTransform.csv</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220214174738446.png" alt="image-20220214174738446"  style= "float:left;" /></span></p><p><span>写入： 配置相应转换选项-&gt; Write Configuration；</span></p><p><span>读取:</span><span>	</span><span>点击即可Read Configuration</span></p><h4 id='44-其他配置'><span>4.4 其他配置</span></h4><h5 id='441-asic高低功耗配置'><span>4.4.1 ASIC高低功耗配置</span></h5><p><span>写入：Power consumption: </span><strong><span>Low</span></strong><span>-&gt;低功耗 </span><strong><span>High</span></strong><span>-&gt;高功耗，选择相应功耗选项-&gt; Write Configuration；</span></p><p><span>读取:</span><span>	</span><span>点击即可Read Configuration</span></p><p><span>功耗标识：低功耗 </span><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220214175703649.png" referrerpolicy="no-referrer" alt="image-20220214175703649"><span> 高功耗</span><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220214175724893.png" referrerpolicy="no-referrer" alt="image-20220214175724893"></p><h2 id='5寄存器界面register'><span>5.寄存器界面Register</span></h2><p><span>左侧列表第二项-&gt;寄存器操作界面,主要为ASIC寄存器进行查看和配置</span></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220214175930658.png" referrerpolicy="no-referrer" alt="image-20220214175930658"></p><p><span>左表为所有的寄存器，右表为每个寄存器所对应的段域。</span></p><h3 id='51寄存器表加载功能'><span>5.1寄存器表加载功能</span></h3><ol start='' ><li><p><span>为方便编辑，寄存器表是通过</span><strong><span>加载XML表进行解析的</span></strong><span>，点击Reload Register table 可重新加载寄存器表格</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210707101229201.png" alt="image-20210707101229201" style="float: left;" /></span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210627231300314.png" alt="image-20210627231300314" style="zoom: 100%; float: left;" /></span></p><p><span>全部恢复默认值，按钮点击</span><strong><span>All reset default</span></strong></p></li></ol><h3 id='52寄存器搜索功能'><span>5.2寄存器搜索功能：</span></h3><p><span>左边下方，选择搜索的类型，可以填入寄存器对应的</span><strong><span>地址/寄存器名称/Id</span></strong><span>, 点击</span><strong><span>Search</span></strong><span>，便可进行筛选符合的结果，如果需要重新显示全部寄存器，点击</span><strong><span>Display Whole Table</span></strong><span>即可</span></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210627225226341.png" referrerpolicy="no-referrer" alt="image-20210627225226341"></p><h3 id='53-寄存器表读写操作'><span>5.3 寄存器表读写操作</span></h3><h4 id='531修改寄存器值'><span>5.3.1修改寄存器值</span></h4><ol start='' ><li><p><span>左表中选择相应的寄存器，在</span><strong><span>Value</span></strong><span>列双击即可修改其值；</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210708171151547.png" alt="image-20210708171151547" style= "zoom:100%; float:left;"  /></span></p></li><li><p><span>值</span><strong><span>修改后</span></strong><span>颜色为</span><strong><span>黄色</span></strong><span>，表示值曾被修改过；点击Submit Change提交修改，点解Revert Change撤销修改，颜色恢复绿色</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210708171428241.png" alt="image-20210708171428241" style= "zoom:100%; float:left;"   /></span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210708171434678.png" alt="image-20210708171434678" style= "zoom:100%; float:left;"   /></span></p></li><li><p><span>修改的</span><strong><span>Value值</span></strong><span>将会</span><strong><span>自动更新到</span></strong><span>右表所有的段域，又或者点击</span><strong><span>Sync</span></strong><span> 按键强制刷新同样达到更新右表的效果；</span></p></li><li><p><span>点击</span><strong><span>All reset default</span></strong><span> 按钮恢复所有默认值到寄存器表。</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210708171613688.png" alt="image-20210708171613688" style="float: left;" /></span></p></li></ol><h4 id='532-寄存器值读写功能'><span>5.3.2 寄存器值读写功能</span></h4><ol start='' ><li><p><span>支持</span><strong><span>一键全读/全写</span></strong><span>，点击</span><strong><span>All read /All write</span></strong><span> 即可。</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210708171924408.png" alt="image-20210708171924408" style= "zoom:100%; float:left;"   /></span></p></li><li><p><span>支持</span><strong><span>选择性读/写/写读</span></strong><span>，</span><strong><span>右键选择菜单Read-Only/ Write-Only /Write-Read</span></strong></p></li><li><p><strong><span>读失败标识为红色</span></strong><span>，重新读取成功取消标红。</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210709111855502.png" alt="image-20210709111855502" style= "zoom:100%; float:left;"   /></span></p></li></ol><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210708172239198.png" alt="image-20210708172239198" style= "zoom:100%; float:left;"   /></span></p><p>&nbsp;</p><h3 id='53-段域表读写操作'><span>5.3 段域表读写操作</span></h3><h4 id='531修改域表位值'><span>5.3.1修改域表位值</span></h4><ol start='' ><li><p><span>右表相应行中</span><strong><span>双击Value</span></strong><span>值进行更改值，其大小限制为取决于Bits 列的限制；</span></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210708172542795.png" referrerpolicy="no-referrer" alt="image-20210708172542795"></p></li><li><p><span>值</span><strong><span>修改后</span></strong><span>颜色为</span><strong><span>黄色</span></strong><span>，表示值曾被修改过；点击Submit Change提交修改，点解Revert Change撤销修改，颜色恢复绿色</span></p><p>&nbsp;</p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210708172615802.png" referrerpolicy="no-referrer" alt="image-20210708172615802"></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210707100736154.png" referrerpolicy="no-referrer" alt="image-20210707100736154"></p></li><li><p><span>按键说明：</span></p><p><strong><span>sync</span></strong><span>：将左表中寄存器的值按照右表位的分布进行全段域更新；</span></p><p><strong><span>Reset Default</span></strong><span>：恢复所有段域位的Value值为默认值</span></p><p><strong><span>Submit Change</span></strong><span>：确认更改，若有黄色则消失</span></p><p><strong><span>Revert Change</span></strong><span>:撤销更改，恢复上次的值，若有黄色则消失</span></p><p>&nbsp;</p></li></ol><h4 id='532-段域读写功能'><span>5.3.2 段域读写功能</span></h4><p><span>按键说明：</span></p><p><strong><span>Read-Only</span></strong><span>: 只读该寄存器值</span></p><p><strong><span>Write-Only</span></strong><span>:只写该寄存器值, 在</span><strong><span>写之前需提交是否修改更改的域</span></strong><span>；</span></p><p><strong><span>Write-Read</span></strong><span>:写完再读该寄存器值</span></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210708173253701.png" referrerpolicy="no-referrer" alt="image-20210708173253701"></p><h3 id='54-寄存器读写功能'><span>5.4 寄存器读写功能</span></h3><ol start='' ><li><p><span>可在左表对相应寄存器进行</span><strong><span>读写</span></strong><span>，</span><strong><span>右键菜单栏选择S</span></strong><span>，然后选择：</span></p><p><strong><span>Send: 只写不读</span></strong>
+<strong><span>Read:只读不写</span></strong>
+<strong><span>WriteRead:即写即读(目前不支持)</span></strong></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210707102751251.png" referrerpolicy="no-referrer" alt="image-20210707102751251"></p></li><li><p><span>支持全读/全写，通过按钮点击</span><strong><span>All read  , All write</span></strong></p></li></ol><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210707101027296.png" referrerpolicy="no-referrer" alt="image-20210707101027296"></p><p><span>②或者</span><strong><span>直接点击右表中的按钮进行读写当前寄存器的地址和值</span></strong></p><p><span>支持单个寄存器独立读/写/读写，通过点击按钮</span><strong><span>Read-Only , Write-Only, Single Write Read</span></strong></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210707103403883.png" referrerpolicy="no-referrer" alt="image-20210707103403883"></p><h3 id='55寄存器命令调试'><span>5.5寄存器命令调试</span></h3><p><span>Register-&gt;Comunicate-&gt;输入Hex命令(eg: 55 AA FF 02 00 00 00 02 FA FA) -&gt; Write-&gt; Read</span></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215101805356.png" referrerpolicy="no-referrer" alt="image-20220215101805356"></p><h2 id='6data-analysis数据分析'><span>6.Data analysis数据分析</span></h2><p><span>Data analysis数据分析主要是抓取LVDS数据进行进一步分析以及相应的控制面板；</span></p><p><span>功能面板包括：</span></p><ul><li><span>Save保存数据面板</span></li><li><span>Mux Sensor选择面板</span></li><li><span>Volt 电压控制面板</span></li><li><span>Pore 孔保护面板</span></li><li><span>MuxScan 多路扫描面板</span></li><li><span>Simulate 电化学活化面板</span></li><li><span>AutoScan 自动扫描面板</span></li></ul><p><span>图像分析面板：</span></p><ul><li><p><span>Curves 电流曲线面板</span></p></li><li><p><span>Mapping 状态映射面板</span></p></li><li><p><span>Chart 图标面板</span></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215104701356.png" alt="image-20220215104701356" style="zoom:80%;" /></p></li></ul><h3 id='61-save-保存数据面板'><span>6.1 Save 保存数据面板</span></h3><p><span>功能用途：保存原始数据/配置实时分析模块/加载模拟数据</span></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215105055607.png" referrerpolicy="no-referrer" alt="image-20220215105055607"></p><h4 id='611-保存原始数据'><span>6.1.1 保存原始数据</span></h4><p><span>ChooseFloder-&gt; Start-&gt;开始保存数据，Stop停止保存数据；</span></p><h4 id='612-保存选项json设置'><span>6.1.2 保存选项Json设置</span></h4><h5 id='6121-config选项'><span>6.1.2.1 Config选项</span></h5><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215105520904.png" alt="image-20220215105520904" style="zoom:80%; float:left;" /></span></p><ul><li><span>“SequencerID” 测序机器编号</span></li><li><span>“StartTime”、“ EndTime “、” FolderPath”为自动 生成 ；</span></li><li><span>可选择是否启用实时测序分析</span></li><li><span>联网后的配置信息从服务器下载更新；</span></li></ul><h5 id='6122-加载现有的参数配置'><span>6.1.2.2 加载现有的参数配置</span></h5><p><span>“Load…”可以加载现有的 json参数配置文件</span></p><h5 id='6123-保存配置参数'><span>6.1.2.3 保存配置参数</span></h5><p><span>“Save “保存当前的配置参数到当前系统运行目录的 ./etc/ Data/ata/ “子目录下的 json文件</span></p><h4 id='613-保存设置'><span>6.1.3 保存设置</span></h4><h5 id='6131-保存文件大小设置'><span>6.1.3.1 保存文件大小设置</span></h5><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215110340091.png" alt="image-20220215110340091" style="zoom:80%;float:left;" /></span></p><p><span>默认大小值为128M，可以根据需要设置每个文件保存的大小。</span></p><h5 id='6132-选择数据保存目录'><span>6.1.3.2 选择数据保存目录</span></h5><p><span>“ChooseFolder“可选择数据保存目录，不选择则保存到默认路径；按钮左边文本框显示为保存路径。</span></p><h5 id='6133-打开数据保存目录'><span>6.1.3.3 打开数据保存目录</span></h5><p><span>“OpenFolder“可打开数据保存的目录；</span></p><p><span> 3 自动停止数据保存 </span></p><h4 id='614-设置倒计时时间'><span>6.1.4 设置倒计时时间</span></h4><p><span>编辑框内可以设置倒计时的时间，单位为分钟，范围为1min到1439min；</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215110833638.png" alt="image-20220215110833638" style="zoom:80%;float:left;" /></span></p><h5 id='6141显示倒计时'><span>6.1.4.1显示倒计时</span></h5><p><span>LED框可显示倒计时时间</span></p><h5 id='6142重置倒计时时间'><span>6.1.4.2重置倒计时时间</span></h5><p><span>“ResetAuto“可重置倒计时时间；</span></p><h5 id='6143自动停止并保存数据'><span>6.1.4.3自动停止并保存数据</span></h5><p><span>“StartAuto“点击开始启用自动停止收取数据和保存数据；</span></p><h5 id='6144-自动停止数据保存'><span>6.1.4.4 自动停止数据保存</span></h5><p><span>  “StartAuto“点击开始启用自动停止收取数据和保存数据；                             </span></p><h5 id='6145-其他说明'><span>6.1.4.5 其他说明</span></h5><p><span>启用自动停止并保存的同时，系统状态栏页会同步显示倒计时时间；</span></p><h4 id='615-数据翻译转换'><span>6.1.5 数据翻译转换</span></h4><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215111056812.png" alt="image-20220215111056812" style= "zoom:100%; float:left;"   /></span></p><p><span>对话框大小可以改变。</span></p><h5 id='6151-将二进制数据转换为文本数据'><span>6.1.5.1 将二进制数据转换为文本数据</span></h5><p><span>点击“Binary Translate to Text”按钮实现转换。</span></p><h5 id='6152-打开文本数据文件'><span>6.1.5.2 打开文本数据文件</span></h5><p><span>点击“Open Text File”按钮实现。</span></p><h4 id='616-数据波形图回放'><span>6.1.6 数据波形图回放</span></h4><ul><li><span>对话框大小可以改变；</span></li><li><span>可显示加载的数据文件路径；</span></li><li><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215111418313.png" alt="image-20220215111418313" style= "zoom:100%; float:left;"   /></li></ul><h5 id='6161-加载数据文件'><span>6.1.6.1 加载数据文件</span></h5><p><span>点击“Load Data”按钮加载数据，加载好如上图所示。此时可用鼠标操作：</span></p><ul><li><span>鼠标左键框选放大；</span></li><li><span>鼠标中键滚动缩放；</span></li><li><span>鼠标右键平移拖拽；</span></li></ul><h5 id='6162-重置数据'><span>6.1.6.2 重置数据</span></h5><p><span>点击“Reset Data”按钮重置数据为最初加载的样子。</span></p><h3 id='62-mux-sensor选择面板'><span>6.2 Mux Sensor选择面板</span></h3><p><span>功能包括：所有通道/部分通道Sensor状态切换以及 定时做所有通道做degating；</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215111923358.png" alt="image-20220215111923358" style= "zoom:100%; float:left;"   /></span></p><h4 id='621-所有通道sensor切换'><span>6.2.1 所有通道Sensor切换</span></h4><p><span>所有通道切换状态选项： A/B/C/D/Off/ Internal sources/Mux</span></p><ul><li><span>A: SensorA nomal，所有通道切换至SensorA</span></li><li><span>B: SensorB nomal，所有通道切换至SensorB</span></li><li><span>C: SensorC nomal，所有通道切换至SensorC</span></li><li><span>D: SensorD nomal，所有通道切换至SensorD</span></li><li><span>Off: Off ，所有通道切换至Off</span></li><li><span>Internal sources: internal current source，所有通道切换至内部电流源</span></li><li><span>Mux : 切换至混合模式，所有通道根据Valid表进行切换对应sensor</span></li></ul><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215112506060.png" alt="image-20220215112506060" style= "zoom:100%; float:left;"   /></span></p><h4 id='622-自选通道sensor切换'><span>6.2.2 自选通道Sensor切换</span></h4><p><span>输入Start开始通道号-&gt;End 结束通道号-&gt;选择State-&gt;applay</span></p><p><span>State: Normal/Unblock/InternalSources/Switch off</span></p><ul><li><span>Normal，所选相应通道号切换至Normal</span></li><li><span>Unblock，所选相应通道号切换至Unblock</span></li><li><span>InternalSources，所选相应通道号切换至InternalSources内部电流源</span></li><li><span>Switch off，所选相应通道号切换至Off</span></li></ul><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215112811225.png" alt="image-20220215112811225" style= "zoom:100%; float:left;"   /></span></p><h4 id='623-定时degating模块'><span>6.2.3 定时degating模块</span></h4><p><span>输入定时时间-&gt;Auto unblock使能，再次点击关闭使能</span></p><p><span>功能描述：当计时时间到，即开启一次将所有通道状态由当前Sensor状态设置为Unblock状态,持续一段时间(Degating设置延时时间ms)后再次恢复原来状态；此目的是为了定时处理堵孔情况；</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215113141801.png" alt="image-20220215113141801" style= "zoom:100%; float:left;"   /></span></p><h3 id='63-volt电压控制面板'><span>6.3 Volt电压控制面板</span></h3><p><span>设置DAC0,DAC1的电压与读取</span></p><h4 id='631-dac电压的设置和读取'><span>6.3.1 DAC电压的设置和读取</span></h4><p><strong><span>人为设定</span></strong><span>最小最大值： 输入DAC0/DAC1的Min/Max值-&gt;Apply</span></p><p><span>通过</span><strong><span>软件读回</span></strong><span>设置最小最大值： </span><strong><span>Read back</span></strong><span>按钮；</span></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215134105914.png" referrerpolicy="no-referrer" alt="image-20220215134105914"></p><h4 id='632-normalunblock电压设置'><span>6.3.2 Normal/Unblock电压设置</span></h4><p><span>在Amplitude框输入电压值-&gt;Apply设置Normal状态下通道所受电压，在Volt输入电压-&gt;Apply可设置Unblock状态下通道所受电压；</span></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215134115986.png" referrerpolicy="no-referrer" alt="image-20220215134115986"></p><h3 id='64-pore孔保护面板'><span>6.4 Pore孔保护面板</span></h3><p><span>功能描述：单孔保护模块以及其他保护模块；</span></p><h4 id='641-孔保护模块'><span>6.4.1 孔保护模块</span></h4><h5 id='6411孔保护模块说明'><span>6.4.1.1孔保护模块说明</span></h5><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215135225215.png" referrerpolicy="no-referrer" alt="image-20220215135225215"></p><p><strong><span>阈值</span></strong><span>：Single pore单孔、Multi pore 多孔、Membrane broken 膜破；</span></p><p><strong><span>孔保护模块逻辑</span></strong><span>： </span></p><ol start='' ><li><p><span>每秒获取通道平均值，当通道每秒电流平均值超过Single pore阈值，则开始进入下一步判断，否则判断为Nonepore无孔，结束判断；</span></p></li><li><p><span>步骤1中通道Avg超过Single pore的阈值后，首先判断是否大于Membrane broken，若大于膜破电流则判断为Saturated pore孔状态；否则进入下一步判断；</span></p></li><li><p><span>步骤2中若电流Avg超过Multi pore的阈值，则判断为Multi pore孔状态，否则判断为Single pore孔状态，结束判断；</span></p></li><li><p><strong><span>只要判定为非Nonepore,无论是Single/Multi/Saturated均会将该通道置为Off</span></strong><span>(不锁定)；</span></p><p><span>（Nonepore/Single pore/Multi pore/Saturate pore 参考Mapping中的Pore面板）</span></p></li></ol><h5 id='6412-孔保护模块开启'><span>6.4.1.2 孔保护模块开启</span></h5><p><span>点击Start 使能该模块，点击Stop则停止该模块；</span></p><h5 id='6413-通道锁定'><span>6.4.1.3 通道锁定</span></h5><p><span>勾选Porelock只要判定为非Nonepore,无论是Single/Multi/Saturated均会将该通道</span><strong><span>置为Off且锁定</span></strong><span>；</span></p><p><span>Lock即为软件逻辑锁定，当锁定该通道后无法再人为切换Sensor状态，除非清楚该通道的lock标识，具体参考Mapping中的Lock面板；</span></p><h4 id='642-std过滤'><span>6.4.2 Std过滤</span></h4><p><span>功能描述：每秒获取通道的Std值，Off不满足Min-Max范围内的通道；</span></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215140056130.png" referrerpolicy="no-referrer" alt="image-20220215140056130"></p><p><span>点击Start开启使能该模块，点击Stop则停止该模块；</span></p><h3 id='65-muxscan多路扫描模块'><span>6.5 MuxScan多路扫描模块</span></h3><p><span>功能描述：根据Lab256pro的Muxscan模块功能而来，仿照模块流程，</span><strong><span>实际上此模块并未用</span></strong><span>；</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215140520804.png" alt="image-20220215140520804" style= "zoom:100%; float:left;"   /></span></p><h4 id='651-模块说明'><span>6.5.1 模块说明</span></h4><ul><li><span>Timer Period: 每个周期时间</span></li><li><span>Cycle ：总共周期数</span></li><li><span>Next: 继续此周期</span></li><li><span>Start:开启/关闭该模块</span></li></ul><p><span>总体流程：设置倒计时-&gt;计时到-&gt;</span><strong><span>周期模块流程</span></strong><span>-&gt;开始计时-&gt;Cycle -1 &gt; 0?-&gt;继续下一周期</span></p><p><strong><span>周期模块流程</span></strong><span>： 停止保存数据，停止degting-&gt;Pore Qc-&gt;Seq-&gt;开启degating-&gt;开始保存数据；</span></p><h4 id='652-pore-qc'><span>6.5.2 Pore Qc</span></h4><p><span>Qc逻辑： 设置Backward 反向电压 Volt,持续Duration一段时间后再设置PoreQc Volt再持续Duration一段时间后，开始以每秒的平均值/标准差Std来筛选，若同时满足Current avg和std Min-Max范围，则认为符合筛选条件则标识为Seq且不予操作，不符合则置为off;</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215141347606.png" alt="image-20220215141347606" style= "zoom:100%; float:left;"   /></span></p><h4 id='653-seq'><span>6.5.3 Seq</span></h4><p><span>软件逻辑：设置Zerovolt 电压为0，持续duration一段时间，再施加Seq 电压为volt,持续duration一段时间，若Enable勾选则开启degating模块，若不勾选则不开启degating模块；</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215141618119.png" alt="image-20220215141618119" style= "zoom:100%; float:left;"   /></span></p><h3 id='66-simulate电化学活化模块'><span>6.6 Simulate电化学活化模块</span></h3><p><span>功能描述：仿真三角波电压，对通道进行依次施加，从而达到活化膜特性；</span></p><h4 id='661-simulation'><span>6.6.1 Simulation</span></h4><h5 id='6611-参数说明'><span>6.6.1.1 参数说明</span></h5><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215144002604.png" referrerpolicy="no-referrer" alt="image-20220215144002604"></p><ul><li><span>CurVolt  :显示当前电压；</span></li><li><span>Volt Start: 仿三角波起始电压；</span></li><li><span>Volt End：仿三角波终止电压；</span></li><li><span>Volt Step: 仿三角波电压步长；</span></li><li><span>Time Step: 仿三角波时间步长；</span></li><li><span>Ramp pattern: Rise/Fall/Mirror模式,上升/下降/对称</span></li><li><span>Cycle：总周期数</span></li><li><span>Remain:剩余周期数</span></li><li><span>Default：默认参数</span></li></ul><h5 id='6611-开启模块'><span>6.6.1.1 开启模块</span></h5><p><span>点击Start Simulation开启仿真模块，点击Stop停止仿真模块</span></p><h5 id='6612-软件逻辑'><span>6.6.1.2 软件逻辑</span></h5><ol start='' ><li><p><span>设置好参数后，首先所有通道设置为SensorA</span></p></li><li><p><span>设置为VoltStart电压，持续Time step，后再设置为VoltStart+VoltStep，持续Time step时间...直到达到VoltEnd;</span></p></li><li><p><span>依次切换所有通道为SensorB、SensorC、SensorD,重复2步骤；</span></p><p><span>(当前电压显示再CurVolt中，Remian显示已处理的Sensor 模块过程中存在进度条，完成则显示100%)</span></p><p><span>Rise模式仿三角波电压类似如下图：</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215145435074.png" alt="image-20220215145435074" style= "zoom:100%; float:left;"   /></span></p><p><span>Mirror模式仿三角波电压类似如下图：</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215145546718.png" alt="image-20220215145546718" style= "zoom:100%; float:left;"   /></span></p></li></ol><h4 id='662-polymer-simulate'><span>6.6.2 Polymer simulate</span></h4><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215145359878.png" referrerpolicy="no-referrer" alt="image-20220215145359878"></p><h5 id='6621-参数说明'><span>6.6.2.1 参数说明</span></h5><ul><li><span>Pore Limit： 孔保护电流阈值</span></li><li><span>Pore protect ：孔保护时Sensor状体</span></li><li><span>Volt Start: 起始电压</span></li><li><span>Volt End ：终止电压</span></li><li><span>Volt Step：步进电压</span></li><li><span>Time Step：步进时长</span></li><li><span>CurVolt: 当前电压</span></li><li><span>Default：默认参数</span></li></ul><h5 id='6622-开启模块'><span>6.6.2.2 开启模块</span></h5><p><span>点击Start Simulation开启仿真模块，点击Stop停止仿真模块</span></p><h5 id='6623-软件逻辑'><span>6.6.2.3 软件逻辑</span></h5><ol start='' ><li><span>设置好参数，设置单孔保护阈值，达到单孔阈值后设置为off，开启单孔保护模块；</span></li><li><span>设置为VoltStart电压，持续Time step，后再设置为VoltStart+VoltStep，持续Time step时间...直到达到VoltEnd;</span></li><li><span>重复2步骤直到手动停止</span></li></ol><h3 id='67-autoscan自动扫描模块'><span>6.7 AutoScan自动扫描模块</span></h3><p><span class='md-image'><img src="C:\Users\ZHANGX~1\AppData\Local\Temp\Image.png" alt="Image" style= "zoom:100%; float:left;"   /></span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Local\Temp\Image2.png" alt="Image2" style= "zoom:100%; float:left;"   /></span></p><h4 id='671-功能用途'><span>6.7.1 功能用途</span></h4><p><span>自动扫描测序，过滤电流溢出通道，筛选出ABCD组有效测序Sensor，并在筛选的结果上选择合适的Sensor进行测序，开启Degating：</span></p><h4 id='672-功能使用'><span>6.7.2 功能使用</span></h4><p><span>设置好上图的各个模块参数，点击最右边Start按钮开始启动；Timer Period和Cycle对应扫描间隔时间和周期数，达到设置周期数自动停止模块功能；Start按钮会显示剩余周期数；</span></p><h4 id='673-功能模块流程'><span>6.7.3 功能模块流程</span></h4><p><strong><span>停止保存数据和Degating模块-&gt;Scan Group-&gt;ValidQc-&gt;PoreFilt-&gt;Degating开启-&gt;开启新保存数据</span></strong></p><h4 id='674-scan-group'><span>6.7.4 Scan Group</span></h4><h5 id='6741参数解释'><span>6.7.4.1参数解释</span></h5><ul><li><span>Dc volt:  设置直流电压</span></li><li><span>Ac volt:  设置三角波电压</span></li><li><span>Allow Times:  直流或三角波设置下扫描次数</span></li></ul><h5 id='6742目的'><span>6.7.4.2目的</span></h5><p><span>轮流扫描SensorABCD组，Lock并Off掉有问题的通道</span></p><h5 id='6743内部操作逻辑'><span>6.7.4.3内部操作逻辑      </span></h5><p><span>先设置所有通道为A组，设置直流0.18V，调用Mapping中Lock面板Scan按钮，扫描10次，再设置为三角波0.05V，调用Mapping中Lock面板Scan按钮，扫描10次，扫描过程中会使用OVF面板中记录哪些channel是否有溢出，溢出则关闭通道状态，并增加已锁定标志； 再设置所有通道为B组，重复上述步骤；直到4组Sensor扫描完毕；</span></p><h4 id='675-valid-qc'><span>6.7.5 Valid Qc</span></h4><h5 id='6751参数解释'><span>6.7.5.1参数解释</span></h5><ul><li><span>Volt:      设置直流电压</span></li><li><span>Wait:      等待时间/s后以Current和Std为标准进行1s的筛选</span></li><li><span>Current:   平均电流筛选范围设置</span></li><li><span>Std:       标准差筛选范围设置</span></li></ul><h5 id='6752目的'><span>6.7.5.2目的</span></h5><p><span>筛选哪些Sensor为有效，并作Mux多路混合切换</span></p><h5 id='6753内部操作逻辑'><span>6.7.5.3内部操作逻辑   </span></h5><ol start='' ><li><span>设置所有通道为A组Sensor,设置直流电压后，等待Wait时间后，获取所有通道的平均电流和Std值，符合两者范围的通道识别为Valid有效通道，否则识别为InValid，结果更新在Mapping中的Valid面板; 再设置所有通道为BSensor组，重复上述步骤，直至ABCD组Sensor筛选完毕</span></li><li><span>根据Mapping中Valid的映射表，作所有通道的Sensor切换，如通道1的ABCD中，A有效而BCD无效，则优先使用A作为当前状态进行测序，其他通道同理；</span></li></ol><h4 id='676-porefilt'><span>6.7.6 PoreFilt</span></h4><h5 id='6761-参数解释'><span>6.7.6.1 参数解释</span></h5><ul><li><span>DegatVolt:  正反向电压的绝对值</span></li><li><span>Delay:       作正反向电压持续的时间</span></li><li><span>Times:       正反向电压施加的次数</span></li><li><span>PoreProtect  单孔保护的电流阈值-&gt;关闭gating的多孔</span></li></ul><h5 id='6762-目的'><span>6.7.6.2 目的</span></h5><p><span>未知，详细情况问陈玮</span></p><h5 id='6763-内部操作逻辑'><span>6.7.6.3 内部操作逻辑</span></h5><p><span>设置正反向电压的绝对值，对所有通道施加正电压持续Delay时间，然后施加反向电压持续Delay时间，如此重复Times次后开启单孔保护功能，设置单孔保护阈值为PoreProtect电流；</span></p><h4 id='677-degating'><span>6.7.7 Degating</span></h4><h5 id='6771-参数解释'><span>6.7.7.1 参数解释</span></h5><p><span>将Degating面板参数放置在此，参数与Lab256无区别</span></p><h5 id='6772-目的'><span>6.7.7.2 目的</span></h5><p><span>开启Degating功能</span></p><h5 id='6773-内部操作逻辑'><span>6.7.7.3 内部操作逻辑</span></h5><p><span>将此参数设置同步到Degating模块后开启Degating功能</span></p><h3 id='68-电流曲线模块'><span>6.8 电流曲线模块</span></h3><p><span>采集LVDS数据，并将所有通道的电流曲线描绘至面板上，最大支持1024通道；</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215152254635.png" alt="image-20220215152254635" style= "zoom:100%; float:left;"   /></span></p><h4 id='681-设置xy轴坐标'><span>6.8.1 设置XY轴坐标</span></h4><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215152317489.png" alt="image-20220215152317489" style= "zoom:100%; float:left;"   /></span></p><ul><li><span>Ymin : Y轴最小值</span></li><li><span>Ymax: Y轴最大值</span></li><li><span>Times:X轴显示范围，单位为秒</span></li><li><span>Apply： 设置按钮</span></li></ul><h4 id='682-设置可视化通道'><span>6.8.2 设置可视化通道</span></h4><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215152432864.png" alt="image-20220215152432864" style= "zoom:100%; float:left;"   /></span></p><ul><li><span>Start: 起始通道号</span></li><li><span>End:终止通道号</span></li><li><span>Apply： 可视化通道设置</span></li></ul><h3 id='69-curves-configuration'><span>6.9 Curves configuration</span></h3><p><span>对每一通道的可视化，颜色，平均值，标准差Std, Valid标识进行查看和设置</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215152750649.png" alt="image-20220215152750649" style= "zoom:100%; float:left;"   /></span></p><h4 id='691-曲线颜色及可见性设置'><span>6.9.1 曲线颜色及可见性设置</span></h4><p><span>右键菜单选择Channel setting，</span></p><ul><li><strong><span>Visible代表该通道曲线是否可见，勾选则可见，不勾选则不可见，</span></strong></li><li><strong><span>曲线颜色可通过双击通道对应Color面板进行颜色更换。</span></strong></li></ul><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20210818163403170.png" alt="image-20210818163403170" style= "zoom:100%; float:left;"   /></span></p><h4 id='692-平均值和标准差查看'><span>6.9.2 平均值和标准差查看</span></h4><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220216111140195.png" alt="image-20220216111140195" style= "zoom:100%; float:left;"  /></span></p><p><span>每个通道的平均值Avg和标准差Std可以在第四列Average和第五列Std中查看，每秒更新一次；</span></p><h4 id='693-通道sensor组和valid查看'><span>6.9.3 通道Sensor组和Valid查看</span></h4><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220216111456336.png" alt="image-20220216111456336" style= "zoom:100%; float:left;"  /></span></p><p><span>每个通道的处于哪个Sensor组别以及在该组别中是否有效可以在第七列Valid中查看；</span></p><h4 id='694-筛选模块'><span>6.9.4 筛选模块</span></h4><p><span>根据</span><strong><span>Type 过滤可选类型，将符合类型筛选条件的通道保留在该列表，每秒更新一次并统计通道数Count</span></strong><span>(</span><strong><span>切记请勿停止Refresh按钮</span></strong><span>)</span></p><ul><li><span>Channel</span><span>	</span><span>保留所有通道在此列表</span></li><li><span>Visible </span><span>	</span><span>只保留可见的通道在此列表</span></li><li><span>AvgStd</span><span>	</span><span>只保留满足Avg/Std范围的通道在此列表</span></li><li><span>Seq</span><span>	</span><span>只保留标识为Seq的通道在此列表</span></li><li><span>Valid</span><span>	</span><span>只保留标识为Valid的通道在此列表</span></li></ul><h4 id='695-avgstd筛选模块'><span>6.9.5 AvgStd筛选模块</span></h4><p><span>将Type过滤类型选为AvgStd即可；</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215171206068.png" alt="image-20220215171206068" style= "zoom:100%; float:left;"   /></span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215171144183.png" alt="image-20220215171144183" style= "zoom:100%; float:left;"  /></span></p><p><span>参数说明：</span></p><ul><li><span>Avg :</span><span>	</span><span>每一秒电流平均值阈值</span></li><li><span>Std:</span><span>	</span><span>每一秒电流Std标准差阈值</span></li><li><span>OpenporeAvg: 开孔电流平均值阈值，取决于OpenporeFilt是否勾选</span></li><li><span>OpenporeAvg: 开孔电流Std标准差阈值，取决于OpenporeFilt是否勾选</span></li></ul><p><span>按钮说明：</span></p><ul><li><span>Hide按钮: 按键按下时，当这一秒平均值和标准差同时满足所设置范围则可见，不满足则不可见，对Sensor状态不操作；（Openpore是否纳入筛选条件，让其同时满足，取决于OpenporeFilt是否勾选）</span></li><li><span>Shutoff按钮：按键按下时，当这一秒平均值和标准差同时满足所设置范围则不操作，不满足则置为off；（Openpore是否纳入筛选条件，让其同时满足，取决于OpenporeFilt是否勾选）</span></li><li><span>Lock按钮：按键按下时，当这一秒平均值和标准差同时满足所设置范围则不操作，不满足则Lock并置为off,(Lock参考Lock面板功能介绍)；（Openpore是否纳入筛选条件，让其同时满足，取决于OpenporeFilt是否勾选）</span></li><li><span>Valid 按钮： 按键按下时，当这一秒平均值和标准差同时满足所设置范围则置为Valid，不满足则置为InValid且置为Off；（Openpore是否纳入筛选条件，让其同时满足，取决于OpenporeFilt是否勾选）</span></li><li><span>Only valid按钮： 按键按下时，当已标识为Valid的通道设置为Normal，Invalid则置为Off；</span></li></ul><h3 id='610-mapping映射图表'><span>6.10 Mapping映射图表</span></h3><p><span>Mapping图表主要为一张32*32的表格，映射1024通道的所有的状态；</span></p><p><span>包括Sensor状态、OVF溢出状态、Cap电容状态、Pore状态、Lock状态、Valid状态、Mux状态</span></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215172317719.png" referrerpolicy="no-referrer" alt="image-20220215172317719"></p><h4 id='6101-通道号显示隐藏'><span>6.10.1 通道号显示/隐藏</span></h4><p><span>Display mode -&gt; Content-&gt;Pure隐藏通道号</span></p><p><span>Display mode -&gt; Content-&gt;Channel num 显示通道号</span></p><h4 id='6102-功能状态统计'><span>6.10.2 功能状态统计</span></h4><p><span>左边为对应功能的状态，右边为该状态Count统计数</span></p><h4 id='6103-功能状态颜色更改'><span>6.10.3 功能状态颜色更改</span></h4><p><span>点击对应功能状态左边的方框，即可改变状态颜色</span></p><h4 id='6104-sensor状态表'><span>6.10.4 Sensor状态表</span></h4><p><span>Mapping图表映射1024通道的Sensor状态；</span></p><h5 id='61041-sensor状态描述'><span>6.10.4.1 Sensor状态描述</span></h5><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215173406003.png" alt="image-20220215173406003" style= "zoom:100%; float:left;"   /></span></p><p><span>根据ASIC芯片规格，每个通道有16种sensor状态，且状态只能在16种选择一种状态</span></p><ul><li><span>Off ：开关断开状态</span></li><li><span>A：通道置为NormalA状态；</span></li><li><span>B：通道置为NormalB状态；</span></li><li><span>C:</span><span>	</span><span>通道置为NormalC状态；</span></li><li><span>D:</span><span>	</span><span>通道置为NormalD状态；</span></li><li><span>A unblock:通道置为A unblock状态；</span></li><li><span>B unblock:通道置为B unblock状态；</span></li><li><span>C unblock:通道置为C unblock状态；</span></li><li><span>D unblock:通道置为D unblock状态；</span></li><li><span>其他状态：与测序无关，无需了解</span></li></ul><h5 id='61042-sensor状态更新'><span>6.10.4.2 Sensor状态更新</span></h5><p><span>点击Refresh 则从下位机更新当前Sensor状态</span></p><h4 id='6105-ovf状态表'><span>6.10.5 OVF状态表</span></h4><p><span>Mapping图表映射1024通道的OVF 标识状态；</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215174427289.png" alt="image-20220215174427289" style= "zoom:100%; float:left;"   /></span></p><h5 id='61051-ovf状态描述'><span>6.10.5.1 OVF状态描述</span></h5><ul><li><span>Normal: 通道无溢出</span></li><li><span>Over_flow： 通道标识为溢出</span></li></ul><p><span>此标识溢出为下位机FPGA从ASIC中读回，为寄存器中的值；</span></p><h5 id='61052-ovf状态更新'><span>6.10.5.2 OVF状态更新</span></h5><p><span>点击Refreshf按钮 则可获取对应最新的状态</span></p><h5 id='61053-关断ovf通道'><span>6.10.5.3 关断OVF通道</span></h5><p><span>点击 Shut off按钮，若某通道标识为Over_flow则关断该通道为Off，若无标识则不动作，</span><strong><span>Ps：不会点击refresh按钮</span></strong></p><h5 id='61054-lock-ovf通道'><span>6.10.5.4 Lock OVF通道</span></h5><p><span>点击 Lock按钮,若某通道标识为Over_flow则关断该通道为Off并lock，若无标识则不动作，</span><strong><span>Ps：不会点击refresh按钮</span></strong></p><h5 id='61055-清除ovf标识'><span>6.10.5.5 清除OVF标识</span></h5><p><span>点击Clear按钮,清除映射表中所有over_flow标识，均值为normal</span></p><h4 id='6106-cap状态表'><span>6.10.6 Cap状态表</span></h4><p><span>Mapping图表映射1024通道的Cap状态；</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215174501927.png" alt="image-20220215174501927" style= "zoom:100%; float:left;"  /></span></p><h5 id='61061-cap状态描述'><span>6.10.6.1 Cap状态描述</span></h5><ul><li><span>Cap_level1 电容状态level1</span><span>	</span><span>level1阈值范围设置</span></li><li><span>Cap_level2 电容状态level2</span><span>	</span><span>level2阈值范围设置</span></li><li><span>Cap_level3 电容状态level3</span><span>	</span><span>level3阈值范围设置</span></li><li><span>Cap_level4 电容状态level4</span><span>	</span><span>level4阈值范围设置</span></li><li><span>Cap_level5 电容状态level5</span><span>	</span><span>level5阈值范围设置</span></li></ul><h5 id='61062-cap电容检测'><span>6.10.6.2 Cap电容检测</span></h5><p><span>设置好电容阈值范围，点击Start按钮，开始检测电容，根据电容值判断该通道电容处于哪个状态；实时更新，点击stop关闭电容检测模块；</span></p><h5 id='61063-cap电容值显示'><span>6.10.6.3 Cap电容值显示</span></h5><p><span>Display mode -&gt;选择Cap value;</span></p><h5 id='61064-cap电容保存'><span>6.10.6.4 Cap电容保存</span></h5><p><span>点击Save as...按钮,选择保存路径，可将当前电容值保存为txt文档</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215175059541.png" alt="image-20220215175059541" style="zoom: 67%;float:left;" /></span></p><h5 id='61065-cap状态清除'><span>6.10.6.5 Cap状态清除</span></h5><p><span>点击Clear ，则将所有通道状态清除Cap_level1</span></p><h4 id='6107-pore状态表'><span>6.10.7 Pore状态表</span></h4><p><span>Mapping图表映射1024通道的OVF 标识状态；</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220215175914666.png" alt="image-20220215175914666" style= "zoom:100%; float:left;"   /></span></p><h5 id='61071-pore状态描述'><span>6.10.7.1 Pore状态描述</span></h5><ul><li><span>None pore ： 无孔</span></li><li><span>Single pore:</span><span>	</span><span>单孔</span></li><li><span>Multi pore:</span><span>	</span><span>多孔</span></li><li><span>Saturated pore:</span><span>	</span><span>膜破</span></li><li><span>Inactive pore:</span><span>	</span><span>死孔</span></li><li><span>Slip pore:</span><span>	</span><span>滑孔</span></li></ul><h5 id='61072-pore标识组'><span>6.10.7.2 Pore标识组</span></h5><p><span>Pore标识根据Sensor组分为四组，分别为PoreA组，PoreB组，PoreC组，PoreD组</span></p><h5 id='61073-pore状态更新'><span>6.10.7.3 Pore状态更新</span></h5><p><span>开启单孔保护模块，即可将判断的结果更新到此表中，</span><strong><span>关于单孔保护模块参考6.4</span></strong></p><h5 id='61074-pore状态统计'><span>6.10.7.4 Pore状态统计</span></h5><p><span>点击Count按钮，则可统计各种状态通道数</span></p><h5 id='61075-pore状态清除'><span>6.10.7.5 Pore状态清除</span></h5><p><span>点击Clear按钮，则可清除各种状态为Nonepore</span></p><h4 id='6108-lock状态表'><span>6.10.8 Lock状态表</span></h4><p><span>Mapping图表映射1024通道的Lock标识状态；</span></p><h5 id='61081-lock标识解释'><span>6.10.8.1 Lock标识解释</span></h5><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220216094534354.png" alt="image-20220216094534354" style= "zoom:100%; float:left;"  /></span></p><ul><li><span>Allow:</span><span>	</span><span>允许</span></li><li><span>Prohibited:</span><span>	</span><span>禁止</span></li></ul><p><strong><span>Lock标识在ASIC中并不存在该硬件标识，只是软件定义的逻辑标识，可以认为是给软件操作的枷锁；</span></strong></p><ul><li><span>当通道标识手动操作或者模块功能标识为Prohibited时，则意味着该通道会置为Sensor state 为off ，软件将锁定该通道状态，任何Sensor切换操作都不可以改变Sensor状态，除非取消Prohibited标识，变为Allow标识；</span></li></ul><h5 id='61082-lock标识组'><span>6.10.8.2 Lock标识组</span></h5><p><span>Lock标识根据Sensor组分为四组，分别为LockA组，LockB组，LockC组，LockD组</span></p><h5 id='61083-自动扫描scan'><span>6.10.8.3 自动扫描Scan</span></h5><h6 id='610831-扫描顺序'><span>6.10.8.3.1 扫描顺序</span></h6><p><span>扫描顺序：扫描通道分为16组，</span></p><p><span>第1组的排列通道号为：1，17，33.....1009，共64通道;</span></p><p><span>第2组的排列通道号为：2，18，34.....1010，共64通道;</span></p><p><span>第3组的排列通道号为：3，19，35.....1011，共64通道;</span></p><p><span>............</span></p><p><span>第16组的排列通道号为：16，32，64.....1024，共64通道;</span></p><h6 id='610832-软件逻辑'><span>6.10.8.3.2 软件逻辑</span></h6><p><span>软件内部逻辑：根据扫描顺序将扫描通道分为16组，切换至每一组时，  连续调用三次OVF模块的Refresh，如果某通道连续出现三次OVF中的over_flow，则将该通道置为Lock标识并关断为Off State;扫描完16组为一次time,直至满足times次数；</span></p><h6 id='610833-一键操作'><span>6.10.8.3.3 一键操作</span></h6><p><span>填写次数times，</span><strong><span>点击按钮Scan</span></strong><span>,即可自动扫描溢出通道，有问题通道标识为Prohibited并关断为off,无问题通道则标识为Allow;</span></p><h5 id='61084-手动修改标识'><span>6.10.8.4 手动修改标识</span></h5><h6 id='610841-手动标识为allow'><span>6.10.8.4.1 手动标识为Allow</span></h6><p><span>在表中点击某通道或者部分通道-&gt;点击按钮Allow-&gt;即可标识为Allow;</span></p><h6 id='610841-手动标识为prohibited'><span>6.10.8.4.1 手动标识为Prohibited</span></h6><p><span>在表中点击某通道或者部分通道-&gt;点击按钮Prohibited-&gt;即可标识为Prohibited;</span></p><h5 id='61085-其他功能'><span>6.10.8.5 其他功能</span></h5><h6 id='610851-手动置为normal'><span>6.10.8.5.1 手动置为Normal</span></h6><p><span>在表中点击某通道或者部分通道-&gt;点击按钮Normal-&gt;即可修改当前通道SensorState标识为Normal;</span></p><h6 id='610852-手动置为unblock'><span>6.10.8.5.2 手动置为Unblock</span></h6><p><span>在表中点击某通道或者部分通道-&gt;点击按钮Normal-&gt;即可修改当前通道SensorState标识为Normal;</span></p><h5 id='61086-重新统计标识'><span>6.10.8.6 重新统计标识</span></h5><p><span>点击按钮Count即可重新统计每种状态的通道数；</span></p><h5 id='61086-清除标识'><span>6.10.8.6 清除标识</span></h5><p><span>点击按钮Clear即可将所有通道标识改为Allow；</span></p><p>&nbsp;</p><h4 id='6109-valid状态表'><span>6.10.9 Valid状态表</span></h4><p><span>Mapping图表映射1024通道的Valid标识状态；</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220216100808716.png" alt="image-20220216100808716" style= "zoom:100%; float:left;"   /></span></p><h5 id='61091-valid标识描述'><span>6.10.9.1 Valid标识描述</span></h5><ul><li><p><span>Invalid:</span><span>	</span><span>无效</span></p></li><li><p><span>Valid:</span><span>	</span><span>有效</span></p><p><span>Valid标识也是软件的逻辑标识，跟硬件ASIC无关，当在测序过程中，根据筛选标准，如在Curves configuration中根据AvgStd的Min-Max范围进行筛选，满足即可标识为Valid，不满足标识为Invalid;</span></p><p><span>用途：标识为Valid为Mux状态组中使用；</span></p></li></ul><h5 id='61092-valid标识组'><span>6.10.9.2 Valid标识组</span></h5><p><span>Lock标识根据Sensor组分为四组，分别为ValidA组，ValidB组，ValidC组，ValidD组</span></p><h5 id='61093-手动标识valid'><span>6.10.9.3 手动标识Valid</span></h5><ol start='' ><li><p><span>方法1：</span></p><ol start='' ><li><span>在表中点击某通道或者部分通道-&gt;点击按钮Valid-&gt;即可修改当前通道标识为Valid;</span></li><li><span>在表中点击某通道或者部分通道-&gt;点击按钮InValid-&gt;即可修改当前通道标识为InValid;</span></li></ol></li><li><p><span>方法2：</span></p><ol start='' ><li><span>在Curves configuration模块中，AvgStd的Min-Max范围进行筛选，点击Transform to valid;</span></li></ol></li></ol><h5 id='61094-自动标识valid'><span>6.10.9.4 自动标识Valid</span></h5><p><span>使用AutoScan模块功能中的ValidQc模块会标识Valid还是InValid;</span></p><h5 id='61094-重新统计标识valid'><span>6.10.9.4 重新统计标识Valid</span></h5><p><span>点击按钮Count，即可重新统计标识Valid的通道数</span></p><h5 id='61095-清除统计标识valid'><span>6.10.9.5 清除统计标识Valid</span></h5><p><span>点击按钮Clear，即可将所有通道默认标识为Invalid；</span></p><h4 id='61010-mux状态表'><span>6.10.10 Mux状态表</span></h4><p><span>Mapping图表映射1024通道的Mux标识状态；</span></p><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220216102110653.png" alt="image-20220216102110653" style= "zoom:100%; float:left;"   /></span></p><h5 id='610101-mux状态标识描述'><span>6.10.10.1 Mux状态标识描述</span></h5><ul><li><span>Sensor A</span><span>	</span><span>归类为SensorA组</span></li><li><span>Sensor B    归类为SensorB组</span></li><li><span>Sensor C    归类为SensorC组</span></li><li><span>Sensor D   归类为SensorD组</span></li></ul><p><span>解释：Mux标识为软件逻辑标识，即将Sensor分为ABCD组，只有这四组状态，当归类为A组时，normal将Sensor State设置为NormalA,unblock将Sensor State设置为A unblock;BCD以此类推；</span></p><h5 id='610102-mux状态标识目的用途'><span>6.10.10.2 Mux状态标识目的用途</span></h5><p><span>目的：1024通道中每一通道都有ABCD，所以Mux是为了混合模式使用，即某些通道在A组，某些通道在B组，依此类推；</span></p><h5 id='610103-mux状态标识软件逻辑'><span>6.10.10.3 Mux状态标识软件逻辑</span></h5><p><span>通过Valid中四组的标识状态Valid，重新生成一张Mux标识表，举例如：</span></p><ul><li><span>1-10通道只有A,B组是Valid的-&gt;</span><span>	</span><span>1-10通道会将其归类SensorA和SensorB两组的其中一组(随机分配或者顺移分配)；</span></li><li><span>11-20通道只有C组Valid-&gt; 11-20通道会将其归类为SensorC组，且不会变成其他Sensor组</span></li><li><span>21-30通道ABCD组均InValid-&gt; 21-30通道会将其归类为SensorABCD组中的一组(随机分配或者顺移分配)；</span></li></ul><h5 id='610104-标识随机分配random'><span>6.10.10.4 标识随机分配Random</span></h5><p><span>点击Random 按钮，根据 Mux状态标识软件逻辑，分配规则为随机分配；</span></p><h5 id='610105-标识顺移分配mux'><span>6.10.10.5 标识顺移分配Mux</span></h5><p><span>点击Mux按钮，根据 Mux状态标识软件逻辑，分配规则为顺移分配；</span></p><h5 id='610106-mux标识重新统计'><span>6.10.10.6 Mux标识重新统计</span></h5><p><span>点击按钮Count，即可重新统计Mux标识对应的通道数</span></p><h5 id='61010ss7-mux标识清除'><span>6.10.10ss.7 Mux标识清除</span></h5><p><span>点击按钮Clear，即可清除所有通道标识为SensorA组</span></p><h3 id='611-chart图表统计'><span>6.11 Chart图表统计</span></h3><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220216105418802.png" alt="image-20220216105418802" style="zoom:80%;" /></p><p><span>图表统计目前分为： Sensor统计，Cap电容统计，Pore孔统计，Valid有效统计，Reads统计；</span></p><h4 id='6111-sensor占比统计'><span>6.11.1 Sensor占比统计</span></h4><h5 id='61111-sensor统计更新'><span>6.11.1.1 Sensor统计更新</span></h5><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220216111747011.png" alt="image-20220216111747011" style= "zoom:80%; "  /></p><p><span>点击Update按钮即可</span></p><h4 id='6112-cap-level统计'><span>6.11.2 Cap Level统计</span></h4><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220216111713382.png" alt="image-20220216111713382" style= "zoom:80%;"   /></p><h5 id='61121--cap-level统计更新'><span>6.11.2.1  Cap Level统计更新</span></h5><p><span>点击Update按钮即可</span></p><h4 id='6113-pore-占比统计'><span>6.11.3 Pore 占比统计</span></h4><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220216111816484.png" alt="image-20220216111816484" style="zoom:80%;" /></p><h5 id='61131--pore-占比统计更新'><span>6.11.3.1  Pore 占比统计更新</span></h5><p><span>点击Update按钮即可</span></p><h4 id='6114-valid统计'><span>6.11.4 Valid统计</span></h4><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220216111829252.png" alt="image-20220216111829252" style="zoom:80%;" /></p><h5 id='61141--valid统计更新'><span>6.11.4.1  Valid统计更新</span></h5><p><span>点击Update按钮即可</span></p><h4 id='6115-reads-adapters统计'><span>6.11.5 Reads Adapters统计</span></h4><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220216111902898.png" alt="image-20220216111902898" style="zoom: 80%;" /></p><p><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220216111918819.png" alt="image-20220216111918819" style="zoom:80%;" /></p><h5 id='61151--reads-adapters记录'><span>6.11.5.1  Reads Adapters记录</span></h5><p><span>勾选SavePanel的Record选择框，勾选则在此刻创建csv文件，不勾选则关闭该csv文件，当开启Autoscan模块，停止保存数据时会记录当前的Autoseq的reads和adapters数目，输出至文件中，</span><strong><span>文件保存在etc\ReadsAdapterRecord目录中</span></strong><span>；</span></p><h5 id='61152-reads-adapters统计更新'><span>6.11.5.2 Reads Adapters统计更新</span></h5><p><span>Choose按钮选择 ReadsAdapters的csv记录文件，点击Update按钮即可在每一时间段的reads和adapter的统计和累计的统计中切换；</span></p><h2 id='7-log日志'><span>7 Log日志</span></h2><p><span class='md-image'><img src="C:\Users\zhangxianda\AppData\Roaming\Typora\typora-user-images\image-20220216112957888.png" alt="image-20220216112957888" style= "zoom:80%; float:left;"  /></span></p><p><span>Log日志会记录文件在etc\Logs目录下；</span></p></div></div>
+</body>
+</html>

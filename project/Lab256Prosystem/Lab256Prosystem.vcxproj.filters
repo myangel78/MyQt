@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AboutDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CalibrationDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CapListItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CapacitanceView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ChannelStatusView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConfigServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ControlListItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ControlView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CustomPlotView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CyAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DegatingDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FeedbackDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FlowModulePane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HttpClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LogPane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MyQMessageBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlotReviewDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PoreSelectDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RecordSettingDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RedisAccess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SampleRateDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SavePane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SerialPort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SerialSettingDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TemperatureMonitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TranslateDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UpdateDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UsbCyDevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UsbPortBulk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UsbProtoMsg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VerUpdateDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ZeroAdjustDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\qcustomplot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CapUnitItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HistoryDataView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\AboutDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\CalibrationDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\CapListItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\CapacitanceView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\ChannelStatusView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="src\ConfigServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="src\ControlListItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\ControlView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\CustomPlotView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\DegatingDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\FeedbackDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\FlowModulePane.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="src\HttpClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="src\LogPane.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\MainWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\MyQMessageBox.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\PlotReviewDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\PoreSelectDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\RecordSettingDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="src\RedisAccess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="src\SampleRateDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\SavePane.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\SerialPort.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\SerialSettingDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\TemperatureMonitor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\TranslateDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\UpdateDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="src\UsbCyDevice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\UsbPortBulk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\UsbProtoMsg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="src\VerUpdateDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\ZeroAdjustDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="src\mainversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="src\qcustomplot.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\CapUnitItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\HistoryDataView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\img\BGI.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\BGI_LOGO.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\info\LAB256ProUserGuide.pdf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\info\ReleaseInfo.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\Settings.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\about.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\chinaweather.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\close.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\config.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\connect.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\conf\defaultAFE2256-v3_0.img">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\conf\defaultBgiCyclone.img">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\conf\defaultCalibrationConfig.ini">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\conf\defaultLoadReg.csv">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\conf\defaultSysConfig.ini">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\conf\defaultautonanopore.sh">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\conf\defaultself_check.sh">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\device_press.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\eject.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\eject_press.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\engineer.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\exaile.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\install.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\mdc.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\monitor.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\pause.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\pause.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\pause_press.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="res\res.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <None Include="res\img\reset_press.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\run.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\run_press.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\search.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\search_press.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\setting.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\setting_press.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\shutdown.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\start.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\stop.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\stop_press.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\system.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\system_press.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\temperature.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\update.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\upgrade.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\upgrade_press.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\version.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\version_press.png">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include=".\Lab256Prosystem_resource.rc" />
+  </ItemGroup>
+</Project>

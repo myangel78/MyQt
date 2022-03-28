@@ -1,0 +1,97 @@
+﻿v1.0.0 Release Note:
+1.reWirte the whole software GUI layout
+2.update button to start and stop saving file;
+3.add the capacitance detect.
+---------------------------------------------
+v1.0.1 Release Note:
+1.add the frequency to set
+---------------------------------------------
+v1.0.2 Release Note:
+1.add the zeroOffset function
+2.add the auto save serial port name and autconnect
+3.add auto save MainWindowGeometry
+4.add auto save HoleEmbedded setting
+---------------------------------------------
+v1.0.3 Release Note:
+1.patch the view dialog floated and never find again when reopen software;
+2.corrected the saving files number;
+3.increase the calibration points and stop before calibration;
+4.patch pore insertion that short out command too fast;
+---------------------------------------------
+v1.0.4 Release Note:
+1.update new De-gating algorithm to the software
+2.delete the choice for display channel number to input;
+---------------------------------------------
+v1.0.5 Release Note:
+1.put graph choose into the current pannel;
+2.add the input to change the degating parameters;
+---------------------------------------------
+v1.0.6 Release Note:
+1.modify the save file without limit size;
+---------------------------------------------
+v1.0.7 Release Note:
+1.合并电压/De-gating面板为一个面板;
+2.解决同时发控制指令下位机无法相应问题;
+3.新增独立保存文件功能和配置工具0.4版本;
+4.增加单独电压通道一起设置功能;
+5.调零时屏蔽自动De-gating操作；
+6.改善串口保存机制以及错误提醒;
+---------------------------------------------
+v1.0.8 Release Note:
+1.single volt 全选按钮更改;正负按钮直接设置电压;
+2.单孔检测功能单孔设为50mv,多孔或损坏设为0V;
+3.增加方块进行单孔标识；
+4.调零步骤改为单孔-0.18V 1s后进行置零再进行调零;
+5.增加定时调零功能；
+6.增加系统显示每次运行时间；
+---------------------------------------------
+v1.0.9 Release Note:
+1.电容模块点击Start自动设定三角波，Stop恢复所有通道原来电压
+2.调零屏蔽自动De-gating模块
+
+---------------------------------------------
+v1.1.0 Release Note:
+1.校准模块增加一次设置全通道电阻数值按钮；
+2.增加线程重试机制为3次，增加错误捕捉信息;
+3.Degating all check改为只对单孔通道进行选择;
+4.增加Polymer膜阶梯电压插孔模块;
+5.修改一些字符拼写错误；
+---------------------------------------------
+v1.1.1 Release Note:
+1.修正采样率设置失败问题；
+---------------------------------------------
+v1.1.2 Release Note:
+1.文件夹名称命令增添采样率信息;
+2.增加直流电压模拟三角波功能；
+---------------------------------------------
+v1.1.3 Release Note:
+1.关闭软件时自动保存通道曲线的颜色和视图可见属性
+2.校准模块一键设置slope和offset
+---------------------------------------------
+v1.1.4 Release Note:
+1.Degating 逻辑判断更改
+2.定时停止数据保存功能
+3.一键筛选电容范围通道
+4.使能Opengl库绘图
+---------------------------------------------
+v1.1.5 Release Note:
+1.增加Polymer和Triangular模块的参数保存
+---------------------------------------------
+v1.1.5.1 Release Note:
+1.改善校准加载数据逻辑,提高成功率。
+---------------------------------------------
+v1.1.6 Release Note:
+1.调零参数外放，增大参数限值
+2.合并电压设置界面
+
+
+
+
+
+
+
+
+
+
+
+

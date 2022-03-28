@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files\table">
+      <UniqueIdentifier>{87232b73-9671-44a1-af8a-c777ed22731e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\table">
+      <UniqueIdentifier>{724dec15-50c3-4c47-8bfc-298339d4e95f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\wizard">
+      <UniqueIdentifier>{2572b623-1fd1-4b5e-9a37-69e905eedc7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\wizard">
+      <UniqueIdentifier>{857c94b5-984c-4056-967f-a53552ba0b51}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AboutDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ComunicateTestWdgt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConfigServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConfigurationWidgt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LogPane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RegisterMapWdgt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RegisterWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SqlDataBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UsbFtdDevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UsbProtoMsg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XmlStreamReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UDPSocket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="include\logger\EcoliLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlotReviewDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TranslateDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataAnalysWidgt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CustomPlotWidgt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\customplot\qcustomplot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QNotify.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SavePannel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CustomSplitter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\table\CustomDelegate.cpp">
+      <Filter>Source Files\table</Filter>
+    </ClCompile>
+    <ClCompile Include="src\table\PlotCfgDelegate.cpp">
+      <Filter>Source Files\table</Filter>
+    </ClCompile>
+    <ClCompile Include="src\table\PLotCfgTabModel.cpp">
+      <Filter>Source Files\table</Filter>
+    </ClCompile>
+    <ClCompile Include="src\table\InputNewRecordDlg.cpp">
+      <Filter>Source Files\table</Filter>
+    </ClCompile>
+    <ClCompile Include="src\table\RegFieldTableModel.cpp">
+      <Filter>Source Files\table</Filter>
+    </ClCompile>
+    <ClCompile Include="src\table\RegFieldTableView.cpp">
+      <Filter>Source Files\table</Filter>
+    </ClCompile>
+    <ClCompile Include="src\table\RegisterTableModel.cpp">
+      <Filter>Source Files\table</Filter>
+    </ClCompile>
+    <ClCompile Include="src\table\RegisterTableView.cpp">
+      <Filter>Source Files\table</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataHandle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VoltCtrPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SensorPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\table\PoreStateMapTabModel.cpp">
+      <Filter>Source Files\table</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CapCaculate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PoreCtrlPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PoreStateMapWdgt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataCalculate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MuxScanPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DegatingPane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HttpClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MyQMessageBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RecordSettingDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MembranePanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ModelSharedData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AutoScanPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TemperatureMonitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SerialSettingDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SerialPort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ChartViewWidgt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RedisAccess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ValidOptimized.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RecordCsvFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PercentBarChartView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\wizard\CustomComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\wizard\AutoSequenceSettingDlg.cpp">
+      <Filter>Source Files\wizard</Filter>
+    </ClCompile>
+    <ClCompile Include="src\wizard\MembraneQCSettingDlg.cpp">
+      <Filter>Source Files\wizard</Filter>
+    </ClCompile>
+    <ClCompile Include="src\wizard\PoreAutoFiltSettingDlg.cpp">
+      <Filter>Source Files\wizard</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FlowOpertPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\AboutDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\ComunicateTestWdgt.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="src\ConfigServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="src\ConfigurationWidgt.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="include\FTD3XX\FTD3XX.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\logger\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="src\LogPane.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\MainWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\RegisterMapWdgt.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\RegisterWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\SqlDataBase.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\UsbFtdDevice.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="src\UsbProtoMsg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\XmlStreamReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\concurrentqueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mainversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="src\CustomSplitter.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\DataAnalysWidgt.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\CustomPlotWidgt.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\customplot\qcustomplot.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\QNotify.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\PlotReviewDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\SavePannel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\TranslateDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\table\CustomDelegate.h">
+      <Filter>Header Files\table</Filter>
+    </QtMoc>
+    <QtMoc Include="src\table\PlotCfgDelegate.h">
+      <Filter>Header Files\table</Filter>
+    </QtMoc>
+    <QtMoc Include="src\table\PlotCfgTabModel.h">
+      <Filter>Header Files\table</Filter>
+    </QtMoc>
+    <QtMoc Include="src\table\RegFieldTableModel.h">
+      <Filter>Header Files\table</Filter>
+    </QtMoc>
+    <QtMoc Include="src\table\RegFieldTableView.h">
+      <Filter>Header Files\table</Filter>
+    </QtMoc>
+    <QtMoc Include="src\table\RegisterTableModel.h">
+      <Filter>Header Files\table</Filter>
+    </QtMoc>
+    <QtMoc Include="src\table\RegisterTableView.h">
+      <Filter>Header Files\table</Filter>
+    </QtMoc>
+    <QtMoc Include="src\UDPSocket.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\VoltCtrPanel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\SensorPanel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\table\PoreStateMapTabModel.h">
+      <Filter>Header Files\table</Filter>
+    </QtMoc>
+    <QtMoc Include="src\CapCaculate.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\DataCalculate.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\PoreCtrlPanel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\PoreStateMapWdgt.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\MuxScanPanel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\DegatingPane.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\MyQMessageBox.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\RecordSettingDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\MembranePanel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\AutoScanPanel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\ModelSharedData.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\SerialSettingDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\TemperatureMonitor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\SerialPort.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\ChartViewWidgt.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\PercentBarChartView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\wizard\AutoSequenceSettingDlg.h">
+      <Filter>Header Files\wizard</Filter>
+    </QtMoc>
+    <QtMoc Include="src\wizard\MembraneQCSettingDlg.h">
+      <Filter>Header Files\wizard</Filter>
+    </QtMoc>
+    <QtMoc Include="src\wizard\PoreAutoFiltSettingDlg.h">
+      <Filter>Header Files\wizard</Filter>
+    </QtMoc>
+    <QtMoc Include="src\wizard\CustomComponent.h">
+      <Filter>Header Files\wizard</Filter>
+    </QtMoc>
+    <QtMoc Include="src\FlowOpertPanel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\etc\FTD3XX.dll">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\Registers.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\etc\Registers.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\info\ReleaseInfo.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\about.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\channelovftmap.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\channeltiamap.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\close.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\configuration.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\connect.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\cycloneG30.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\cycloneG30.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\initialization.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\loadconf.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\log.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\logPage.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\reg.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="res\res.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <None Include="res\img\run.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\search.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\stop.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\test.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\img\xml.png">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include=".\CycloneG30_resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\logger\EcoliLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\table\InputNewRecordDlg.h">
+      <Filter>Header Files\table</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataHandle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HttpClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RedisAccess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RecordCsvFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ValidOptimized.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\img\curve.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img\splitterBottom.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img\splitterLeft.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img\splitterRight.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img\splitterTop.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

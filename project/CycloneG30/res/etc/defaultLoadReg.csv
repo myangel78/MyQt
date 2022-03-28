@@ -1,0 +1,7 @@
+destination:   ASIC:  1,,,,
+destination, addr ,value, interval(ms),comment
+1,0x0,0x00000000,0,#comment
+1,0x1,0x00000001,1000,#comment
+1,0x2,0x00000002,1000,#comment
+1,0x3,0x000088aa,1000,#comment
+1,0x4,0x00008aaa,0,#comment

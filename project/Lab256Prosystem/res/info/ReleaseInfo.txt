@@ -1,0 +1,119 @@
+v3.6.1.0
+1. Add Swap memory Check.
+1. Add Email Send Feedback.
+-----------------------------------------
+v3.5.1.0
+1. Revision Automation Sequencing Flow(3).
+2. Add History Cap/Degating/Status Data Curve.
+3. Add Record Volt change.
+4. Add Autoseq Gating Status.
+-----------------------------------------
+v3.2.1.0
+1. Revision Automation Sequencing Flow(2).
+2. MembraneFormation Flow Changed.
+3. Keep Last Automation Sequencing Config.
+4. Add Pore protein serial number Config.
+-----------------------------------------
+v3.1.1.0
+1. Add Seq check in List and Degating for all seq col.
+2. Add Degating average calculation.
+3. Add Merge cap heat map to status map.
+-----------------------------------------
+v3.0.1.0
+1. Revision Automation Sequencing Flow.
+2. TODO:Automation Sequencing Flow.
+-----------------------------------------
+v2.3.1.0
+1. Add channel status times can set.
+2. Add Degating count calculation.
+-----------------------------------------
+v2.2.1.0
+1. Auto Upload Raw data Folder after Stop save.
+2. Add Raw data name space check.
+-----------------------------------------
+v2.1.1.0
+1. Add Realtime Sequencing Analysis image Save.
+-----------------------------------------
+v2.0.1.0
+1. Add Timer Period Sequencing Data Save.
+-----------------------------------------
+v1.9.1.0
+1. Add Timer Period Sequencing.
+-----------------------------------------
+v1.8.1.0
+1. Add Support Realtime Sequencing Analysis.
+2. Add Sample rate to Save Data Name.
+-----------------------------------------
+v1.7.1.0
+1. Add Realtime sequencing Analysis config.
+2. Add Upload File and Folder for Saved Data.
+3. Add Auto Check Version Update.
+-----------------------------------------
+v1.6.1.0
+1. Add config info save to User Path.
+2. Add Open Folder for Channel Status.
+3. Add Enable OpenGL config save.
+-----------------------------------------
+v1.5.2.0
+1. Fix the serial port crash bug.
+2. Add the choice whether enable opengl or not.
+-----------------------------------------
+v1.5.1.0
+1. Add STD Fliter for Sequencing Flow.
+1. Add Status Follow Channel and Save.
+-----------------------------------------
+v1.4.1.0
+1. Add Pore Select module.
+-----------------------------------------
+v1.3.1.0
+1. Add Temperature Monitor module.
+2. Add Show Sequencing ID and Save.
+-----------------------------------------
+v1.3.0.0
+1. Optimizate Sample Rate setting.
+-----------------------------------------
+v1.2.1.0
+1. Add Rotation Seqencing.
+2. Add Saturated voltage Limit setting.
+3. Add Rotation Seqencing follow Data Save.
+4. Add Spport Linux for Sample Rate read back.
+-----------------------------------------
+v1.0.12.0
+1. Add Channels Status Statistics.
+2. Set default Sample Rate to 5KHz.
+3. Can set Capacitance Heat Map Threshold.
+4. Can set Hardware Version & Sample Rate.
+-----------------------------------------
+v1.0.11.0
+1. Optimizate Calibration.
+2. Optimizate to Pull Config for Saving Data.
+-----------------------------------------
+v1.0.10.0
+1. Add Save Data Config getting from Server.
+-----------------------------------------
+v1.0.9.0
+1. Add Module Flow Seqencing.
+2. Move Adjust module to Voltage and Mainmenu.
+3. Reset running time when close device without exit system.
+-----------------------------------------
+v1.0.8.0
+1. Add Plot Review.
+2. Optimizate User Guide for Linux.
+3. Add STD min and max Filter.
+-----------------------------------------
+v1.0.6.0 Release Note: 2021-02-02
+1. Handle Zero Adjust and Degating conflict.
+-----------------------------------------
+v1.0.5.0 Release Note: 2021-01-29
+1. Add STD show and Filter.
+-----------------------------------------
+v1.0.3.0 Release Note: 2021-01-26
+1. Add About Info.
+-----------------------------------------
+v1.0.2.0 Release Note: 2021-01-25
+1. Add tools tips.
+-----------------------------------------
+v1.0.1.0 Release Note: 2021-01-22
+1. Init Release.
+2. Add CAP heat map.
+-----------------------------------------

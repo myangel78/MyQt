@@ -1,0 +1,4669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Registers>
+    <Register id="00">
+        <Reg_Name>VERSION</Reg_Name>
+        <Address>00</Address>
+        <Size>32</Size>
+        <Default_Value>20201204</Default_Value>
+        <Value>20201204</Value>
+        <AllField Table_Name="FieldsTabReg00">
+            <Field id="00">
+                <Field_name>version</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>20201204</Default_Value>
+                <Value>20201204</Value>
+                <Description>Design Version</Description>
+            </Field>
+        </AllField>
+    </Register>
+    <Register id="01">
+        <Reg_Name>PKT_CTL</Reg_Name>
+        <Address>01</Address>
+        <Size>32</Size>
+        <Default_Value>0000B56B</Default_Value>
+        <Value>0000B56B</Value>
+        <AllField Table_Name="FieldsTabReg01">
+            <Field id="00">
+                <Field_name>Reserved</Field_name>
+                <Bits>31:16</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                <Description>Reserved</Description>
+            </Field>
+            <Field id="01">
+                <Field_name>FRAME_HEADER</Field_name>
+                <Bits>15:2</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>2d5a</Default_Value>
+                <Value>2d5a</Value>
+                <Description>FRAME_HEADER: &#x000A;LVDS TX header control for every frame</Description>
+            </Field>
+            <Field id="02">
+                <Field_name>LANE_MODE</Field_name>
+                <Bits>1</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>LANE_MODE: LVDS Txlanes slelect &#x000A;1: 2 lanes &#x000A;0: 1 lane</Description>
+            </Field>
+            <Field id="03">
+                <Field_name>SCAN_DIR</Field_name>
+                <Bits>0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>SCAN_DIR:  format  ADC  data  sequence control &#x000A;1: from ADC63 to ADC0 &#x000A;0: from ADC0 to ADC63</Description>
+            </Field>
+        </AllField>
+    </Register>
+    <Register id="02">
+        <Reg_Name>PLL_CTL</Reg_Name>
+        <Address>02</Address>
+        <Size>32</Size>
+        <Default_Value>000205D9</Default_Value>
+        <Value>000205D9</Value>
+        <AllField Table_Name="FieldsTabReg02">
+            <Field id="00">
+                <Field_name>Reserved</Field_name>
+                <Bits>31:19</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+            <Field id="01">
+                <Field_name>PLL_RDY</Field_name>
+                <Bits>18</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Lock  detection  output  signal,  indicate PLL &#x000A; output clock frequency is stable</Description>
+            </Field>
+            <Field id="02">
+                <Field_name>PLL_EN</Field_name>
+                <Bits>17</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>PLL Enable Signal(not used) &#x000A;1: PLL Enable &#x000A;0: PLL Disable</Description>
+            </Field>
+            <Field id="03">
+                <Field_name>PLL_BYPASS</Field_name>
+                <Bits>16</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>PLL  BYPASS  Signal,  Enables  to  output &#x000A; PLL_REFIN from PLL_CLKO pin. &#x000A; 1: PLL bypass &#x000A;0: normal operation</Description>
+            </Field>
+            <Field id="04">
+                <Field_name>PLL_DM</Field_name>
+                <Bits>15:10</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>Reference Input Divider Control Pins. &#x000A; Set the reference divider factor from 1 to 64 </Description>
+            </Field>
+            <Field id="05">
+                <Field_name>PLL_DN</Field_name>
+                <Bits>9:3</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>003b</Default_Value>
+                <Value>003b</Value>
+                                <Description>Feedback Divider Control Pins. &#x000A;Set  the  feedback  divider  factor  from  1  to 128. </Description>
+            </Field>
+            <Field id="06">
+                <Field_name>PLL_DP</Field_name>
+                <Bits>2:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>Output Divider Control Pins. &#x000A;Set the post divider factor from 1 to 8 </Description>
+            </Field>
+        </AllField>
+    </Register>
+    <Register id="03">
+        <Reg_Name>LVDS_CTL</Reg_Name>
+        <Address>03</Address>
+        <Size>32</Size>
+        <Default_Value>00000003</Default_Value>
+        <Value>00000003</Value>
+        <AllField Table_Name="FieldsTabReg03">
+            <Field id="00">
+                <Field_name>Reserved</Field_name>
+                <Bits>31:8</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved </Description>
+            </Field>
+            <Field id="01">
+                <Field_name>LVDS_PLL_RDY</Field_name>
+                <Bits>7</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>PLL  lock  signal  output  for  debug,  indicate &#x000A;LVDS PLL output clock frequency is stable</Description>
+            </Field>
+            <Field id="02">
+                <Field_name>LVDS_LOOPBK_EN</Field_name>
+                <Bits>6</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>LVDS loop back Enable Signal,&#x000A;1: LVDS loop back Enable, &#x000A;0: LVDS loop back Disable </Description>
+            </Field>
+            <Field id="03">
+                <Field_name>LVDS_PLL_BYPASS</Field_name>
+                <Bits>5</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Bypass the PLL reference clock to output &#x000A;digital IO when “1” (1.2V   signal), PLL  &#x000A;reference  clock output for debug from BYPASS_CLK pin. &#x000A;1: PLL bypass  &#x000A;0: normal operation</Description>
+            </Field>
+            <Field id="04">
+                <Field_name>LVDS_DATASET</Field_name>
+                <Bits>4:2</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Sets  data  source  for  normal  mode  or  test pattern.&#x000A;3b000: normal operation &#x000A;3b001 ~ 3b111: internal test pattern </Description>
+            </Field>
+            <Field id="05">
+                <Field_name>LVDS_EN</Field_name>
+                <Bits>1</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>LVDS Enable Signal &#x000A;1: LVDS Enable, operation mode &#x000A;0: LVDS Disable, power down mode </Description>
+            </Field>
+            <Field id="06">
+                <Field_name>LVDS_CLKSEL</Field_name>
+                <Bits>0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>Selects  the  Rising  or  Falling  Edge  of  the Input Clock.&#x000A;1: rising edge &#x000A;0: falling edge </Description>
+            </Field>
+        </AllField>
+    </Register>
+    <Register id="04">
+        <Reg_Name>LVDS_DAT</Reg_Name>
+        <Address>04</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg04">
+            <Field id="00">
+                <Field_name>Reserved</Field_name>
+                <Bits>31:15</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+            <Field id="01">
+                <Field_name>LVDS_DAT_SWEN</Field_name>
+                <Bits>14</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>LVDS_DAT software enable, &#x000A;1: LVDS TX output LVDS_DAT[13:0] &#x000A;0: LVDS TX output AFE auto scan data </Description>
+            </Field>
+            <Field id="02">
+                <Field_name>LVDS_DAT</Field_name>
+                <Bits>13:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>when  LVDS_DAT_SWEN=1,  LVDS  output output this data register &#x000A;LVDS_DAT[13:7] is TX1P/Ns output;&#x000A;LVDS_DAT[6:0] is TX0P/Ns output; </Description>
+            </Field>
+        </AllField>
+    </Register>
+    <Register id="05">
+        <Reg_Name>TSEN_STAT</Reg_Name>
+        <Address>05</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg05">
+            <Field id="00">
+                <Field_name>Reserved</Field_name>
+                <Bits>31:1</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+            <Field id="01">
+                <Field_name>TSEN_EOF</Field_name>
+                <Bits>0</Bits>
+                <Mode>W1C</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>TSEN_EOF: TEMP SENSOR end of conversion</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="06">
+        <Reg_Name>TSEN_CTL</Reg_Name>
+        <Address>06</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg06">
+            <Field id="00">
+                <Field_name>Reserved</Field_name>
+                <Bits>31:13</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+            <Field id="01">
+                <Field_name>TSEN_PD</Field_name>
+                <Bits>12</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>TSEN_PD: TEMP SENSOR power down. &#x000A;1: Power down &#x000A;0: Normal </Description>
+            </Field>
+                        <Field id="02">
+                <Field_name>TSEN_DAT</Field_name>
+                <Bits>11:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>TSEN_DAT: TEMP SENSOR data register </Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="07">
+        <Reg_Name>OTP_CTL</Reg_Name>
+        <Address>07</Address>
+        <Size>32</Size>
+        <Default_Value>BE800000</Default_Value>
+        <Value>BE800000</Value>
+        <AllField Table_Name="FieldsTabReg07">
+            <Field id="00">
+                <Field_name>OTP_EOP</Field_name>
+                <Bits>31</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>OTP program detection output signal,&#x000A;0: OTP program is running &#x000A;1: OTP program is completed </Description>
+            </Field>
+            <Field id="01">
+                <Field_name>OTP_PWCNT</Field_name>
+                <Bits>30:19</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>07d0</Default_Value>
+                <Value>07d0</Value>
+                                <Description>OTP program pulse width counter (optional, &#x000A;can be set as constant) </Description>
+            </Field>
+                        <Field id="02">
+                <Field_name>OTP_PA</Field_name>
+                <Bits>18:7</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>4K*32bit OTP ROM indirect address </Description>
+            </Field>
+                        <Field id="03">
+                <Field_name>OTP_PTM</Field_name>
+                <Bits>6:4</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>OTP ROM operation mode &#x000A;000: standby or read mode &#x000A;010: Program mode &#x000A;others: reserved </Description>
+            </Field>
+                        <Field id="04">
+                <Field_name>OTP_PDST</Field_name>
+                <Bits>3</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>OTP  ROM  deep  standby  mode  enabling, &#x000A;high active </Description>
+            </Field>
+                        <Field id="05">
+                <Field_name>OTP_PWEOTP_PWE</Field_name>
+                <Bits>2</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>OTP  ROM  program  mode enabling, &#x000A;high active (auto clear)</Description>
+            </Field>
+                        <Field id="06">
+                <Field_name>OTP_POE</Field_name>
+                <Bits>1</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>OTP ROM output enabling, high active</Description>
+            </Field>
+                        <Field id="07">
+                <Field_name>OTP_PCE</Field_name>
+                <Bits>0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>OTP ROM IP enabling, high active</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="08">
+        <Reg_Name>OTP_DAT</Reg_Name>
+        <Address>08</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg08">
+            <Field id="00">
+                <Field_name>OTP_DAT</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Write : OTPROM Data PDIN for program &#x000A;Read : OTP ROM Data PDOUT readback</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="09">
+        <Reg_Name>DAC_CTL</Reg_Name>
+        <Address>09</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg09">
+            <Field id="00">
+                <Field_name>Reserved</Field_name>
+                <Bits>31:24</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+            <Field id="01">
+                <Field_name>DACEN2</Field_name>
+                <Bits>23</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>0: Digital DAC disabled &#x000A;1: Digital DAC enabled </Description>
+            </Field>
+                        <Field id="02">
+                <Field_name>PDCHG2</Field_name>
+                <Bits>22</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Pre-charge Vref Cap:&#x000A;1: Power down &#x000A;0: Power on </Description>
+            </Field>
+                        <Field id="03">
+                <Field_name>RST_ANA2</Field_name>
+                <Bits>21</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>DAC Analog reset Control (analog):&#x000A;1: reset &#x000A;0: normal work </Description>
+            </Field>
+                        <Field id="04">
+                <Field_name>PDDAANA2</Field_name>
+                <Bits>20</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>DAC Analog parts control Power Down &#x000A;Control (analog):&#x000A;1: Power down &#x000A;0: Power on</Description>
+            </Field>
+                        <Field id="05">
+                <Field_name>PDBIAS2</Field_name>
+                <Bits>19</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description> Reference power-down:&#x000A;1: Power down &#x000A;0: Power on</Description>
+            </Field>
+                        <Field id="06">
+                <Field_name>DAIB_CTR2</Field_name>
+                <Bits>18:16</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Selects current biasing resistor: &#x000A;00: Smallest Biasing Resistor &#x000A;01: Medium Small Biasing Resistor &#x000A;10: Medium Big Biasing Resistor &#x000A;11:Biggest Biasing Resistor</Description>
+            </Field>
+                        <Field id="07">
+                <Field_name>DACEN1</Field_name>
+                <Bits>15</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>0: Digital DAC disabled &#x000A;1: Digital DAC enabled</Description>
+            </Field>
+            <Field id="08">
+                <Field_name>PDCHG1</Field_name>
+                <Bits>14</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Pre-charge Vref Cap:&#x000A;1: Power down&#x000A;0: Power on</Description>
+            </Field>
+            <Field id="09">
+                <Field_name>RST_ANA1</Field_name>
+                <Bits>13</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>DAC Analog reset Control (analog):&#x000A;1: reset &#x000A;0: normal work </Description>
+            </Field>
+            <Field id="10">
+                <Field_name>PDDAANA1</Field_name>
+                <Bits>12</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description> DAC Analog parts control Power &#x000A;Down Control (analog): &#x000A;1: Power down &#x000A;0: Power on</Description>
+            </Field>
+            <Field id="11">
+                <Field_name>PDBIAS1</Field_name>
+                <Bits>11</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reference power-down:&#x000A;1: Power down &#x000A;0: Power on </Description>
+            </Field>
+            <Field id="12">
+                <Field_name>PDBIAS1</Field_name>
+                <Bits>10:8</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Selects current biasing resistor:&#x000A;00: Smallest Biasing Resistor &#x000A;01: Medium Small Biasing Resistor &#x000A;10: Medium Big Biasing Resistor &#x000A;11:Biggest Biasing Resistor </Description>
+            </Field>
+            <Field id="13">
+                <Field_name>DACEN0</Field_name>
+                <Bits>7</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description> 0: Digital DAC disabled &#x000A;1: Digital DAC enabled</Description>
+            </Field>
+            <Field id="14">
+                <Field_name>PDCHG0</Field_name>
+                <Bits>6</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Pre-charge Vref Cap:&#x000A;1: Power down &#x000A;0: Power on </Description>
+            </Field>
+            <Field id="15">
+                <Field_name>RST_ANA0</Field_name>
+                <Bits>5</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>DAC Analog reset Control (analog):&#x000A;1: reset &#x000A;0: normal work </Description>
+            </Field>
+            <Field id="16">
+                <Field_name>PDDAANA0</Field_name>
+                <Bits>4</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>DAC   Analog   parts   control   Power   Down Control (analog):&#x000A;1: Power down &#x000A;0: Power on </Description>
+            </Field>
+            <Field id="17">
+                <Field_name>PDBIAS0</Field_name>
+                <Bits>3</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reference power-down:&#x000A;1: Power down &#x000A;0: Power on </Description>
+            </Field>
+            <Field id="18">
+                <Field_name>DAIB_CTR0</Field_name>
+                <Bits>2:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Selects current biasing resistor: &#x000A;00: Smallest Biasing Resistor &#x000A;01: Medium Small Biasing Resistor &#x000A;10: Medium Big Biasing Resistor &#x000A;11:Biggest Biasing Resistor </Description>
+            </Field>
+        </AllField>
+         </Register>
+        <Register id="10">
+        <Reg_Name>DAC0_DATA</Reg_Name>
+        <Address>0A</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg10">
+            <Field id="00">
+                <Field_name>dac0_ren</Field_name>
+                <Bits>31</Bits>
+                <Mode>WO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>write  1  to  this  bit  to  &#x000A;read  dac0_data  to dac0_addr of sram </Description>
+            </Field>
+            <Field id="01">
+                <Field_name>reserved</Field_name>
+                <Bits>30:25</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved </Description>
+            </Field>
+                        <Field id="02">
+                <Field_name>dac0_addr</Field_name>
+                <Bits>24:16</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>write dac0_addr to register</Description>
+            </Field>
+                        <Field id="03">
+                <Field_name>dac0_data</Field_name>
+                <Bits>15:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>write dac0_data to register</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="11">
+        <Reg_Name>DAC1_DATA</Reg_Name>
+        <Address>0B</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg11">
+            <Field id="00">
+                <Field_name>reserved</Field_name>
+                <Bits>31:16</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+            <Field id="01">
+                <Field_name>dac1_data</Field_name>
+                <Bits>15:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>dac1_data</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="12">
+        <Reg_Name>DAC2_DATA</Reg_Name>
+        <Address>0C</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg12">
+            <Field id="00">
+                <Field_name>reserved</Field_name>
+                <Bits>31:16</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+            <Field id="01">
+                <Field_name>dac2_data</Field_name>
+                <Bits>15:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>dac2_data</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="13">
+        <Reg_Name>DAC_GEN_CTL</Reg_Name>
+        <Address>0D</Address>
+        <Size>32</Size>
+        <Default_Value>00000007</Default_Value>
+        <Value>00000007</Value>
+        <AllField Table_Name="FieldsTabReg13">
+            <Field id="00">
+                <Field_name>reserved</Field_name>
+                <Bits>31:21</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+            <Field id="01">
+                <Field_name>dac0_fix_value</Field_name>
+                <Bits>20:5</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>dac0 fix value</Description>
+            </Field>
+                        <Field id="02">
+                <Field_name>dac0_fix_mode</Field_name>
+                <Bits>4</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>dac0 fix value mode</Description>
+            </Field>
+                        <Field id="03">
+                <Field_name>dac0_prog_mode</Field_name>
+                <Bits>3</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>dac0 program mode</Description>
+            </Field>
+                        <Field id="04">
+                <Field_name>dac0_gen_divval</Field_name>
+                <Bits>2</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>1:256fs &#x000A;0:128fs</Description>
+            </Field>
+                        <Field id="05">
+                <Field_name>dac1_gen_divval</Field_name>
+                <Bits>1</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>1:256fs &#x000A;0:128fs</Description>
+            </Field>
+                        <Field id="06">
+                <Field_name>dac2_gen_divval</Field_name>
+                <Bits>0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>1:256fs &#x000A;0:128fs</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="14">
+        <Reg_Name>DAC0_SRAM_RD_DATA</Reg_Name>
+        <Address>0E</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg14">
+            <Field id="00">
+                <Field_name>dac0_wen</Field_name>
+                <Bits>31</Bits>
+                <Mode>WO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>write 1 to this bit to write dac0_data to &#x000A;dac0_addr of sram</Description>
+            </Field>
+            <Field id="01">
+                <Field_name>reserved</Field_name>
+                <Bits>30:16</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved </Description>
+            </Field>
+                        <Field id="02">
+                <Field_name>dac0_read_data</Field_name>
+                <Bits>15:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>After  write  dac0_ren  and  dac0_addr,read &#x000A;this field to read SRAM data from sram</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="15">
+        <Reg_Name>SYS_DIV_0_CFG</Reg_Name>
+        <Address>12</Address>
+        <Size>32</Size>
+        <Default_Value>12CBCB02</Default_Value>
+        <Value>12CBCB02</Value>
+        <AllField Table_Name="FieldsTabReg15">
+            <Field id="00">
+                <Field_name>reg_t_sensor_clk_div</Field_name>
+                <Bits>31:20</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>012c</Default_Value>
+                <Value>012c</Value>
+                                <Description>This bit can be configured from 1 ~ 4095,&#x000A;temperature  sensor  clock  divided  by  this &#x000A;value multiply 8. For example:&#x000A;if this bit configured to 2, then tsensor clock divided by 2*8=16 from pll clock.&#x000A;If  this  bit  is  configured  to  12h000,  the temperaturesensor clock will be stopped &#x000A;</Description>
+            </Field>
+            <Field id="01">
+                <Field_name>reg_adc_clk_div</Field_name>
+                <Bits>19:14</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>002f</Default_Value>
+                <Value>002f</Value>
+                                <Description>adc clock divider configure 1~63:&#x000A;If  this  bit  is  configured  to  6h00,  the  ADC &#x000A;clock will be stopped</Description>
+            </Field>
+                        <Field id="02">
+                <Field_name>reg_otp_ctl_clk_div</Field_name>
+                <Bits>13:8</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>000b</Default_Value>
+                <Value>000b</Value>
+                                <Description>otp control clock divider configure1~63:&#x000A;If  this  bit  is  configured  to  6h00,  the OTP &#x000A;clock will be stopped </Description>
+            </Field>
+                        <Field id="03">
+                <Field_name>reserved</Field_name>
+                <Bits>7:6</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="04">
+                <Field_name>reg_data_flow_clk_div</Field_name>
+                <Bits>5:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0002</Default_Value>
+                <Value>0002</Value>
+                                <Description>data flow blocks clock divider configure1~63:&#x000A;If  this  bit  is  configured  to  6h00,  the &#x000A;system clock will be stopped, and MUST &#x000A;use power on reset or pin reset to reset IC. </Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="16">
+        <Reg_Name>SYS_DIV_1_CFG</Reg_Name>
+        <Address>13</Address>
+        <Size>32</Size>
+        <Default_Value>EFEFEF00</Default_Value>
+        <Value>EFEFEF00</Value>
+        <AllField Table_Name="FieldsTabReg16">
+            <Field id="00">
+                <Field_name>reg_dac_2_clk_div</Field_name>
+                <Bits>31:24</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>00EF</Default_Value>
+                <Value>00EF</Value>
+                                <Description>dac_2 clock divider configure1~255:&#x000A;If  this  bit  is  configured  to  8h00,  the  DAC2 &#x000A;clock will be stopped </Description>
+            </Field>
+            <Field id="01">
+                <Field_name>reg_dac_1_clk_div</Field_name>
+                <Bits>23:16</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>00EF</Default_Value>
+                <Value>00EF</Value>
+                                <Description>dac_1 clock divider configure1~255:&#x000A;If  this  bit  is  configured  to  8h00,the  DAC1 &#x000A;clock will be stopped </Description>
+            </Field>
+                        <Field id="02">
+                <Field_name>reg_dac_0_clk_div</Field_name>
+                <Bits>15:8</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>00EF</Default_Value>
+                <Value>00EF</Value>
+                                <Description>dac_0 clock divider configure1~255:&#x000A;If  this  bit  is  configured  to  8h00,  the  DAC0 &#x000A;clock will be stopped </Description>
+            </Field>
+                        <Field id="03">
+                <Field_name>reserved</Field_name>
+                <Bits>7:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="17">
+        <Reg_Name>SYS_CLK_CG</Reg_Name>
+        <Address>14</Address>
+        <Size>32</Size>
+        <Default_Value>00055154</Default_Value>
+        <Value>00055154</Value>
+        <AllField Table_Name="FieldsTabReg17">
+            <Field id="00">
+                <Field_name>reserved</Field_name>
+                <Bits>31:19</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+            <Field id="01">
+                <Field_name>reg_t_sensor_cg</Field_name>
+                <Bits>18</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>temperature   sensor   block   clock   gating &#x000A;control:&#x000A;1: clock enable &#x000A;0: clock disable </Description>
+            </Field>
+                        <Field id="02">
+                <Field_name>reserved</Field_name>
+                <Bits>17</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="03">
+                <Field_name>reg_dac_2_cg</Field_name>
+                <Bits>16</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>dac_2 block clock gating control:&#x000A;1: clock enable &#x000A;0: clock disable </Description>
+            </Field>
+                        <Field id="04">
+                <Field_name>reserved</Field_name>
+                <Bits>15</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="05">
+                <Field_name>reg_dac_1_cg</Field_name>
+                <Bits>14</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>dac_1 block clock gating control:&#x000A;1: clock enable &#x000A;0: clock disable </Description>
+            </Field>
+                        <Field id="06">
+                <Field_name>reserved</Field_name>
+                <Bits>13</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved </Description>
+            </Field>
+                        <Field id="07">
+                <Field_name>reg_dac_0_cg</Field_name>
+                <Bits>12</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>dac_0 block clock gating control:&#x000A;1: clock enable &#x000A;0: clock disable </Description>
+            </Field>
+                        <Field id="08">
+                <Field_name>reserved</Field_name>
+                <Bits>11:9</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="09">
+                <Field_name>reg_adc_cg</Field_name>
+                <Bits>8</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>adc block clock gating control:&#x000A;1: clock enable &#x000A;0: clock disable</Description>
+            </Field>
+                        <Field id="10">
+                <Field_name>reserved</Field_name>
+                <Bits>7</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved </Description>
+            </Field>
+                        <Field id="11">
+                <Field_name>reg_otp_ctl_cg</Field_name>
+                <Bits>6</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>otpcontrol block clock gating control:&#x000A;1: clock enable &#x000A;0: clock disable</Description>
+            </Field>
+                        <Field id="12">
+                <Field_name>reserved</Field_name>
+                <Bits>5</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved </Description>
+            </Field>
+                        <Field id="13">
+                <Field_name>reg_lvds_tx_cg</Field_name>
+                <Bits>4</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>lvds tx block clock gating control:&#x000A;1: clock enable &#x000A;0: clock disable </Description>
+            </Field>
+                        <Field id="14">
+                <Field_name>reserved</Field_name>
+                <Bits>3</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="15">
+                <Field_name>reg_pkt_fmt_cg</Field_name>
+                <Bits>2</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>pktformat block clock gating control:&#x000A;1: clock enable &#x000A;0: clock disable </Description>
+            </Field>
+                        <Field id="16">
+                <Field_name>reserved</Field_name>
+                <Bits>1:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="18">
+        <Reg_Name>HOST_SW_RSTN_CFG</Reg_Name>
+        <Address>15</Address>
+        <Size>32</Size>
+        <Default_Value>00055155</Default_Value>
+        <Value>00055155</Value>
+        <AllField Table_Name="FieldsTabReg18">
+            <Field id="00">
+                <Field_name>reserved</Field_name>
+                <Bits>31:19</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+            <Field id="01">
+                <Field_name>reg_t_sensor_hst_sw_rstn</Field_name>
+                <Bits>18</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>temperature  sensor  block  host  sw  rstn control:&#x000A;1: not reset the block&#x000A;0: reset the block</Description>
+            </Field>
+                        <Field id="02">
+                <Field_name>reserved</Field_name>
+                <Bits>17</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="03">
+                <Field_name>reg_dac_2_hst_sw_rstn</Field_name>
+                <Bits>16</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>dac_2 block host sw rstn control:&#x000A;1: not reset the block&#x000A;0: reset the block</Description>
+            </Field>
+                        <Field id="04">
+                <Field_name>reserved</Field_name>
+                <Bits>15</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="05">
+                <Field_name>reg_dac_1_hst_sw_rstn</Field_name>
+                <Bits>14</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>dac_1 block host sw rstn control:&#x000A;1: not resetthe block&#x000A;0: reset the block </Description>
+            </Field>
+                        <Field id="06">
+                <Field_name>reserved</Field_name>
+                <Bits>13</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="07">
+                <Field_name>reg_dac_0_hst_sw_rstn</Field_name>
+                <Bits>12</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>dac_0 block host sw rstn control:&#x000A;1: not reset the block&#x000A;0: reset the block </Description>
+            </Field>
+                        <Field id="08">
+                <Field_name>reserved</Field_name>
+                <Bits>11:9</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="09">
+                <Field_name>reg_adc_hst_sw_rstn</Field_name>
+                <Bits>8</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>adc block host swrstn control:&#x000A;1: not reset the block&#x000A;0: reset the block </Description>
+            </Field>
+                        <Field id="10">
+                <Field_name>reserved</Field_name>
+                <Bits>7</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="11">
+                <Field_name>reg_opt_ctl_hst_sw_rstn</Field_name>
+                <Bits>6</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>otp_ctl block host sw rstn control:&#x000A;1: not reset the block&#x000A;0: reset the block </Description>
+            </Field>
+                        <Field id="12">
+                <Field_name>reserved</Field_name>
+                <Bits>5</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="13">
+                <Field_name>reg_lvds_tx_hst_sw_rstn</Field_name>
+                <Bits>4</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>lvds_tx block host sw rstn control:&#x000A;1: not reset the block&#x000A;0: reset the block </Description>
+            </Field>
+                        <Field id="14">
+                <Field_name>reserved</Field_name>
+                <Bits>3</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="15">
+                <Field_name>reg_pkt_fmt_hst_sw_rstn</Field_name>
+                <Bits>2</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>pkt format block host sw rstn control:&#x000A;1: not reset the block&#x000A;0: reset the block </Description>
+            </Field>
+                        <Field id="16">
+                <Field_name>reserved</Field_name>
+                <Bits>1</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="17">
+                <Field_name>reg_spi_hst_sw_rstn</Field_name>
+                <Bits>0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>spi block host sw rstn control:&#x000A;1: not reset the block&#x000A;0: reset the block </Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="19">
+        <Reg_Name>DEBUG_PORT_CTL</Reg_Name>
+        <Address>16</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg19">
+            <Field id="00">
+                <Field_name>reserved</Field_name>
+                <Bits>31:5</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                                <Description>Reserved</Description>
+                <Value>0000</Value>
+            </Field>
+            <Field id="01">
+                <Field_name>debug_port_sel</Field_name>
+                <Bits>4:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                                <Description>debug port (TESTIO29,TESTIO30, &#x000A;TESTIO31,SYS_REAY)select,&#x000A;5d00: debug port as normal mode&#x000A;5d01~5d18:  output  special  signals  from &#x000A;debug portothers: reserved </Description>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="20">
+        <Reg_Name>AFE_INMUX_SEL0</Reg_Name>
+        <Address>20</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg20">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel0</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Use 4bit per channel, TIA total 1024 channels &#x000A;[3:0]-->sel3[0],sel2[0],sel1[0],sel0[0] &#x000A;[7:4]-->sel3[1],sel2[1],sel1[1],sel0[1]  &#x000A;... &#x000A;[31:28]-->sel3[7],sel2[7],sel1[7],sel0[7] &#x000A;0000: all switches offTIA normal work mode, &#x000A;0001:Select sensor A &#x000A;0010:Select sensor B &#x000A;0011:Select sensor C &#x000A;0100:Select sensor D &#x000A;0101: TIA input disconnect to sensors,connect to internal current source.Sensor connect to unblock voltage &#x000A;0110:Select sensor A &#x000A;0111:Select sensor B &#x000A;1000:Select sensor C &#x000A;1001:Select sensor DTIA normal work mode, internal current source add to TIA input through SW11, SW10, X1 and X2.  &#x000A;1010:Select sensor A &#x000A;1011:Select sensor B &#x000A;1100:Select sensor C &#x000A;1101:Select sensor DTIA input disconnect to sensors, &#x000A;1110:connect to VCM through a resistor &#x000A;1111:connect to VCM</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="21">
+        <Reg_Name>AFE_INMUX_SEL1</Reg_Name>
+        <Address>21</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+                <Description>Use 4bit per channel, TIA total 1024 channels &#x000A;[3:0]-->sel3[0],sel2[0],sel1[0],sel0[0] &#x000A;[7:4]-->sel3[1],sel2[1],sel1[1],sel0[1]  &#x000A;... &#x000A;[31:28]-->sel3[7],sel2[7],sel1[7],sel0[7] &#x000A;0000: all switches offTIA normal work mode, &#x000A;0001:Select sensor A &#x000A;0010:Select sensor B &#x000A;0011:Select sensor C &#x000A;0100:Select sensor D &#x000A;0101: TIA input disconnect to sensors,connect to internal current source.Sensor connect to unblock voltage &#x000A;0110:Select sensor A &#x000A;0111:Select sensor B &#x000A;1000:Select sensor C &#x000A;1001:Select sensor DTIA normal work mode, internal current source add to TIA input through SW11, SW10, X1 and X2.  &#x000A;1010:Select sensor A &#x000A;1011:Select sensor B &#x000A;1100:Select sensor C &#x000A;1101:Select sensor DTIA input disconnect to sensors, &#x000A;1110:connect to VCM through a resistor &#x000A;1111:connect to VCM</Description>
+        <AllField Table_Name="FieldsTabReg21">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel1</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="22">
+        <Reg_Name>AFE_INMUX_SEL2</Reg_Name>
+        <Address>22</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg22">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel2</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="23">
+        <Reg_Name>AFE_INMUX_SEL3</Reg_Name>
+        <Address>23</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg23">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel3</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="24">
+        <Reg_Name>AFE_INMUX_SEL4</Reg_Name>
+        <Address>24</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg24">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel4</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="25">
+        <Reg_Name>AFE_INMUX_SEL5</Reg_Name>
+        <Address>25</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg25">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel5</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="26">
+        <Reg_Name>AFE_INMUX_SEL6</Reg_Name>
+        <Address>26</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg26">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel6</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="27">
+        <Reg_Name>AFE_INMUX_SEL7</Reg_Name>
+        <Address>27</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg27">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel7</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="28">
+        <Reg_Name>AFE_INMUX_SEL8</Reg_Name>
+        <Address>28</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg28">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel8</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="29">
+        <Reg_Name>AFE_INMUX_SEL9</Reg_Name>
+        <Address>29</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg29">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel9</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="30">
+        <Reg_Name>AFE_INMUX_SEL10</Reg_Name>
+        <Address>2A</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg30">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel10</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="31">
+        <Reg_Name>AFE_INMUX_SEL11</Reg_Name>
+        <Address>2B</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg31">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel11</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="32">
+        <Reg_Name>AFE_INMUX_SEL12</Reg_Name>
+        <Address>2C</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg32">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel12</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="33">
+        <Reg_Name>AFE_INMUX_SEL13</Reg_Name>
+        <Address>2D</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg33">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel13</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="34">
+        <Reg_Name>AFE_INMUX_SEL14</Reg_Name>
+        <Address>2E</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg34">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel14</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="35">
+        <Reg_Name>AFE_INMUX_SEL15</Reg_Name>
+        <Address>2F</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg35">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel15</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="36">
+        <Reg_Name>AFE_INMUX_SEL16</Reg_Name>
+        <Address>30</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg36">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel16</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="37">
+        <Reg_Name>AFE_INMUX_SEL17</Reg_Name>
+        <Address>31</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg37">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel17</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="38">
+        <Reg_Name>AFE_INMUX_SEL18</Reg_Name>
+        <Address>32</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg38">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel18</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="39">
+        <Reg_Name>AFE_INMUX_SEL19</Reg_Name>
+        <Address>33</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg39">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel19</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="40">
+        <Reg_Name>AFE_INMUX_SEL20</Reg_Name>
+        <Address>34</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg40">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel20</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="41">
+        <Reg_Name>AFE_INMUX_SEL21</Reg_Name>
+        <Address>35</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg41">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel21</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="42">
+        <Reg_Name>AFE_INMUX_SEL22</Reg_Name>
+        <Address>36</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg42">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel22</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="43">
+        <Reg_Name>AFE_INMUX_SEL23</Reg_Name>
+        <Address>37</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg43">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel23</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="44">
+        <Reg_Name>AFE_INMUX_SEL24</Reg_Name>
+        <Address>38</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg44">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel24</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="45">
+        <Reg_Name>AFE_INMUX_SEL25</Reg_Name>
+        <Address>39</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg45">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel25</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="46">
+        <Reg_Name>AFE_INMUX_SEL26</Reg_Name>
+        <Address>3A</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg46">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel26</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="47">
+        <Reg_Name>AFE_INMUX_SEL27</Reg_Name>
+        <Address>3B</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg47">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel27</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="48">
+        <Reg_Name>AFE_INMUX_SEL28</Reg_Name>
+        <Address>3C</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg48">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel28</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="49">
+        <Reg_Name>AFE_INMUX_SEL29</Reg_Name>
+        <Address>3D</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg49">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel29</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="50">
+        <Reg_Name>AFE_INMUX_SEL30</Reg_Name>
+        <Address>3E</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg50">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel30</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="51">
+        <Reg_Name>AFE_INMUX_SEL31</Reg_Name>
+        <Address>3F</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg51">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel31</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="52">
+        <Reg_Name>AFE_INMUX_SEL32</Reg_Name>
+        <Address>40</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg52">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel32</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="53">
+        <Reg_Name>AFE_INMUX_SEL33</Reg_Name>
+        <Address>41</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg53">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel33</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="54">
+        <Reg_Name>AFE_INMUX_SEL34</Reg_Name>
+        <Address>42</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg54">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel34</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="55">
+        <Reg_Name>AFE_INMUX_SEL35</Reg_Name>
+        <Address>43</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg55">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel35</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="56">
+        <Reg_Name>AFE_INMUX_SEL36</Reg_Name>
+        <Address>44</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg56">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel36</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="57">
+        <Reg_Name>AFE_INMUX_SEL37</Reg_Name>
+        <Address>45</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg57">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel37</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="58">
+        <Reg_Name>AFE_INMUX_SEL38</Reg_Name>
+        <Address>46</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg58">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel38</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="59">
+        <Reg_Name>AFE_INMUX_SEL39</Reg_Name>
+        <Address>47</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg59">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel39</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="60">
+        <Reg_Name>AFE_INMUX_SEL40</Reg_Name>
+        <Address>48</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg60">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel40</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="61">
+        <Reg_Name>AFE_INMUX_SEL41</Reg_Name>
+        <Address>49</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg61">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel41</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="62">
+        <Reg_Name>AFE_INMUX_SEL42</Reg_Name>
+        <Address>4A</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg62">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel42</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="63">
+        <Reg_Name>AFE_INMUX_SEL43</Reg_Name>
+        <Address>4B</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg63">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel43</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="64">
+        <Reg_Name>AFE_INMUX_SEL44</Reg_Name>
+        <Address>4C</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg64">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel44</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="65">
+        <Reg_Name>AFE_INMUX_SEL45</Reg_Name>
+        <Address>4D</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg65">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel45</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="66">
+        <Reg_Name>AFE_INMUX_SEL46</Reg_Name>
+        <Address>4E</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg66">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel46</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="67">
+        <Reg_Name>AFE_INMUX_SEL47</Reg_Name>
+        <Address>4F</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg67">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel47</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="68">
+        <Reg_Name>AFE_INMUX_SEL48</Reg_Name>
+        <Address>50</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg68">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel48</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+                </AllField>
+    </Register>
+        <Register id="69">
+        <Reg_Name>AFE_INMUX_SEL49</Reg_Name>
+        <Address>51</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg69">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel49</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+            </AllField>
+    </Register>
+        <Register id="70">
+        <Reg_Name>AFE_INMUX_SEL50</Reg_Name>
+        <Address>52</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg70">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel50</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="71">
+        <Reg_Name>AFE_INMUX_SEL51</Reg_Name>
+        <Address>53</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg71">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel51</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="72">
+        <Reg_Name>AFE_INMUX_SEL52</Reg_Name>
+        <Address>54</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg72">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel52</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="73">
+        <Reg_Name>AFE_INMUX_SEL53</Reg_Name>
+        <Address>55</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg73">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel53</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="74">
+        <Reg_Name>AFE_INMUX_SEL54</Reg_Name>
+        <Address>56</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg74">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel54</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="75">
+        <Reg_Name>AFE_INMUX_SEL55</Reg_Name>
+        <Address>57</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg75">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel55</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="76">
+        <Reg_Name>AFE_INMUX_SEL56</Reg_Name>
+        <Address>58</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg76">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel56</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="77">
+        <Reg_Name>AFE_INMUX_SEL57</Reg_Name>
+        <Address>59</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg77">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel57</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="78">
+        <Reg_Name>AFE_INMUX_SEL58</Reg_Name>
+        <Address>5A</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg78">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel58</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="79">
+        <Reg_Name>AFE_INMUX_SEL59</Reg_Name>
+        <Address>5B</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg79">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel59</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="80">
+        <Reg_Name>AFE_INMUX_SEL60</Reg_Name>
+        <Address>5C</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg80">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel60</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="81">
+        <Reg_Name>AFE_INMUX_SEL61</Reg_Name>
+        <Address>5D</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg81">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel61</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="82">
+        <Reg_Name>AFE_INMUX_SEL62</Reg_Name>
+        <Address>5E</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg82">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel62</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="83">
+        <Reg_Name>AFE_INMUX_SEL63</Reg_Name>
+        <Address>5F</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg83">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel63</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="84">
+        <Reg_Name>AFE_INMUX_SEL64</Reg_Name>
+        <Address>60</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg84">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel64</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="85">
+        <Reg_Name>AFE_INMUX_SEL65</Reg_Name>
+        <Address>61</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg85">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel65</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="86">
+        <Reg_Name>AFE_INMUX_SEL66</Reg_Name>
+        <Address>62</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg86">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel66</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="87">
+        <Reg_Name>AFE_INMUX_SEL67</Reg_Name>
+        <Address>63</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg87">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel67</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="88">
+        <Reg_Name>AFE_INMUX_SEL68</Reg_Name>
+        <Address>64</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg88">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel68</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="89">
+        <Reg_Name>AFE_INMUX_SEL69</Reg_Name>
+        <Address>65</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg89">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel69</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="90">
+        <Reg_Name>AFE_INMUX_SEL70</Reg_Name>
+        <Address>66</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg90">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel70</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="91">
+        <Reg_Name>AFE_INMUX_SEL71</Reg_Name>
+        <Address>67</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg91">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel71</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="92">
+        <Reg_Name>AFE_INMUX_SEL72</Reg_Name>
+        <Address>68</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg92">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel72</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="93">
+        <Reg_Name>AFE_INMUX_SEL73</Reg_Name>
+        <Address>69</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg93">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel73</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="94">
+        <Reg_Name>AFE_INMUX_SEL74</Reg_Name>
+        <Address>6A</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg94">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel74</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>00000000</Default_Value>
+                <Value>00000000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="95">
+        <Reg_Name>AFE_INMUX_SEL75</Reg_Name>
+        <Address>6B</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg95">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel75</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="96">
+        <Reg_Name>AFE_INMUX_SEL76</Reg_Name>
+        <Address>6C</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg96">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel76</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="97">
+        <Reg_Name>AFE_INMUX_SEL77</Reg_Name>
+        <Address>6D</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg97">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel77</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="98">
+        <Reg_Name>AFE_INMUX_SEL78</Reg_Name>
+        <Address>6E</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg98">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel78</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="99">
+        <Reg_Name>AFE_INMUX_SEL79</Reg_Name>
+        <Address>6F</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg99">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel79</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="100">
+        <Reg_Name>AFE_INMUX_SEL80</Reg_Name>
+        <Address>70</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg100">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel80</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="101">
+        <Reg_Name>AFE_INMUX_SEL81</Reg_Name>
+        <Address>71</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg101">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel81</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="102">
+        <Reg_Name>AFE_INMUX_SEL82</Reg_Name>
+        <Address>72</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg102">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel82</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="103">
+        <Reg_Name>AFE_INMUX_SEL83</Reg_Name>
+        <Address>73</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg103">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel83</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="104">
+        <Reg_Name>AFE_INMUX_SEL84</Reg_Name>
+        <Address>74</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg104">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel84</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="105">
+        <Reg_Name>AFE_INMUX_SEL85</Reg_Name>
+        <Address>75</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg105">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel85</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="106">
+        <Reg_Name>AFE_INMUX_SEL86</Reg_Name>
+        <Address>76</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg106">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel86</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="107">
+        <Reg_Name>AFE_INMUX_SEL87</Reg_Name>
+        <Address>77</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg107">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel87</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="108">
+        <Reg_Name>AFE_INMUX_SEL88</Reg_Name>
+        <Address>78</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg108">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel88</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="109">
+        <Reg_Name>AFE_INMUX_SEL89</Reg_Name>
+        <Address>79</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg109">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel89</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="110">
+        <Reg_Name>AFE_INMUX_SEL90</Reg_Name>
+        <Address>7A</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg110">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel90</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="111">
+        <Reg_Name>AFE_INMUX_SEL91</Reg_Name>
+        <Address>7B</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg111">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel91</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="112">
+        <Reg_Name>AFE_INMUX_SEL92</Reg_Name>
+        <Address>7C</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg112">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel92</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="113">
+        <Reg_Name>AFE_INMUX_SEL93</Reg_Name>
+        <Address>7D</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg113">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel93</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="114">
+        <Reg_Name>AFE_INMUX_SEL94</Reg_Name>
+        <Address>7E</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg114">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel94</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="115">
+        <Reg_Name>AFE_INMUX_SEL90</Reg_Name>
+        <Address>7F</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg115">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel95</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="116">
+        <Reg_Name>AFE_INMUX_SEL96</Reg_Name>
+        <Address>80</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg116">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel96</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="117">
+        <Reg_Name>AFE_INMUX_SEL97</Reg_Name>
+        <Address>81</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg117">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel97</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="118">
+        <Reg_Name>AFE_INMUX_SEL98</Reg_Name>
+        <Address>82</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg118">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel98</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="119">
+        <Reg_Name>AFE_INMUX_SEL99</Reg_Name>
+        <Address>83</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg119">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel99</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+                </AllField>
+        </Register>
+        <Register id="120">
+        <Reg_Name>AFE_INMUX_SEL100</Reg_Name>
+        <Address>84</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg120">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel100</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="121">
+        <Reg_Name>AFE_INMUX_SEL101</Reg_Name>
+        <Address>85</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg121">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel101</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="122">
+        <Reg_Name>AFE_INMUX_SEL102</Reg_Name>
+        <Address>86</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg122">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel102</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="123">
+        <Reg_Name>AFE_INMUX_SEL103</Reg_Name>
+        <Address>87</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg123">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel103</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="124">
+        <Reg_Name>AFE_INMUX_SEL104</Reg_Name>
+        <Address>88</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg124">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel104</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="125">
+        <Reg_Name>AFE_INMUX_SEL105</Reg_Name>
+        <Address>89</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg125">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel105</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="126">
+        <Reg_Name>AFE_INMUX_SEL106</Reg_Name>
+        <Address>8A</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg126">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel106</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="127">
+        <Reg_Name>AFE_INMUX_SEL107</Reg_Name>
+        <Address>8B</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg127">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel107</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="128">
+        <Reg_Name>AFE_INMUX_SEL108</Reg_Name>
+        <Address>8C</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg128">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel108</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="129">
+        <Reg_Name>AFE_INMUX_SEL109</Reg_Name>
+        <Address>8D</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg129">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel109</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="130">
+        <Reg_Name>AFE_INMUX_SEL110</Reg_Name>
+        <Address>8E</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg130">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel110</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="131">
+        <Reg_Name>AFE_INMUX_SEL111</Reg_Name>
+        <Address>8F</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg131">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel111</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="132">
+        <Reg_Name>AFE_INMUX_SEL112</Reg_Name>
+        <Address>90</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg132">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel112</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="133">
+        <Reg_Name>AFE_INMUX_SEL113</Reg_Name>
+        <Address>91</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg133">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel113</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="134">
+        <Reg_Name>AFE_INMUX_SEL114</Reg_Name>
+        <Address>92</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg134">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel114</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="135">
+        <Reg_Name>AFE_INMUX_SEL115</Reg_Name>
+        <Address>93</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg135">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel115</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="136">
+        <Reg_Name>AFE_INMUX_SEL116</Reg_Name>
+        <Address>94</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg136">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel116</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="137">
+        <Reg_Name>AFE_INMUX_SEL117</Reg_Name>
+        <Address>95</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg137">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel117</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="138">
+        <Reg_Name>AFE_INMUX_SEL118</Reg_Name>
+        <Address>96</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg138">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel118</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="139">
+        <Reg_Name>AFE_INMUX_SEL119</Reg_Name>
+        <Address>97</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg139">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel119</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="140">
+        <Reg_Name>AFE_INMUX_SEL120</Reg_Name>
+        <Address>98</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg140">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel120</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="141">
+        <Reg_Name>AFE_INMUX_SEL121</Reg_Name>
+        <Address>99</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg141">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel121</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="142">
+        <Reg_Name>AFE_INMUX_SEL122</Reg_Name>
+        <Address>9A</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg142">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel122</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="143">
+        <Reg_Name>AFE_INMUX_SEL123</Reg_Name>
+        <Address>9B</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg143">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel123</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="144">
+        <Reg_Name>AFE_INMUX_SEL124</Reg_Name>
+        <Address>9C</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg144">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel124</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="145">
+        <Reg_Name>AFE_INMUX_SEL125</Reg_Name>
+        <Address>9D</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg145">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel125</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="146">
+        <Reg_Name>AFE_INMUX_SEL126</Reg_Name>
+        <Address>9E</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg146">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel126</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="147">
+        <Reg_Name>AFE_INMUX_SEL127</Reg_Name>
+        <Address>9F</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg147">
+            <Field id="00">
+                <Field_name>reg_afe_inmux_sel127</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Use 4bit per channel, TIA total 1024 channels &#x000A;[3:0]-->sel3[0],sel2[0],sel1[0],sel0[0] &#x000A;[7:4]-->sel3[1],sel2[1],sel1[1],sel0[1]  &#x000A;... &#x000A;[31:28]-->sel3[7],sel2[7],sel1[7],sel0[7] &#x000A;0000: all switches offTIA normal work mode, &#x000A;0001:Select sensor A &#x000A;0010:Select sensor B &#x000A;0011:Select sensor C &#x000A;0100:Select sensor D &#x000A;0101: TIA input disconnect to sensors,connect to internal current source.Sensor connect to unblock voltage &#x000A;0110:Select sensor A &#x000A;0111:Select sensor B &#x000A;1000:Select sensor C &#x000A;1001:Select sensor DTIA normal work mode, internal current source add to TIA input through SW11, SW10, X1 and X2.  &#x000A;1010:Select sensor A &#x000A;1011:Select sensor B &#x000A;1100:Select sensor C &#x000A;1101:Select sensor DTIA input disconnect to sensors, &#x000A;1110:connect to VCM through a resistor &#x000A;1111:connect to VCM</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="148">
+        <Reg_Name>SARADC_DAT</Reg_Name>
+        <Address>A0</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg148">
+            <Field id="00">
+                <Field_name>Reserved</Field_name>
+                <Bits>31:25</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="01">
+                <Field_name>AFE_INMUX_SEL_LOAD</Field_name>
+                <Bits>24</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>AFE_INMUX_SEL0~127  load  to  AFE  IP control signal&#x000A;1: Enable AFE_INMUX_SEL0~127 load to AFE IP, and SPI Slave should not update $20~9F register&#x000A;0:  Disable  AFE_INMUX_SEL0~127  load to  AFE  IP,  and  SPI  Slave  could  update $20~9F register</Description>
+            </Field>
+                        <Field id="02">
+                <Field_name>SARADC_RAW</Field_name>
+                <Bits>23</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>SARADC  Raw  data  is  just  the  2nd  ADC data,  &#x000A;and  the 1st  phase  ADC  is  asserted as all 0</Description>
+            </Field>
+                        <Field id="03">
+                <Field_name>SARADC_EOF</Field_name>
+                <Bits>22</Bits>
+                <Mode>W1C</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>SARADC_EOF:64  SAR  ADCs  scan  end of conversion</Description>
+            </Field>
+                        <Field id="04">
+                <Field_name>SARADC_SEL</Field_name>
+                <Bits>21:16</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>SARADC_SEL:64   SAR   ADCs   pointer signals when auto scan disable&#x000A;00 -->ADC0&#x000A;01 -->ADC1&#x000A;... --> ...&#x000A;3E -->ADC62&#x000A;3F -->ADC63</Description>
+            </Field>
+                        <Field id="05">
+                <Field_name>SARADC_DAT</Field_name>
+                <Bits>15:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>SARADC_DAT:  SAR  ADC  data  register after 2s complementcoding,&#x000A; controlled by SARADC_SEL SARADC_CHA_SEL</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="149">
+        <Reg_Name>SARADC_CTL</Reg_Name>
+        <Address>A1</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg149">
+            <Field id="00">
+                <Field_name>Reserved</Field_name>
+                <Bits>31:7</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="01">
+                <Field_name>SARADC_SELDIFF</Field_name>
+                <Bits>6</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Selects the ADC input mode.&#x000A;SELDIFF=Low: Pseudo-Differential Unipolar input.&#x000A;SELDIFF=High: Fully-differential input.</Description>
+            </Field>
+                        <Field id="02">
+                <Field_name>SARADC_CAL_TST</Field_name>
+                <Bits>5</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>SARADC_CAL_TST:  SAR  ADC  calibration test &#x000A;1: calibration test mode&#x000A;0: Normal</Description>
+            </Field>
+                        <Field id="03">
+                <Field_name>SARADC_PD</Field_name>
+                <Bits>4</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>SARADC_PD: SAR ADC power down. &#x000A;1: Power down&#x000A;0: Normal</Description>
+            </Field>
+                        <Field id="04">
+                <Field_name>SARADC_CHA_SEL</Field_name>
+                <Bits>3:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>SARADC_CHA_SEL:   SAR   ADC   analog input  selection  signals.  Only  single-ended input mode supplied, when SARADC_SCAN=0&#x000A;In the single-ended input mode,&#x000A;0000 -->A0&#x000A;0001 -->A1&#x000A;...   --> ...&#x000A;1110 -->A14 &#x000A;1111 -->A15</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="150">
+        <Reg_Name>SARADC_STR</Reg_Name>
+        <Address>A2</Address>
+        <Size>32</Size>
+        <Default_Value>000000A0</Default_Value>
+        <Value>000000A0</Value>
+        <AllField Table_Name="FieldsTabReg150">
+            <Field id="00">
+                <Field_name>Reserved</Field_name>
+                <Bits>31:10</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="01">
+                <Field_name>SARADC_SCAN_STP</Field_name>
+                <Bits>9</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>SARADC_SCAN_STP:  SAR    ADC    auto scan  stop,  write  high  to  stop  scan  (auto clear).When  read  back,  this  bit  stand    for  scan status:&#x000A;1: afe scan ongoing&#x000A;0: afe scan stopped</Description>
+            </Field>
+                        <Field id="02">
+                <Field_name>SARADC_SCAN_STR</Field_name>
+                <Bits>8</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>SARADC_SCAN_STR:   SAR   ADC   auto scan start&#x000A;1: auto scan start (auto clear)&#x000A;0: auto scan not start</Description>
+            </Field>
+                        <Field id="03">
+                <Field_name>SARADC_SCAN_EN</Field_name>
+                <Bits>7</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>SARADC_SCAN_EN: SAR ADC auto scan select. Please assert SARADC_SCAN_EN=1 before SARADC_SCAN_STR&#x000A;1: auto scan enable&#x000A;0: auto scan disable</Description>
+            </Field>
+                        <Field id="04">
+                <Field_name>ADC_CAL_CC</Field_name>
+                <Bits>6:5</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>ADC calibration cycle selected mode.It is recommended to set 2b01.Calibration Period (tcc) &#x000A;CAL_CC(1:0)=00 -->3720 CLK Cycle &#x000A;CAL_CC(1:0)=01 -->14520 CLK Cycle &#x000A;CAL_CC(1:0)=10 -->57720 CLK Cycle &#x000A;CAL_CC(1:0)=11 -->230520 CLK Cycle</Description>
+            </Field>
+                        <Field id="05">
+                <Field_name>ADC_CAL_RST</Field_name>
+                <Bits>4</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reset  signal  for  internal  registers  of  SAR ADC, High active.&#x000A;The ADC must be reset before starting the calibration.&#x000A;1: enable (auto clear)&#x000A;0: disable</Description>
+            </Field>
+                        <Field id="06">
+                <Field_name>EN_CAL</Field_name>
+                <Bits>3</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Control  signal  for  128  SAR  ADCs  offset calibration,  the  calibration  is  started  by  a low to high transition of EN_CAL.&#x000A;1: enable (auto clear)&#x000A;0: disable</Description>
+            </Field>
+                        <Field id="07">
+                <Field_name>CAL_DONE</Field_name>
+                <Bits>2</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Flag for calibration of 128 SAR ADCs:&#x000A;CAL_DONE=1, Calibration is finished&#x000A;CAL_DONE=0, Calibration is not done.</Description>
+            </Field>
+                        <Field id="08">
+                <Field_name>SUCCESSIVE</Field_name>
+                <Bits>1</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>SUCCESSIVE: 128 SAR ADCs successive sample enable&#x000A;1: enable&#x000A;0: disable</Description>
+            </Field>
+                        <Field id="09">
+                <Field_name>SINGLE</Field_name>
+                <Bits>0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>SINGLE:  128  SAR  ADCs  single  sample enable&#x000A;1: enable (auto clear)&#x000A;0: disable</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="151">
+        <Reg_Name>AFE_INMUX</Reg_Name>
+        <Address>A3</Address>
+        <Size>32</Size>
+        <Default_Value>00000006</Default_Value>
+        <Value>00000006</Value>
+        <AllField Table_Name="FieldsTabReg151">
+            <Field id="00">
+                <Field_name>Reserved</Field_name>
+                <Bits>31:7</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="01">
+                <Field_name>reg_afe_inmux_sel5</Field_name>
+                <Bits>6</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description> Unblock voltage select,&#x000A;0 VU1 selected(default)&#x000A;1 VU2 selected</Description>
+            </Field>
+                        <Field id="02">
+                <Field_name>reg_afe_inmux_sel4</Field_name>
+                <Bits>5</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description> Current source control,&#x000A;0 current source switch on(default)&#x000A;1 current source switch off</Description>
+            </Field>
+                        <Field id="03">
+                <Field_name>reg_intoc_swrst</Field_name>
+                <Bits>4</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>software  reset  signal  for  internal  amplifier offset  cancellation  before  integrating,  High active.&#x000A; 1: enable (auto clear)&#x000A; 0: disable</Description>
+            </Field>
+                        <Field id="04">
+                <Field_name>reg_intoc_str</Field_name>
+                <Bits>3</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description> Control  signal  for  internal  amplifier  offset cancellation,  the  calibration  is  started  by  a low to high transition.&#x000A;1: enable (auto clear)&#x000A;0: disable</Description>
+            </Field>
+                        <Field id="05">
+                <Field_name>reg_intoc_stp</Field_name>
+                <Bits>2</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>internal amplifier offset cancellation end flag&#x000A; 1: cancellation done(default)&#x000A; 0: cancellation on-going</Description>
+            </Field>
+                        <Field id="06">
+                <Field_name>reg_int_bypovf</Field_name>
+                <Bits>1</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>The  integrator’s  output  overflow  detection block control,&#x000A; 1: bypass overflow detection block(default)&#x000A; 0: not bypass</Description>
+            </Field>
+                        <Field id="07">
+                <Field_name>reg_int_frst</Field_name>
+                <Bits>0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description> integrator force reset&#x000A;1: enable TIA reset&#x000A;0: disable TIA reset(default)</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="152">
+        <Reg_Name>AFE_CTR</Reg_Name>
+        <Address>A4</Address>
+        <Size>32</Size>
+        <Default_Value>0401000A</Default_Value>
+        <Value>0401000A</Value>
+        <AllField Table_Name="FieldsTabReg152">
+            <Field id="00">
+                <Field_name>Reserved</Field_name>
+                <Bits>31:28</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="01">
+                <Field_name>reg_afe_ib_tia_ctr</Field_name>
+                <Bits>27:26</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>Bias current adjust control signal for TIA,&#x000A; 00:minimum, 1*IB&#x000A; 01:2*IB(default)&#x000A;&#x000A; 10:3*IB&#x000A; 11:4*IB</Description>
+            </Field>
+                        <Field id="02">
+                <Field_name>reserved</Field_name>
+                <Bits>25</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="03">
+                <Field_name>reg_afe_ib_ctr2_1</Field_name>
+                <Bits>24:23</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description> Global bias current control, reserved.&#x000A;00:N.A.(Default)</Description>
+            </Field>
+                        <Field id="04">
+                <Field_name>reg_afe_ib_ctr0</Field_name>
+                <Bits>22</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description> Internal current source adjust control,&#x000A;0: 200pA(default)&#x000A;1: 100pA</Description>
+            </Field>
+                        <Field id="05">
+                <Field_name>reg_afe_vcm_ctr</Field_name>
+                <Bits>21:20</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description> VCM voltage control:&#x000A;00:0.5*AVDD（default）&#x000A;01:0.45*AVDD &#x000A;10:0.4*AVDD &#x000A;11:0.35*AVDD</Description>
+            </Field>
+                        <Field id="06">
+                <Field_name>reg_afe_lpf_ctr3</Field_name>
+                <Bits>19</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>LPF reserved option control,&#x000A; “1” option enable&#x000A; “0” normal work(default)</Description>
+            </Field>
+                        <Field id="07">
+                <Field_name>reg_afe_lpf_ctr2_0</Field_name>
+                <Bits>18:16</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description> LPF corner frequency fc select:&#x000A;000 short all LPF resistors, LPF bypass.&#x000A;010 300kHz&#x000A;110 150kHz100 75kHz&#x000A;001:37.5kHz(default)&#x000A;011,101,111: 20kHz</Description>
+            </Field>
+                        <Field id="08">
+                <Field_name>reg_afe_ctr15_7</Field_name>
+                <Bits>15:7</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>AFE control &#x000A; Reserved</Description>
+            </Field>
+                        <Field id="09">
+                <Field_name>reg_afe_int_ctr</Field_name>
+                <Bits>6:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>000A</Default_Value>
+                <Value>000A</Value>
+                                <Description> [6:4]:Integrator AMP reserved option000 (default) &#x000A;[3:2]:Input current range select bit &#x000A;00:1.25nV &#x000A;01:1nA10:500pA(default) &#x000A;11:250pA &#x000A;[1:0]:Integrator gain select bit &#x000A;00    X2 &#x000A;01    X2.5 &#x000A;10    X5(default)11    X10</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="153">
+        <Reg_Name>AFE_TEST_CTR</Reg_Name>
+        <Address>A5</Address>
+        <Size>32</Size>
+        <Default_Value>00F02901</Default_Value>
+        <Value>00F02901</Value>
+        <AllField Table_Name="FieldsTabReg153">
+            <Field id="00">
+                <Field_name>Reserved</Field_name>
+                <Bits>31:28</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="01">
+                <Field_name>reg_afe_reserve</Field_name>
+                <Bits>27:20</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>000F</Default_Value>
+                <Value>000F</Value>
+                                <Description>afe_reserved &#x000A; 0F: (Default)</Description>
+            </Field>
+                        <Field id="02">
+                <Field_name>afe_tsout_sel</Field_name>
+                <Bits>19:18</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>In AFE_DEBUG mode, the TIA1023/TIA1008/TIA15/TIA0  inner  analog signals  &#x000A; will  be  MUXed  and  buffered  to  test pin TSOUT[3:0]. &#x000A; 11: ADMUX output &#x000A; 10: CDS phase2 output &#x000A; 01: CDS phase1 output &#x000A; 00: integrator output(Default)</Description>
+            </Field>
+                        <Field id="03">
+                <Field_name>afe_tsin_sel</Field_name>
+                <Bits>17</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description> In  AFE_DEBUG  mode,  the  analog  input signals  of  ADC63 and ADC0  can  be  send from  &#x000A;test pad TSINA1/B1,TSINA0/B0individually, bypass TIA and ADMUX &#x000A;1:TSINA1/B1for  ADC63,   TSINA0/B0for ADC0, &#x000A;0:   ADMUX   output   for   ADC63,   ADC0(Default)</Description>
+            </Field>
+                        <Field id="04">
+                <Field_name>reserved</Field_name>
+                <Bits>16:14</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Reserved</Description>
+            </Field>
+                        <Field id="05">
+                <Field_name>reg_afe_trimr</Field_name>
+                <Bits>13:8</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0029</Default_Value>
+                <Value>0029</Value>
+                                <Description>Trim   control   of   RCAL   which   used   to produce  internal  high  precision  reference current.</Description>
+            </Field>
+                        <Field id="06">
+                <Field_name>reg_afe_debug</Field_name>
+                <Bits>7</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description> AFE analog block debug mode control: &#x000A;1: Debug Mode &#x000A;0: Normal Work (Default)</Description>
+            </Field>
+                        <Field id="07">
+                <Field_name>reserved</Field_name>
+                <Bits>6:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0001</Default_Value>
+                <Value>0001</Value>
+                                <Description>Reserved</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="154">
+        <Reg_Name>AFE_TEST_ADC_RANGE</Reg_Name>
+        <Address>A6</Address>
+        <Size>32</Size>
+        <Default_Value>3FFF17FF</Default_Value>
+        <Value>3FFF17FF</Value>
+        <AllField Table_Name="FieldsTabReg154">
+            <Field id="00">
+                <Field_name>afe_adc_range_h</Field_name>
+                <Bits>31:16</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>3FFF</Default_Value>
+                <Value>3FFF</Value>
+                                <Description>ADC  increment data  should  be  equal  to  or less  than  this  range,  &#x000A;otherwise,  TIA    test Fail</Description>
+            </Field>
+                        <Field id="01">
+                <Field_name>afe_adc_range_l</Field_name>
+                <Bits>15:0</Bits>
+                <Mode>RW</Mode>
+                <Default_Value>17FF</Default_Value>
+                <Value>17FF</Value>
+                                <Description>ADC  increment  data  should  be  more  than this range, &#x000A;otherwise, TIA    test Fail</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="155">
+        <Reg_Name>AFE_TIA_TEST0</Reg_Name>
+        <Address>B0</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg155">
+            <Field id="00">
+                <Field_name>reg_tia_test0</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+                <Description>Use 1bit per channel, TIA total 1024 channels &#x000A; [0]-->TIA0 &#x000A; [1]-->TIA1 &#x000A; ... &#x000A; [31]-->TIAl31 &#x000A; 0: TIA test Fail, TIA analog signal(after ADC conversion) is more than AFE_TEST_ADC_RANGE &#x000A; 1: TIA test Pass, TIA analog  signal(after ADC conversion) is equal to or less than AFE_TEST_ADC_RANGE</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="156">
+        <Reg_Name>AFE_TIA_TEST1</Reg_Name>
+        <Address>B1</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg156">
+            <Field id="00">
+                <Field_name>reg_tia_test1</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="157">
+        <Reg_Name>AFE_TIA_TEST2</Reg_Name>
+        <Address>B2</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg157">
+            <Field id="00">
+                <Field_name>reg_tia_test2</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="158">
+        <Reg_Name>AFE_TIA_TEST3</Reg_Name>
+        <Address>B3</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg158">
+            <Field id="00">
+                <Field_name>reg_tia_test3</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="159">
+        <Reg_Name>AFE_TIA_TEST4</Reg_Name>
+        <Address>B4</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg159">
+            <Field id="00">
+                <Field_name>reg_tia_test4</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="160">
+        <Reg_Name>AFE_TIA_TEST5</Reg_Name>
+        <Address>B5</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg160">
+            <Field id="00">
+                <Field_name>reg_tia_test5</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="161">
+        <Reg_Name>AFE_TIA_TEST6</Reg_Name>
+        <Address>B6</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg161">
+            <Field id="00">
+                <Field_name>reg_tia_test6</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="162">
+        <Reg_Name>AFE_TIA_TEST7</Reg_Name>
+        <Address>B7</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg162">
+            <Field id="00">
+                <Field_name>reg_tia_test7</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="163">
+        <Reg_Name>AFE_TIA_TEST8</Reg_Name>
+        <Address>B8</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg163">
+            <Field id="00">
+                <Field_name>reg_tia_test8</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="164">
+        <Reg_Name>AFE_TIA_TEST9</Reg_Name>
+        <Address>B9</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg164">
+            <Field id="00">
+                <Field_name>reg_tia_test9</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="165">
+        <Reg_Name>AFE_TIA_TEST10</Reg_Name>
+        <Address>BA</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg165">
+            <Field id="00">
+                <Field_name>reg_tia_test10</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="166">
+        <Reg_Name>AFE_TIA_TEST11</Reg_Name>
+        <Address>BB</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg166">
+            <Field id="00">
+                <Field_name>reg_tia_test11</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="167">
+        <Reg_Name>AFE_TIA_TEST12</Reg_Name>
+        <Address>BC</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg167">
+            <Field id="00">
+                <Field_name>reg_tia_test12</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="168">
+        <Reg_Name>AFE_TIA_TEST13</Reg_Name>
+        <Address>BD</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg168">
+            <Field id="00">
+                <Field_name>reg_tia_test13</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="169">
+        <Reg_Name>AFE_TIA_TEST14</Reg_Name>
+        <Address>BE</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg169">
+            <Field id="00">
+                <Field_name>reg_tia_test14</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="170">
+        <Reg_Name>AFE_TIA_TEST15</Reg_Name>
+        <Address>BF</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg170">
+            <Field id="00">
+                <Field_name>reg_tia_test15</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="171">
+        <Reg_Name>AFE_TIA_TEST16</Reg_Name>
+        <Address>C0</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg171">
+            <Field id="00">
+                <Field_name>reg_tia_test16</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="172">
+        <Reg_Name>AFE_TIA_TEST17</Reg_Name>
+        <Address>C1</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg172">
+            <Field id="00">
+                <Field_name>reg_tia_test17</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="173">
+        <Reg_Name>AFE_TIA_TEST18</Reg_Name>
+        <Address>C2</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg173">
+            <Field id="00">
+                <Field_name>reg_tia_test18</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="174">
+        <Reg_Name>AFE_TIA_TEST19</Reg_Name>
+        <Address>C3</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg174">
+            <Field id="00">
+                <Field_name>reg_tia_test19</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="175">
+        <Reg_Name>AFE_TIA_TEST20</Reg_Name>
+        <Address>C4</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg175">
+            <Field id="00">
+                <Field_name>reg_tia_test20</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="176">
+        <Reg_Name>AFE_TIA_TEST21</Reg_Name>
+        <Address>C5</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg176">
+            <Field id="00">
+                <Field_name>reg_tia_test21</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="177">
+        <Reg_Name>AFE_TIA_TEST22</Reg_Name>
+        <Address>C6</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg177">
+            <Field id="00">
+                <Field_name>reg_tia_test22</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="178">
+        <Reg_Name>AFE_TIA_TEST23</Reg_Name>
+        <Address>C7</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg178">
+            <Field id="00">
+                <Field_name>reg_tia_test24</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="179">
+        <Reg_Name>AFE_TIA_TEST24</Reg_Name>
+        <Address>C8</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg179">
+            <Field id="00">
+                <Field_name>reg_tia_test25</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="180">
+        <Reg_Name>AFE_TIA_TEST25</Reg_Name>
+        <Address>C9</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg180">
+            <Field id="00">
+                <Field_name>reg_tia_test25</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="181">
+        <Reg_Name>AFE_TIA_TEST26</Reg_Name>
+        <Address>CA</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg181">
+            <Field id="00">
+                <Field_name>reg_tia_test26</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="182">
+        <Reg_Name>AFE_TIA_TEST27</Reg_Name>
+        <Address>CB</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg182">
+            <Field id="00">
+                <Field_name>reg_tia_test27</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="183">
+        <Reg_Name>AFE_TIA_TEST28</Reg_Name>
+        <Address>CC</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg183">
+            <Field id="00">
+                <Field_name>reg_tia_test28</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="184">
+        <Reg_Name>AFE_TIA_TEST29</Reg_Name>
+        <Address>CD</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg184">
+            <Field id="00">
+                <Field_name>reg_tia_test29</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="185">
+        <Reg_Name>AFE_TIA_TEST30</Reg_Name>
+        <Address>CE</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg185">
+            <Field id="00">
+                <Field_name>reg_tia_test30</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="186">
+        <Reg_Name>AFE_TIA_TEST31</Reg_Name>
+        <Address>CF</Address>
+        <Size>32</Size>
+        <Default_Value>FFFFFFFF</Default_Value>
+        <Value>FFFFFFFF</Value>
+        <AllField Table_Name="FieldsTabReg186">
+            <Field id="00">
+                <Field_name>reg_tia_test31</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>FFFFFFFF</Default_Value>
+                                <Description>Use 1bit per channel, TIA total 1024 channels &#x000A; [0]-->TIA0 &#x000A; [1]-->TIA1 &#x000A; ... &#x000A; [31]-->TIAl31 &#x000A; 0: TIA test Fail, TIA analog signal(after ADC conversion) is more than AFE_TEST_ADC_RANGE &#x000A; 1: TIA test Pass, TIA analog  signal(after ADC conversion) is equal to or less than AFE_TEST_ADC_RANGE</Description>
+                <Value>FFFFFFFF</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="187">
+        <Reg_Name>AFE_INT_OVF0</Reg_Name>
+        <Address>D0</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg187">
+            <Field id="00">
+                <Field_name>afe_int_ovf0</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Integrator over flow flag output &#x000A; 1:   integrator   output   is   out   of   range, integrator    will    be    reset    until    next integration cycle. &#x000A; 0:integrator  output  is   within   the  preset range &#x000A; [0]-->TIA0 integrator &#x000A; [1]-->TIA1 integrator &#x000A; ... &#x000A; [31]-->TIAl31 integrator</Description>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="188">
+        <Reg_Name>AFE_INT_OVF1</Reg_Name>
+        <Address>D1</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg188">
+            <Field id="00">
+                <Field_name>afe_int_ovf1</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="189">
+        <Reg_Name>AFE_INT_OVF2</Reg_Name>
+        <Address>D2</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg189">
+            <Field id="00">
+                <Field_name>afe_int_ovf2</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="190">
+        <Reg_Name>AFE_INT_OVF3</Reg_Name>
+        <Address>D3</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg190">
+            <Field id="00">
+                <Field_name>afe_int_ovf3</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="191">
+        <Reg_Name>AFE_INT_OVF4</Reg_Name>
+        <Address>D4</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg191">
+            <Field id="00">
+                <Field_name>afe_int_ovf4</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="192">
+        <Reg_Name>AFE_INT_OVF5</Reg_Name>
+        <Address>D5</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg192">
+            <Field id="00">
+                <Field_name>afe_int_ovf5</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="193">
+        <Reg_Name>AFE_INT_OVF6</Reg_Name>
+        <Address>D6</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg193">
+            <Field id="00">
+                <Field_name>afe_int_ovf6</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="194">
+        <Reg_Name>AFE_INT_OVF7</Reg_Name>
+        <Address>D7</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg194">
+            <Field id="00">
+                <Field_name>afe_int_ovf7</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="195">
+        <Reg_Name>AFE_INT_OVF8</Reg_Name>
+        <Address>D8</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg195">
+            <Field id="00">
+                <Field_name>afe_int_ovf8</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="196">
+        <Reg_Name>AFE_INT_OVF9</Reg_Name>
+        <Address>D9</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg196">
+            <Field id="00">
+                <Field_name>afe_int_ovf9</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="197">
+        <Reg_Name>AFE_INT_OVF10</Reg_Name>
+        <Address>DA</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg197">
+            <Field id="00">
+                <Field_name>afe_int_ovf10</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="198">
+        <Reg_Name>AFE_INT_OVF11</Reg_Name>
+        <Address>DB</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg198">
+            <Field id="00">
+                <Field_name>afe_int_ovf11</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="199">
+        <Reg_Name>AFE_INT_OVF12</Reg_Name>
+        <Address>DC</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg199">
+            <Field id="00">
+                <Field_name>afe_int_ovf12</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="200">
+        <Reg_Name>AFE_INT_OVF13</Reg_Name>
+        <Address>DD</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg200">
+            <Field id="00">
+                <Field_name>afe_int_ovf13</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="201">
+        <Reg_Name>AFE_INT_OVF14</Reg_Name>
+        <Address>DE</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg201">
+            <Field id="00">
+                <Field_name>afe_int_ovf14</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="202">
+        <Reg_Name>AFE_INT_OVF15</Reg_Name>
+        <Address>DF</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg202">
+            <Field id="00">
+                <Field_name>afe_int_ovf15</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="203">
+        <Reg_Name>AFE_INT_OVF16</Reg_Name>
+        <Address>E0</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg203">
+            <Field id="00">
+                <Field_name>afe_int_ovf16</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="204">
+        <Reg_Name>AFE_INT_OVF17</Reg_Name>
+        <Address>E1</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg204">
+            <Field id="00">
+                <Field_name>afe_int_ovf17</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="205">
+        <Reg_Name>AFE_INT_OVF18</Reg_Name>
+        <Address>E2</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg205">
+            <Field id="00">
+                <Field_name>afe_int_ovf18</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="206">
+        <Reg_Name>AFE_INT_OVF19</Reg_Name>
+        <Address>E3</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg206">
+            <Field id="00">
+                <Field_name>afe_int_ovf19</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="207">
+        <Reg_Name>AFE_INT_OVF20</Reg_Name>
+        <Address>E4</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg207">
+            <Field id="00">
+                <Field_name>afe_int_ovf20</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="208">
+        <Reg_Name>AFE_INT_OVF21</Reg_Name>
+        <Address>E5</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg208">
+            <Field id="00">
+                <Field_name>afe_int_ovf21</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="209">
+        <Reg_Name>AFE_INT_OVF22</Reg_Name>
+        <Address>E6</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg209">
+            <Field id="00">
+                <Field_name>afe_int_ovf22</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="210">
+        <Reg_Name>AFE_INT_OVF23</Reg_Name>
+        <Address>E7</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg210">
+            <Field id="00">
+                <Field_name>afe_int_ovf23</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="211">
+        <Reg_Name>AFE_INT_OVF24</Reg_Name>
+        <Address>E8</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg211">
+            <Field id="00">
+                <Field_name>afe_int_ovf23</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="212">
+        <Reg_Name>AFE_INT_OVF25</Reg_Name>
+        <Address>E9</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg212">
+            <Field id="00">
+                <Field_name>afe_int_ovf25</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="213">
+        <Reg_Name>AFE_INT_OVF26</Reg_Name>
+        <Address>EA</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg213">
+            <Field id="00">
+                <Field_name>afe_int_ovf26</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="214">
+        <Reg_Name>AFE_INT_OVF27</Reg_Name>
+        <Address>EB</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg214">
+            <Field id="00">
+                <Field_name>afe_int_ovf27</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="215">
+        <Reg_Name>AFE_INT_OVF28</Reg_Name>
+        <Address>EC</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg215">
+            <Field id="00">
+                <Field_name>afe_int_ovf28</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="216">
+        <Reg_Name>AFE_INT_OVF29</Reg_Name>
+        <Address>ED</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg216">
+            <Field id="00">
+                <Field_name>afe_int_ovf29</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="217">
+        <Reg_Name>AFE_INT_OVF30</Reg_Name>
+        <Address>EE</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg217">
+            <Field id="00">
+                <Field_name>afe_int_ovf30</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+            </Field>
+        </AllField>
+    </Register>
+        <Register id="218">
+        <Reg_Name>AFE_INT_OVF31</Reg_Name>
+        <Address>EF</Address>
+        <Size>32</Size>
+        <Default_Value>00000000</Default_Value>
+        <Value>00000000</Value>
+        <AllField Table_Name="FieldsTabReg218">
+            <Field id="00">
+                <Field_name>afe_int_ovf31</Field_name>
+                <Bits>31:0</Bits>
+                <Mode>RO</Mode>
+                <Default_Value>0000</Default_Value>
+                <Value>0000</Value>
+                                <Description>Integrator over flow flag output &#x000A; 1:   integrator   output   is   out   of   range, integrator    will    be    reset    until    next integration cycle. &#x000A; 0:integrator  output  is   within   the  preset range &#x000A; [0]-->TIA0 integrator &#x000A; [1]-->TIA1 integrator &#x000A; ... &#x000A; [31]-->TIAl31 integrator</Description>
+            </Field>
+        </AllField>
+    </Register>
+</Registers>
