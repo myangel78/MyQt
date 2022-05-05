@@ -16,7 +16,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 INCLUDEPATH += include
-INCLUDEPATH += include/gsl
 
 SOURCES += \
     src/MainWindow.cpp \
@@ -39,6 +38,10 @@ LIBS+= -L$$PWD/lib/ -lgslcblas
 DEPENDPATH += $$PWD/.
 }
 unix{
+INCLUDEPATH += ./include/gsl/
+LIBS+= -L$$PWD/lib/ -lgsl
+LIBS+= -L$$PWD/lib/ -lgslcblas
+DEPENDPATH += $$PWD/.
 }
 
 
