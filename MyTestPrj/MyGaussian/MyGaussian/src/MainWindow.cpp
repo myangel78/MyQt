@@ -183,7 +183,6 @@ void MainWindow::setupStyledDemo(QCustomPlot *customPlot)
   // create and configure plottables:
   QCPGraph *graph1 = customPlot->addGraph();
   graph1->setData(m_vctGaussX, m_vctGaussY);
-
   QPen redDotPen;
   redDotPen.setStyle(Qt::DotLine);
   redDotPen.setColor(QColor(255,0,0));
@@ -203,6 +202,16 @@ void MainWindow::setupStyledDemo(QCustomPlot *customPlot)
   graph1->setLayer("abovemain");
   customPlot->xAxis->grid()->setLayer("belowmain");
   customPlot->yAxis->grid()->setLayer("belowmain");
+
+  //图例设置
+  graph1->setName(QString("Amplitude: %1\n Mean: %2\n Std: %3").arg(m_amplitude).arg(m_miu).arg(m_sigma));
+  customPlot->legend->setIconSize(20,20);
+  customPlot->legend->setTextColor(Qt::blue);//设置图例文字颜色
+  customPlot->legend->setVisible(true); //设置图例是否可用
+  customPlot->axisRect()->insetLayout()->setInsetAlignment(0,Qt::AlignTop|Qt::AlignRight);
+  customPlot->legend->setBrush(QColor(255,255,255,0));//设置图例背景
+  customPlot->legend->setBrush(QColor(255, 255, 255, 150));
+  customPlot->legend->setFont(QFont("Helvetica", 9,3));
 
   // add title layout element:
   customPlot->plotLayout()->insertRow(0);
@@ -231,6 +240,7 @@ void MainWindow::setupStyledDemo(QCustomPlot *customPlot)
 //  customPlot->yAxis->setRange(0, 500);
 //  customPlot->xAxis->setRange(DESIGN_MIU-3 *DESIGN_SIGMA,DESIGN_MIU+ 3*DESIGN_SIGMA);
   customPlot->xAxis->setRange(m_miu-3 *m_sigma,m_miu+ 3*m_sigma);
+
 }
 
 
