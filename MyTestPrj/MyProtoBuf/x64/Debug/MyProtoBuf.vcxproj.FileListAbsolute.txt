@@ -1,0 +1,6 @@
+E:\project\personnal\MyProtobuf\MyProtoBuf\x64\Debug\MyProtoBuf.vcxproj.CopyComplete
+E:\project\personnal\MyProtobuf\MyProtoBuf\x64\Debug\MyProtoBuf.exe
+E:\project\personnal\MyProtobuf\MyProtoBuf\x64\Debug\libprotobufd.dll
+E:\GitHub\MyQt\MyTestPrj\MyProtoBuf\x64\Debug\MyProtoBuf.vcxproj.CopyComplete
+E:\GitHub\MyQt\MyTestPrj\MyProtoBuf\x64\Debug\MyProtoBuf.exe
+E:\GitHub\MyQt\MyTestPrj\MyProtoBuf\x64\Debug\libprotobufd.dll
